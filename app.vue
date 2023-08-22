@@ -1,6 +1,7 @@
 <template>
   <div>
-    <NuxtWelcome class="debug"/>
+    <!-- <NuxtWelcome class="debug"/> -->
+    <h1>Coral Reefs</h1>
   </div>
 </template>
 <script setup>

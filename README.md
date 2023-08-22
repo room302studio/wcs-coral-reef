@@ -1,16 +1,4 @@
-# EJ Fox Nuxt 3 Starter
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/981b9e46-6878-4ddb-a716-2713c5f3e412/deploy-status)](https://app.netlify.com/sites/ejfox-nuxt-template/deploys)
-
-## What's different from the standard Nuxt 3 starter?
-- Tachyons 🌟 
-- VueUse 🔧 
-- Vueuse motion 🌈 
-- OpenAI plugin 🧠 
-- Toasts 🍞 
-- Pinia store 🏬 
-- Helpers file 🔨 
-- Google fonts 🖋️ 
+# WCS + Room 302 Studio: Coral Reefs
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 

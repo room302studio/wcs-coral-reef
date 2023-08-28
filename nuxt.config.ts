@@ -12,7 +12,7 @@ export default defineNuxtConfig({
       ],
     },
   },
-  // ssr: false, // for netlify deploy
+  ssr: false, // for netlify deploy
   // devtools: { enabled: true },
   css: [
     'tachyons/css/tachyons.css',

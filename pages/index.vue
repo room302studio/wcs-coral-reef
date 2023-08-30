@@ -108,6 +108,7 @@
           <!-- use flex to vertically center -->
           <div class="flex flex-column justify-center items-center h-100">
             <h3>Spinny globe</h3>
+            <SpinnyGlobe />
           </div>
         </div>
 

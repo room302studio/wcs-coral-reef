@@ -21,7 +21,10 @@
     "@vueuse/motion": "^2.0.0-beta.25",
     "@vueuse/nuxt": "^9.13.0",
     "d3": "^7.8.5",
+    "d3-geo": "^3.1.0",
+    "d3-selection": "^3.0.0",
     "tachyons": "^4.12.0",
+    "topojson-client": "^3.1.0",
     "v-onboarding": "^2.5.1",
     "vue-toast-notification": "^3.1.1"
   }

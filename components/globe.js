@@ -18,7 +18,8 @@ const zoomHandler = zoom();
 // Sensitivity of panning and zooming
 const sensitivity = 58;
 
-export const useGlobe = (container, { state, setState }) => {
+// Framework-agnostic implementation of a spinny globe.
+export const globe = (container, { state, setState }) => {
   // SVG setup
   const svg = select(container).selectAll("svg").data([null]).join("svg");
 
@@ -27,10 +28,10 @@ export const useGlobe = (container, { state, setState }) => {
   const { width, height } = state;
 
   // SVG scaling
-
   svg.attr("width", width).attr("height", height);
 
   // Fit the initial projection to the size of the container
+
   if (!state.initialScale) {
     console.log("No initial scale, fitting to container");
     const initialScale = projection
@@ -56,7 +57,7 @@ export const useGlobe = (container, { state, setState }) => {
     .join("path")
     .attr("class", "graticule")
     .attr("d", path(graticule()))
-    .attr("stroke", "blue")
+    .attr("stroke", "green")
     .attr("fill", "none");
 
   // Support panning

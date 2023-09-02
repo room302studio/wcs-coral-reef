@@ -33,6 +33,7 @@ onMounted(() => {
     .attr("fill", "none");
   const render = () => graticulePath.attr("d", path);
   svg.call(
+    // Inspired by https://vizhub.com/curran/8373d190b0f14dd89c07b44cf1baa9f9
     drag().on("drag", (event) => {
       const rotate = projection.rotate();
       const scale = projection.scale();

@@ -2,8 +2,6 @@
   <div class="globe-container" ref="globeDiv"></div>
 </template>
 <script setup>
-import { globe } from "./globe.js";
-
 const globeDiv = ref(null);
 
 const state = ref({});
@@ -13,7 +11,8 @@ function setState(next) {
 }
 
 watch(state, (next) => {
-  globe(globeDiv.value, { state: next, setState });
+  console.log("state", state.value);
+  useGlobe(globeDiv.value, { state: next, setState });
 });
 
 // On mounted

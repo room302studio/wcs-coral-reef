@@ -18,7 +18,7 @@ const zoomHandler = zoom();
 // Sensitivity of panning and zooming
 const sensitivity = 58;
 
-export function globe(container, { state, setState }) {
+export const useGlobe = (container, { state, setState }) => {
   // SVG setup
   const svg = select(container).selectAll("svg").data([null]).join("svg");
 
@@ -32,6 +32,7 @@ export function globe(container, { state, setState }) {
 
   // Fit the initial projection to the size of the container
   if (!state.initialScale) {
+    console.log("No initial scale, fitting to container");
     const initialScale = projection
       .fitSize([width, height], { type: "Sphere" })
       .scale();
@@ -55,7 +56,7 @@ export function globe(container, { state, setState }) {
     .join("path")
     .attr("class", "graticule")
     .attr("d", path(graticule()))
-    .attr("stroke", "#bbb")
+    .attr("stroke", "blue")
     .attr("fill", "none");
 
   // Support panning
@@ -88,4 +89,4 @@ export function globe(container, { state, setState }) {
       }));
     })
   );
-}
+};

@@ -1,6 +1,7 @@
 import { select } from "d3-selection";
 import { geoOrthographic, geoPath, geoGraticule } from "d3-geo";
 import { drag } from "d3-drag";
+import { zoom } from "d3-zoom";
 
 // This module implements a spinny globe.
 // It is a component that renders into a container element.
@@ -12,6 +13,7 @@ const projection = geoOrthographic();
 const path = geoPath().projection(projection);
 const graticule = geoGraticule();
 const dragHandler = drag();
+const zoomHandler = zoom();
 
 // Sensitivity of panning and zooming
 const sensitivity = 58;
@@ -20,15 +22,31 @@ export function globe(container, { state, setState }) {
   // SVG setup
   const svg = select(container).selectAll("svg").data([null]).join("svg");
 
-  // SVG scaling
   // Assumes the state has width and height,
   // measured from the container element.
-  svg.attr("width", state.width).attr("height", state.height);
+  const { width, height } = state;
+
+  // SVG scaling
+
+  svg.attr("width", width).attr("height", height);
+
+  // Fit the initial projection to the size of the container
+  if (!state.initialScale) {
+    const initialScale = projection
+      .fitSize([width, height], { type: "Sphere" })
+      .scale();
+    setState((state) => ({
+      ...state,
+      initialScale,
+      scale: initialScale,
+      rotate: projection.rotate(),
+    }));
+    return;
+  }
 
   // Update projection rotation based on state
-  if (state.rotate) {
-    projection.rotate(state.rotate);
-  }
+  projection.rotate(state.rotate);
+  projection.scale(state.scale);
 
   // Render graticules (lines around the globe)
   svg
@@ -40,7 +58,7 @@ export function globe(container, { state, setState }) {
     .attr("stroke", "#bbb")
     .attr("fill", "none");
 
-  // Support panning and zooming
+  // Support panning
   svg.call(
     // Inspired by https://vizhub.com/curran/8373d190b0f14dd89c07b44cf1baa9f9
     dragHandler.on("drag", (event) => {
@@ -57,6 +75,16 @@ export function globe(container, { state, setState }) {
       setState((state) => ({
         ...state,
         rotate: newRotate,
+      }));
+    })
+  );
+
+  // Support zooming
+  svg.call(
+    zoomHandler.on("zoom", ({ transform: { k } }) => {
+      setState((state) => ({
+        ...state,
+        scale: state.initialScale * k,
       }));
     })
   );

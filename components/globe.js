@@ -31,9 +31,8 @@ export const globe = (container, { state, setState }) => {
   svg.attr("width", width).attr("height", height);
 
   // Fit the initial projection to the size of the container
-
   if (!state.initialScale) {
-    console.log("No initial scale, fitting to container");
+    console.log("      Fitting initial projection to container size.");
     const initialScale = projection
       .fitSize([width, height], { type: "Sphere" })
       .scale();
@@ -57,15 +56,14 @@ export const globe = (container, { state, setState }) => {
     .join("path")
     .attr("class", "graticule")
     .attr("d", path(graticule()))
-    .attr("stroke", "green")
+    .attr("stroke", "red")
     .attr("fill", "none");
 
   // Support panning
   svg.call(
     // Inspired by https://vizhub.com/curran/8373d190b0f14dd89c07b44cf1baa9f9
     dragHandler.on("drag", (event) => {
-      // Get the current rotation and scale,
-      // or use the default values if none are set.
+      // Get the current rotation and scale
       const rotate = projection.rotate();
       const scale = projection.scale();
 

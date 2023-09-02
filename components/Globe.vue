@@ -19,53 +19,42 @@ const render = () => {
 // watch(() => props.state, render);
 
 // Watch and use new value
-watch(
-  () => props.state,
-  (newState) => {
-    render();
-    // console.log("in watch");
-    // console.log("Old: ", state);
-    // console.log("New: ", newState);
-    // setState((state) => ({
-    //   ...state,
-    //   ...newState,
-    // }));
-  }
-);
+watch(() => props.state, render);
 
 // On mounted
 onMounted(() => {
+  const { setState } = props;
   // Measure the initial width and height of globeDiv
   const { width, height } = globeDiv.value.getBoundingClientRect();
   //   console.log({ width, height });
 
   // Trigger initial render
-  console.log("calling setState from child");
-  props.setState((state) => ({
+  //   console.log("calling setState from child");
+  setState((state) => ({
     ...state,
     width,
     height,
   }));
 
-  // // Measure width and height of globeDiv using resize observer
-  // // https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver
-  // const resizeObserver = new ResizeObserver((entries) => {
-  //   for (let entry of entries) {
-  //     const { width, height } = entry.contentRect;
-  //     setState((state) => ({
-  //       ...state,
-  //       width,
-  //       height,
-  //     }));
-  //   }
-  // });
+  // Measure width and height of globeDiv using resize observer
+  // https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver
+  const resizeObserver = new ResizeObserver((entries) => {
+    for (let entry of entries) {
+      const { width, height } = entry.contentRect;
+      setState((state) => ({
+        ...state,
+        width,
+        height,
+      }));
+    }
+  });
 
-  // resizeObserver.observe(globeDiv.value);
+  resizeObserver.observe(globeDiv.value);
 
-  // // Clean up
-  // return () => {
-  //   resizeObserver.disconnect();
-  // };
+  // Clean up
+  return () => {
+    resizeObserver.disconnect();
+  };
 });
 </script>
 <style>
@@ -78,6 +67,6 @@ onMounted(() => {
 
 .globe-container svg {
   position: absolute;
-  /* background-color: red; */
+  /* background-color: rgb(172, 172, 172); */
 }
 </style>

@@ -104,8 +104,7 @@
         src="https://felt.com/embed/map/Coral-Reefs-Y1O4GeEVRVuGF7EJN49AZxC?loc=-1.04,114.89,3z"
       ></iframe>
       <div class="cf">
-        <div class="w-50 h5 ba b--black fl">
-          <!-- use flex to vertically center -->
+        <div class="w-50 ba b--black fl">
           <div class="flex flex-column justify-center items-center h-100">
             <h3>Spinny globe</h3>
             <SpinnyGlobe />

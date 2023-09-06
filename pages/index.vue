@@ -1,10 +1,10 @@
 <template>
-  <div class="pa5 pr6">
+  <div class="pa1 pa5-l pr6-l">
     <div class="vh-50 w-100 pa4">
       <h1>Intro Title</h1>
     </div>
 
-    <div id="floating-nav" class="fixed right-1 top-1 bg-white pa2 w-10 f6">
+    <div id="floating-nav" class="fixed-ns right-1 top-1 bg-white pa2 pv4 w-100 w-10-ns f6">
       <h4 class="ma0 pa0">Navigation</h4>
       <ul class="pa0 mt2 mb0 list">
         <li class="mv2">Introduction</li>
@@ -34,11 +34,11 @@
     </div>
 
     <div id="section-1 cf" class="section">
-      <div class="w-two-thirds fl">
+      <div class="w-100 w-two-thirds-ns fl">
         <h1>Chart of global temp rise</h1>
       </div>
 
-      <div class="w-third fl">
+      <div class="w-100 w-third-ns fl">
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae
           libero provident dolorem excepturi minus quaerat quasi assumenda optio
@@ -49,7 +49,7 @@
     </div>
 
     <div id="section-2" class="section cf">
-      <div class="w-50 fl">
+      <div class="w-100 w-50-ns fl-ns">
         <h2 class="ma0 pa0">Impact on world</h2>
         <ul>
           <li>Impact 1</li>
@@ -59,7 +59,7 @@
         </ul>
       </div>
 
-      <div class="w-50 fl">
+      <div class="w-100 w-50-ns fl-ns">
         <h2 class="ma0 pa0">Impact on oceans</h2>
         <ul>
           <li>Impact 1</li>
@@ -71,7 +71,7 @@
     </div>
 
     <div id="section-3" class="section w-100 cf">
-      <div class="w-50 fl">
+      <div class="w-100 w-50-ns fl-ns">
         <h1>Ocean/reef percentage</h1>
       </div>
 
@@ -96,22 +96,17 @@
 
     <div id="section-6" class="section w-100">
       <h2>Explore them all</h2>
-      <iframe
-        width="100%"
-        height="600"
-        frameborder="0"
-        title="Felt Map"
-        src="https://felt.com/embed/map/Coral-Reefs-Y1O4GeEVRVuGF7EJN49AZxC?loc=-1.04,114.89,3z"
-      ></iframe>
+      <iframe width="100%" height="600" frameborder="0" title="Felt Map"
+        src="https://felt.com/embed/map/Coral-Reefs-Y1O4GeEVRVuGF7EJN49AZxC?loc=-1.04,114.89,3z"></iframe>
       <div class="cf">
-        <div class="w-50 ba b--black fl">
+        <div class="w-100 w-50-ns ba b--black fl-ns">
           <div class="flex flex-column justify-center items-center h-100">
             <h3>Spinny globe</h3>
             <SpinnyGlobe />
           </div>
         </div>
 
-        <div class="w-50 fl ph5">
+        <div class="w-100 w-50-ns fl-ns ph2 ph5-l">
           <h2 class="pa0 ma0">Metadata</h2>
           <ul class="list pa0">
             <li><strong>Item:</strong> Value</li>
@@ -127,9 +122,9 @@
           </ul>
         </div>
 
-        <div class="w-100">
+        <div class="w-100 overflow-x-auto">
           <h3>Table of reefs</h3>
-          <table class="w-100 f5">
+          <table class="w-100 f5 overflow-x-auto collapse">
             <thead>
               <tr class="tl bg-black white">
                 <th class="pa2">Reef</th>
@@ -142,13 +137,9 @@
             </thead>
             <tbody>
               <!-- just make 20 example reefs -->
-              <tr
-                v-for="i in 20"
-                :key="i"
-                :style="{
-                  backgroundColor: i === 7 ? '#CCC' : '',
-                }"
-              >
+              <tr v-for="i in 20" :key="i" :style="{
+                backgroundColor: i === 7 ? '#CCC' : '',
+              }">
                 <td>Reef {{ i }}</td>
                 <td>Location {{ i }}</td>
                 <td>Country {{ i }}</td>
@@ -180,7 +171,7 @@
         </div>
 
         <div class="w-100 cf">
-          <div class="w-third fl">
+          <div class="w-100 w-third-ns fl-ns">
             <h2 class="f1">Gov</h2>
             <div>arrow</div>
             <div>
@@ -191,7 +182,7 @@
             </div>
             <button>CTA</button>
           </div>
-          <div class="w-third fl">
+          <div class="w-100 w-third-ns fl-ns">
             <h2 class="f1">Funders</h2>
             <div>arrow</div>
             <div>
@@ -202,7 +193,7 @@
             </div>
             <button>CTA</button>
           </div>
-          <div class="w-third fl">
+          <div class="w-100 w-third-ns fl-ns">
             <h2 class="f1">Scientists</h2>
             <div>arrow</div>
             <div>

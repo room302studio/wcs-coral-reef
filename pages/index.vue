@@ -107,12 +107,13 @@
         <div class="w-50 ba b--black fl">
           <div class="flex flex-column justify-center items-center h-100">
             <h3>Spinny globe</h3>
-            <SpinnyGlobe />
+            <SpinnyGlobe @update:bcu="selectedBCUID = $event" />
           </div>
         </div>
 
         <div class="w-50 fl ph5">
           <h2 class="pa0 ma0">Metadata</h2>
+          <h2 class="yellow">{{ selectedBCUID }}</h2>
           <ul class="list pa0">
             <li><strong>Item:</strong> Value</li>
             <li><strong>Item:</strong> Value</li>
@@ -218,4 +219,11 @@
     </div>
   </div>
 </template>
-<script setup></script>
+<script setup>
+const selectedBCUID = ref(null);
+
+// watch selectedBCUID and console.log it with an emoji
+watch(selectedBCUID, (newValue) => {
+  console.log("🌎", newValue);
+});
+</script>

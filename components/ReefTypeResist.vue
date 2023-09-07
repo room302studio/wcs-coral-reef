@@ -3,14 +3,15 @@
     <h1>{{ title }}</h1>
     <div class="cf">
       <div class="w-100 w-50-ns fl-ns">
-        How they resist
+        <p>
+
+        </p>
       </div>
 
       <div class="w-100 w-50-ns fl-ns">
-        <h2>Intro graf</h2>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempore quae repudiandae voluptate, impedit
-          possimus magnam eos voluptas at, natus saepe blanditiis vero incidunt eum recusandae officia, expedita
-          consequuntur molestias?</p>
+        <h2>How Coral Reefs Resist Climate Change</h2>
+        <p>These are reefs that, despite being exposed to warmer waters due to climate change, have evolved adaptations
+          that allow them to resist bleaching events.</p>
       </div>
     </div>
 

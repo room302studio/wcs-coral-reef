@@ -118,11 +118,12 @@ export const globe = (container, { state, setState }) => {
     .attr("class", "worldAtlas")
     .attr("d", path)
     // .attr("stroke", "black")
-    .attr("fill", "#ffedd9");
+    // .attr("fill", "#ffedd9");
+    .attr('fill', '#CCC');
 
   const colorScale = scaleOrdinal(schemeCategory10);
 
-  console.log(state.goodCompromiseBCUsData.features);
+  // console.log(state.goodCompromiseBCUsData.features);
   // Render shapes from state.goodCompromiseBCUsData
   svg
     .selectAll("path.goodCompromiseBCUs")
@@ -133,7 +134,10 @@ export const globe = (container, { state, setState }) => {
     // .attr("stroke", "black")
     .attr("fill", (d) => colorScale(d.properties.BCUID))
     .on("click", (_, d) => {
-      console.log(d.properties.BCUID);
+      if(!d.properties.BCUID) {
+        return;
+      }
+      // console.log(d.properties.BCUID);
       setState((state) => ({
         ...state,
         selectedBCUID: d.properties.BCUID,
@@ -158,7 +162,7 @@ export const globe = (container, { state, setState }) => {
 
     */
 
-  console.log("scale", state.scale);
+  // console.log("scale", state.scale);
 
   // Support panning
   svg.call(
@@ -189,4 +193,35 @@ export const globe = (container, { state, setState }) => {
       }));
     })
   );
+
+  /* start a request animation frame that slowly rotates the globe as long as the mouse is not down */
+  // if (!state.mouseDown) {
+  //   requestAnimationFrame(() => {
+  //     setState((state) => ({
+  //       ...state,
+  //       rotate: [
+  //         state.rotate[0] + 0.4,
+  //         state.rotate[1],
+  //         state.rotate[2],
+  //       ],
+  //     }));
+  //   });
+  // }
+
+  // // set the mouseDown state to true when the mouse is down
+  // svg.on("mousedown", () => {
+  //   setState((state) => ({
+  //     ...state,
+  //     mouseDown: true,
+  //   }));
+  // })
+
+  // // set the mouseDown state to false when the mouse is up
+  // svg.on("mouseup", () => {
+  //   setState((state) => ({
+  //     ...state,
+  //     mouseDown: false,
+  //   }));
+  // });
+    
 };

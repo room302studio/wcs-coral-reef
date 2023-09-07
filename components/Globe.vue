@@ -1,5 +1,5 @@
 <template>
-  <div class="globe-container" ref="globeDiv"></div>
+  <div class="globe-container bg-white" ref="globeDiv"></div>
 </template>
 <script setup>
 import { defineProps, watch } from "vue";

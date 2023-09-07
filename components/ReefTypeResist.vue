@@ -1,5 +1,5 @@
 <template>
-  <div id="section-5" class="section w-100 cf">
+  <div id="section-5" class="section w-100 cf bg-white">
     <h1>{{ title }}</h1>
     <div class="cf">
       <div class="w-100 w-50-ns fl-ns">

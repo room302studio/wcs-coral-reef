@@ -1,5 +1,5 @@
 <template>
-  <Globe :state="stateRef" :setState="setState" />
+  <Globe :state="stateRef" :setState="setState" class="br4" />
 </template>
 <script setup>
 const stateRef = ref({});

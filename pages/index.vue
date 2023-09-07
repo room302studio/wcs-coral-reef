@@ -1,7 +1,7 @@
 <template>
   <div class="pa1 pa5-l pr6-l">
     <div class="vh-50 w-100 pa4">
-      <h1>Intro Title</h1>
+      <h1 class="f-headline">Wave of Hope: Coral Reefs Dance with Climate Change</h1>
     </div>
 
     <div id="floating-nav" class="fixed-ns right-1 top-1 bg-white pa2 pv4 w-100 w-10-ns f6">
@@ -21,11 +21,10 @@
     </div>
 
     <div class="cf">
-      <div class="measure fl">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum
-        similique ratione ex explicabo soluta ab fuga minima, qui nobis omnis
-        doloribus unde magni quod modi quos! Porro necessitatibus eveniet
-        voluptates!
+      <div class="measure fl f1 lh-title pb5">
+        <p>Nestled beneath the ocean waves, some coral reefs are defying the odds, challenging standard climate
+          predictions.</p>
+        <p>Understand how these resilient ecosystems are resisting, avoiding, and recovering from climate change.</p>
       </div>
     </div>
 
@@ -34,16 +33,14 @@
     </div>
 
     <div id="section-1 cf" class="section">
-      <div class="w-100 w-two-thirds-ns fl">
+      <div class="w-100 w-50-ns fl">
         <h1>Chart of global temp rise</h1>
       </div>
 
-      <div class="w-100 w-third-ns fl">
+      <div class="w-100 w-50-ns fl">
         <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae
-          libero provident dolorem excepturi minus quaerat quasi assumenda optio
-          quod eveniet, voluptatum pariatur ducimus facere, consequatur
-          reiciendis ea vero aliquam nam.
+          The rising global temperatures challenge life as we know it, but beneath the ocean's surface, an unprecedented
+          phenomenon is occurring. Coral reefs, in defiance of escalating odds, are writing their own survival story.
         </p>
       </div>
     </div>
@@ -52,20 +49,24 @@
       <div class="w-100 w-50-ns fl-ns">
         <h2 class="ma0 pa0">Impact on world</h2>
         <ul>
-          <li>Impact 1</li>
-          <li>Impact 2</li>
-          <li>Impact 3</li>
-          <li>Impact 4</li>
+          <li>More frequent and intense heatwaves</li>
+          <li>Increased frequency of wildfires</li>
+          <li>Changes in crop yields</li>
+          <li>Increased intensity of tropical storms</li>
+          <li>Spread of vector-borne diseases</li>
         </ul>
       </div>
 
       <div class="w-100 w-50-ns fl-ns">
         <h2 class="ma0 pa0">Impact on oceans</h2>
         <ul>
-          <li>Impact 1</li>
-          <li>Impact 2</li>
-          <li>Impact 3</li>
-          <li>Impact 4</li>
+          <li><a href="https://indonesia.wcs.org/en-us/Initiatives/Marine/Coral-Bleaching.aspx">Coral bleaching events</a>
+          </li>
+          <li><a href="https://www.fisheries.noaa.gov/insight/understanding-ocean-acidification">Ocean acidification</a>
+          </li>
+          <li>Disruption of marine food chains</li>
+          <li>Altered ocean currents</li>
+          <li>Loss of coastal habitats due to rising sea levels</li>
         </ul>
       </div>
     </div>
@@ -88,7 +89,8 @@
       </div>
     </div>
 
-    <ReefTypeModule class="ba b--black pa4" :title="'Resist'" />
+    <!-- <ReefTypeModule class="ba b--black pa4" :title="'Resist'" /> -->
+    <ReefTypeResist class="ba b--black pa4" :title="'Resist'" />
 
     <ReefTypeModule class="ba b--black pa4" :title="'Recover'" />
 

@@ -4,6 +4,8 @@
       <h1>Intro Title</h1>
     </div>
 
+    <TopographicVisual class="w-100" />
+
     <div id="floating-nav" class="fixed right-1 top-1 bg-white pa2 w-10 f6">
       <h4 class="ma0 pa0">Navigation</h4>
       <ul class="pa0 mt2 mb0 list">
@@ -96,13 +98,8 @@
 
     <div id="section-6" class="section w-100">
       <h2>Explore them all</h2>
-      <iframe
-        width="100%"
-        height="600"
-        frameborder="0"
-        title="Felt Map"
-        src="https://felt.com/embed/map/Coral-Reefs-Y1O4GeEVRVuGF7EJN49AZxC?loc=-1.04,114.89,3z"
-      ></iframe>
+      <iframe width="100%" height="600" frameborder="0" title="Felt Map"
+        src="https://felt.com/embed/map/Coral-Reefs-Y1O4GeEVRVuGF7EJN49AZxC?loc=-1.04,114.89,3z"></iframe>
       <div class="cf">
         <div class="w-50 ba b--black fl">
           <div class="flex flex-column justify-center items-center h-100">
@@ -143,13 +140,9 @@
             </thead>
             <tbody>
               <!-- just make 20 example reefs -->
-              <tr
-                v-for="i in 20"
-                :key="i"
-                :style="{
-                  backgroundColor: i === 7 ? '#CCC' : '',
-                }"
-              >
+              <tr v-for="i in 20" :key="i" :style="{
+                backgroundColor: i === 7 ? '#CCC' : '',
+              }">
                 <td>Reef {{ i }}</td>
                 <td>Location {{ i }}</td>
                 <td>Country {{ i }}</td>

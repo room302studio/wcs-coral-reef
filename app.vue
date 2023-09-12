@@ -75,7 +75,11 @@ body {
   }
 }
 
-#bg-gradient {
+body {
+  background: linear-gradient(180deg, #020E18 0%, #006794 100%);
+}
+
+/* #bg-gradient {
   position: fixed;
   top: 0;
   left: 0;
@@ -85,7 +89,6 @@ body {
   background: linear-gradient(270deg, #00dbde, #fff, #00dbde, #fff);
   background-size: 900% 900%;
   animation: gradient 30s linear infinite;
-  /* use a multiply blend mode to make the gradient blend with the background image */
   mix-blend-mode: multiply;
 }
 
@@ -100,7 +103,24 @@ body {
   background: linear-gradient(270deg, #0082de, #fff, #00dbde, #fff5cb);
   background-size: 400% 400%;
   animation: gradient2 60s linear infinite;
-  /* use a multiply blend mode to make the gradient blend with the background image */
   mix-blend-mode: multiply;
+} */
+
+
+/* tachyon color overrides based on figma */
+.light-blue {
+  color: #99CDFF
+}
+
+/* give links a background color of #8054FF, remove underline, make text white, and round corners */
+a {
+  background-color: #443fe5;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+ul li {
+  margin-top: 1.25rem;
 }
 </style>

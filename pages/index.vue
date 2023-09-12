@@ -1,20 +1,47 @@
 <template>
-  <div class="pa1 pa5-l w-90">
+  <div class="pa1 pa5-l w-90 light-blue">
     <div class="vh-50 w-100 pa4">
-      <h1 class="f-headline" v-motion appear :initial="{ opacity: 0 }" :enter="{ opacity: 1, scale: 1 }" :delay="500">
+      <h1 class="f-headline tc light-blue" v-motion appear :initial="{ opacity: 0 }" :enter="{ opacity: 1, scale: 1 }"
+        :delay="500">
         Wave of Hope: Coral Reefs Dance with Climate Change</h1>
     </div>
 
-    <TopographicVisual class="w-100" />
-
     <div class="cf">
-      <div class="measure fl f1 lh-title pb5" v-motion appear :initial="{ opacity: 0 }" :enter="{ opacity: 1, scale: 1 }"
-        :delay="500">
+      <div class="measure fl f3 fw6 lh-title pb5 light-blue" v-motion appear :initial="{ opacity: 0 }"
+        :enter="{ opacity: 1, scale: 1 }" :delay="500">
         <p>Nestled beneath the ocean waves, some coral reefs are defying the odds, challenging standard climate
           predictions.</p>
         <p>Understand how these resilient ecosystems are resisting, avoiding, and recovering from climate change.</p>
       </div>
     </div>
+
+
+    <div id="intro-bg">
+
+    </div>
+
+    <div id="intro-visual" class="w-100">
+      <div id="cloud-1" class="cloud vh-25">
+        <img src="svg/cloud.svg" alt="cloud" class="w-100 h-100" />
+      </div>
+      <div id="cloud-2" class="cloud vh-25">
+        <img src="svg/cloud.svg" alt="cloud" class="w-100 h-100" />
+      </div>
+      <div id="cloud-3" class="cloud vh-25">
+        <img src="svg/cloud.svg" alt="cloud" class="w-100 h-100" />
+      </div>
+
+      <div id="stars"></div>
+
+      <div id="ocean-waves" class="vh-25">
+        <img src="svg/waves.svg" alt="ocean waves" class="" />
+      </div>
+    </div>
+
+
+    <TopographicVisual class="w-100" />
+
+
 
     <div id="surface-of-water">
       <hr />
@@ -212,5 +239,82 @@ watch(selectedBCUID, (newValue) => {
   min-height: 66vh;
   margin-top: 29vh;
   margin-bottom: 29vh;
+}
+</style>
+<style scoped>
+#intro-visual {
+  z-index: -1;
+}
+
+.cloud {
+  position: absolute;
+  top: -10vh;
+  /* Adjust the value to increase or decrease the vertical offset */
+  animation: cloudAnimation linear infinite;
+  animation-duration: 480s;
+  animation-delay: 0s;
+  opacity: 0.8;
+}
+
+@keyframes cloudAnimation {
+  0% {
+    transform: translateX(-120%);
+  }
+
+  100% {
+    transform: translateX(110%);
+  }
+}
+
+#cloud-1 {
+  width: 80%;
+  z-index: 1;
+  animation-duration: 40s;
+  top: 21vh;
+}
+
+#cloud-2 {
+  width: 70%;
+  z-index: 2;
+  animation-duration: 35s;
+  animation-delay: -2s;
+  top: 44vh;
+}
+
+#cloud-3 {
+  width: 20%;
+  z-index: 3;
+  animation-duration: 30s;
+  animation-delay: -10s;
+  top: 72vh;
+}
+
+#ocean-waves {
+  position: absolute;
+  left: 0;
+  bottom: -150px;
+  width: 100vw;
+  z-index: 2;
+}
+
+#ocean-waves img {
+  width: 100%;
+}
+
+#intro-bg {
+  /* background: linear-gradient(180deg, rgba(9, 26, 43, 0) 0%, rgba(0, 103, 148, 0.8) 96.1%); */
+  /* make svg/sky_glow.svg the background */
+  background: url(svg/sky_glow.png) no-repeat;
+  /* but attach it to the bottom of the page */
+  background-position: bottom;
+  /* and make it cover the whole page */
+  background-size: cover;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
 }
 </style>

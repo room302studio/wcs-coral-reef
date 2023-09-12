@@ -25,7 +25,7 @@ export default defineNuxtConfig({
     '@vueuse/motion/nuxt',
     ['@nuxtjs/google-fonts', {
       families: {
-        'Figtree': [400, 700],
+        'Figtree': [200, 300, 400, 500, 600, 700, 800],
       },
     }],
   ],

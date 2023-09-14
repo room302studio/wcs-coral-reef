@@ -1,5 +1,5 @@
 <template>
-  <div id="section-5" class="section w-100 cf bg-white">
+  <div id="section-5" class="section w-100 cf">
     <h1>{{ title }}</h1>
     <div class="cf">
       <div class="w-100 w-50-ns fl-ns">
@@ -73,8 +73,10 @@
   </div>
 </template>
 <script setup>
-const { title } = defineProps({
+const { title, headline, intro } = defineProps({
   title: String,
+  headline: String,
+  intro: String,
 })
 
 </script>

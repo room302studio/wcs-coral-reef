@@ -1,5 +1,5 @@
 <template>
-  <Globe :state="stateRef" :setState="setState" class="br4" />
+  <Globe :state="stateRef" :setState="setState" class="br4 ba b--white" style="background-color: rgba(255,255,255,0.2)" />
 </template>
 <script setup>
 const stateRef = ref({});

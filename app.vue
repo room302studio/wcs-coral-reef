@@ -4,21 +4,7 @@
     </div>
     <div id="bg-gradient-2"></div>
 
-    <div id="floating-nav" class="fixed right-1 top-1 bg-white pa2 w-10 f6 br2">
-      <h4 class="ma0 pa0">Navigation</h4>
-      <ul class="pa0 mt2 mb0 list">
-        <li class="mv2">Introduction</li>
-        <li class="mv2">Global temperature rise</li>
-        <li class="mv2">Impact on world and oceans</li>
-        <li class="mv2">Ocean reef percentage</li>
-        <li class="mv2">Reef type breakdown</li>
-        <li class="mv2">Reef type: resist</li>
-        <li class="mv2">Reef type: recover</li>
-        <li class="mv2">Reef type: avoid</li>
-        <li class="mv2">Explore them all</li>
-        <li class="mv2">Call to action</li>
-      </ul>
-    </div>
+
 
     <NuxtPage />
   </div>
@@ -38,11 +24,19 @@ onMounted(() => {
 })
 </script>
 <style>
+.active {
+  background-color: #8054FF;
+  color: white;
+  font-weight: 700;
+}
+
 /* use Figtree font for everything */
 body {
   font-family: 'Figtree', sans-serif;
   font-size: 24px;
 }
+
+
 
 /* create a very beautiful subtle animation background gradient that slowly changes over time, reminiscent of ocean waves */
 @keyframes gradient {
@@ -112,13 +106,29 @@ body {
   color: #99CDFF
 }
 
+.teal {
+  color: #5CF3E1;
+}
+
 /* give links a background color of #8054FF, remove underline, make text white, and round corners */
-a {
+/* a {
   background-color: #443fe5;
   color: white;
   text-decoration: none;
   border-radius: 4px;
+} */
+
+a {
+  color: #8054FF;
 }
+
+/* links with an image inside them should not have a background color */
+/* a img {
+  background-color: transparent !important;
+} */
+/* that doesn't work because we need to set the transparent on the a tag, not the img tag */
+/* instead, we'll just set the background color to white */
+
 
 ul li {
   margin-top: 1.25rem;

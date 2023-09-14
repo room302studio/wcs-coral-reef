@@ -1,10 +1,10 @@
 <template>
   <div>
-    <canvas id="topographic-canvas" ref="topographicCanvas" class=" w-100 fixed top-0 left-0 o-60" :width="width"
+    <canvas id="topographic-canvas" ref="topographicCanvas" class="w-100 fixed top-0 left-0 o-60" :width="width"
       :height="height" :style="{
         transform: `scale(${canvasScale})`,
         transformOrigin: 'center center',
-      }" />
+      }"></canvas>
   </div>
 </template>
 <script setup>
@@ -20,10 +20,13 @@ import { useWindowScroll, useElementSize, useDebounceFn } from '@vueuse/core'
 
 const { width, height } = useWindowSize()
 
-const q = 3
+const q = 3.1
 
-const period = 0.005
-const octaves = 4
+const period = 0.008
+const octaves = 4.5
+
+const scrollMultiplier = ref(0.5);
+
 
 const n = Math.ceil(width.value / q) + 1
 const m = Math.ceil(height.value / q) + 1
@@ -55,14 +58,14 @@ const { height: pageHeight } = useElementSize(document.body)
 const canvasScale = computed(() => {
   // use y to find how far down the page we are
 
-  const scrollProgress = y.value / pageHeight.value
+  const scrollProgress = (y.value / pageHeight.value) * scrollMultiplier.value
 
   // we want to scale up from 1 to 1.25
   const scaleStart = 1
   const scaleEnd = 1.5
 
   // we want to scale up for the entire duration of the page
-  const duration = 1
+  const duration = 1 * scrollMultiplier.value
 
   // we want to scale up using a quadratic ease out
   const ease = (t) => t * (2 - t)
@@ -80,7 +83,7 @@ const canvasScale = computed(() => {
 })
 
 // Define the offset as a reactive value so it can be easily tweaked later
-const offset = ref(0.15);
+const offset = 0.08
 
 onMounted(() => {
   context.value = topographicCanvas.value.getContext('2d');
@@ -90,8 +93,8 @@ onMounted(() => {
 
   watch(y, (newY) => {
     // Adjust the newY and lastY values by the offset
-    const adjustedNewY = newY - offset.value * pageHeight.value;
-    const adjustedLastY = lastY.value - offset.value * pageHeight.value;
+    const adjustedNewY = newY - offset * pageHeight.value;
+    const adjustedLastY = lastY.value - offset * pageHeight.value;
 
     if (adjustedNewY > adjustedLastY) {
       const linesToDraw = Math.floor(adjustedNewY / pageHeight.value * m);
@@ -105,14 +108,14 @@ onMounted(() => {
   // Draw lines up to the current scroll position on mount
   nextTick(() => {
     // Adjust the y value by the offset
-    const adjustedY = y.value - offset.value * pageHeight.value;
+    const adjustedY = y.value - offset * pageHeight.value;
     drawLines(Math.floor(adjustedY / pageHeight.value * m), 0, path);
   });
 });
 
 function drawLines(to, from = 0, path) {
   // draw a white box with opacity of 0.1
-  context.value.fillStyle = 'rgba(255,255,255,0.005)';
+  context.value.fillStyle = 'rgba(255,255,255,0.0025)';
   // context.value.fillRect(0, 0, width.value, height.value);
   for (let i = from; i < to; i++) {
     const value = grid[i];
@@ -125,7 +128,8 @@ function drawLines(to, from = 0, path) {
 }
 </script>
 <style scoped>
-#topographic-canvas {
+#topographic-canvas,
+canvas {
   z-index: -10;
 }
 </style>

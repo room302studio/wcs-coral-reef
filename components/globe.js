@@ -1,3 +1,4 @@
+import { transition, easeQuadInOut, interpolate } from "d3";
 import { select } from "d3-selection";
 import { geoOrthographic, geoPath, geoGraticule } from "d3-geo";
 import { scaleOrdinal } from "d3-scale";
@@ -22,7 +23,9 @@ const worldAtlasURL =
   "https://unpkg.com/visionscarto-world-atlas@0.1.0/world/110m.json";
 
 // Sensitivity of panning and zooming
-const sensitivity = 58;
+// const sensitivity = 58;
+const sensitivity = 72;
+
 
 // Framework-agnostic implementation of a spinny globe.
 export const globe = (container, { state, setState }) => {
@@ -100,6 +103,39 @@ export const globe = (container, { state, setState }) => {
   projection.rotate(state.rotate);
   projection.scale(state.scale);
 
+   // Calculate the centroids
+  const centroids = state.goodCompromiseBCUsData.features
+    .map(feature => path.centroid(feature))
+      .filter(centroid => !centroid.some(Number.isNaN));
+
+  console.log("centroids", centroids);
+
+  // Rotate to Centroids
+  let currentCentroidIndex = 0;
+setInterval(() => {
+  const centroid = centroids[currentCentroidIndex];
+  
+  // Create a transition
+  const t = transition().duration(6000).ease(easeQuadInOut);
+
+  // Use the transition to rotate the projection
+  const rotate = projection.rotate();
+  const interpolator = interpolate(rotate, [-centroid[0], -centroid[1]]);
+  
+  t.tween("rotate", () => {
+    return t => {
+      const newRotate = interpolator(t);
+      newRotate[1] = Math.max(-180, Math.min(180, newRotate[1]));
+      // newRotate[1] = 0
+      projection.rotate(newRotate);
+      projection.scale(1000);
+      svg.selectAll("path").attr("d", path);
+    };
+  });
+
+  currentCentroidIndex = (currentCentroidIndex + 1) % centroids.length;
+}, 6000);
+
   // Render graticules (lines around the globe)
   // svg
   //   .selectAll("path.graticule")
@@ -119,7 +155,7 @@ export const globe = (container, { state, setState }) => {
     .attr("d", path)
     // .attr("stroke", "black")
     // .attr("fill", "#ffedd9");
-    .attr('fill', '#CCC');
+    .attr('fill', '#011129');
 
   const colorScale = scaleOrdinal(schemeCategory10);
 

@@ -25,7 +25,7 @@
 
       <!-- add some stars floating at the top -->
       <div id="stars" class="vh-50 absolute top-0 left-0 w-100 pa5">
-        <img src="svg/stars.svg" alt="stars" class="w-100 h-100" />
+        <img src="/svg/stars.svg" alt="stars" class="w-100 h-100" />
       </div>
 
       <div id="floating-nav" class="pa2 f6 br2 fixed">
@@ -51,7 +51,7 @@
         Understand how these resilient ecosystems are resisting, avoiding, and recovering from climate change.
       </p>
       <!-- down arrow -->
-      <img src="svg/down_arrow.svg" alt="down arrow" class="h3 center db" />
+      <img src="/svg/down_arrow.svg" alt="down arrow" class="h3 center db" />
     </div>
 
 
@@ -61,19 +61,19 @@
 
     <div id="intro-visual" class="w-100">
       <div id="cloud-1" class="cloud vh-25">
-        <img src="svg/cloud.svg" alt="cloud" class="w-100 h-100" />
+        <img src="/svg/cloud.svg" alt="cloud" class="w-100 h-100" />
       </div>
       <div id="cloud-2" class="cloud vh-25">
-        <img src="svg/cloud.svg" alt="cloud" class="w-100 h-100" />
+        <img src="/svg/cloud.svg" alt="cloud" class="w-100 h-100" />
       </div>
       <div id="cloud-3" class="cloud vh-25">
-        <img src="svg/cloud.svg" alt="cloud" class="w-100 h-100" />
+        <img src="/svg/cloud.svg" alt="cloud" class="w-100 h-100" />
       </div>
 
       <div id="stars"></div>
 
       <div id="ocean-waves" class="vh-25">
-        <img src="svg/waves.svg" alt="ocean waves" class="" />
+        <img src="/svg/waves.svg" alt="ocean waves" class="" />
       </div>
     </div>
 
@@ -95,7 +95,7 @@
 
 
         <div>
-          <img src="svg/global_temp_rise_chart.svg" />
+          <img src="/svg/global_temp_rise_chart.svg" />
         </div>
       </div>
 
@@ -172,7 +172,7 @@
     <div class="section w-100 cf flex flex-row justify-center items-center w-100 w-90-l pa1 pa5-l">
       <div class="w-100 w-two-thirds-ns bg-transparent-white pa3">
         <h1 class="pr1 pr4-l f2 fw2 tc">Our understanding is evolving</h1>
-        <img src="svg/environmental_conditions.svg" alt="reef evolution" class="w-100" />
+        <img src="/svg/environmental_conditions.svg" alt="reef evolution" class="w-100" />
       </div>
 
       <div class="w-third fl pa4">
@@ -298,7 +298,7 @@
         <div class="reef-type w-third fl">Avoid</div>
       </div> -->
       <div class="bg-transparent-black">
-        <img src="svg/refuge_types.r2.svg" alt="reef type breakdown" class="w-100 z-2" />
+        <img src="/svg/refuge_types.r2.svg" alt="reef type breakdown" class="w-100 z-2" />
       </div>
     </div>
 
@@ -330,7 +330,7 @@
               <div class="pv4 f1 white b">
                 Sign on to the WCS letter to save ocean biodiversity
               </div>
-              <img src="svg/down_arrow.svg" alt="down arrow" class="h3 center db" />
+              <img src="/svg/down_arrow.svg" alt="down arrow" class="h3 center db" />
               <button class="w-100 pa2 tc mv4 bg-black white br2 ba b--white bw2">Sign on</button>
             </div>
 
@@ -340,7 +340,7 @@
               <div class="pv4 f1 white b">
                 Scientist or funder?
               </div>
-              <img src="svg/down_arrow.svg" alt="down arrow" class="h3 center db" />
+              <img src="/svg/down_arrow.svg" alt="down arrow" class="h3 center db" />
               <button class="w-100 pa2 tc mv4 bg-black white br2 ba b--white bw2">Join us</button>
             </div>
 

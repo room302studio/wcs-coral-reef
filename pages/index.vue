@@ -25,7 +25,7 @@
 
       <!-- add some stars floating at the top -->
       <div id="stars" class="vh-50 absolute top-0 left-0 w-100 pa5">
-        <img src="/svg/stars.svg" alt="stars" class="w-100 h-100" />
+        <img :src="`/svg/stars.svg`" alt="stars" class="w-100 h-100" />
       </div>
 
       <div id="floating-nav" class="pa2 f6 br2 fixed">
@@ -51,7 +51,7 @@
         Understand how these resilient ecosystems are resisting, avoiding, and recovering from climate change.
       </p>
       <!-- down arrow -->
-      <img src="/svg/down_arrow.svg" alt="down arrow" class="h3 center db" />
+      <img :src="`/svg/down_arrow.svg`" alt="down arrow" class="h3 center db" />
     </div>
 
 
@@ -61,19 +61,19 @@
 
     <div id="intro-visual" class="w-100">
       <div id="cloud-1" class="cloud vh-25">
-        <img src="/svg/cloud.svg" alt="cloud" class="w-100 h-100" />
+        <img :src="`/svg/cloud.svg`" alt="cloud" class="w-100 h-100" />
       </div>
       <div id="cloud-2" class="cloud vh-25">
-        <img src="/svg/cloud.svg" alt="cloud" class="w-100 h-100" />
+        <img :src="`/svg/cloud.svg`" alt="cloud" class="w-100 h-100" />
       </div>
       <div id="cloud-3" class="cloud vh-25">
-        <img src="/svg/cloud.svg" alt="cloud" class="w-100 h-100" />
+        <img :src="`/svg/cloud.svg`" alt="cloud" class="w-100 h-100" />
       </div>
 
       <div id="stars"></div>
 
       <div id="ocean-waves" class="vh-25">
-        <img src="/svg/waves.svg" alt="ocean waves" class="" />
+        <img :src="`/svg/waves.svg`" alt="ocean waves" class="" />
       </div>
     </div>
 
@@ -85,7 +85,7 @@
 
     <div class="o-70" style="margin-top: -50px;">
       <!-- beautiful coral reef photography -->
-      <img src="/images/EmilyDarling.Fiji.2019%20%20(6)_transparent.png" alt="coral reef" class="br4 z-0" />
+      <img :src="`/images/EmilyDarling.Fiji.2019_transparent.png`" alt="coral reef" class="br4 z-0" />
     </div>
 
     <!-- The tachyons class to make flex items go to the bottom of the container is "flex flex-column justify-end items-center" -->
@@ -95,7 +95,7 @@
 
 
         <div>
-          <img src="/svg/global_temp_rise_chart.svg" />
+          <img :src="`/svg/global_temp_rise_chart.svg`" />
         </div>
       </div>
 
@@ -172,7 +172,7 @@
     <div class="section w-100 cf flex flex-row justify-center items-center w-100 w-90-l pa1 pa5-l">
       <div class="w-100 w-two-thirds-ns bg-transparent-white pa3">
         <h1 class="pr1 pr4-l f2 fw2 tc">Our understanding is evolving</h1>
-        <img src="/svg/environmental_conditions.svg" alt="reef evolution" class="w-100" />
+        <img :src="`/svg/environmental_conditions.svg`" alt="reef evolution" class="w-100" />
       </div>
 
       <div class="w-third fl pa4">
@@ -429,11 +429,11 @@
 
       <!-- /logos/WCS_SEAL_ACRONYM-White stroke.png -->
       <div class="flex flex-row justify-center items-center">
-        <img src="/logos/WCS_SEAL_ACRONYM-White%20stroke.png" alt="WCS logo" class="h4" />
+        <img :src="`/logos/WCS_SEAL_ACRONYM-White%20stroke.png`" alt="WCS logo" class="h4" />
 
-        <img src="/logos/BP_Ocean_Initiative_logo_Stacked_White.png" alt="NOAA logo" class="h4" />
+        <img :src="`/logos/BP_Ocean_Initiative_logo_Stacked_White.png`" alt="NOAA logo" class="h4" />
         <a href="https://room302.studio" class="dim ml2">
-          <img src="/logos/room302_logo_whiteonalpha.png" class="h4" />
+          <img :src="`/logos/room302_logo_whiteonalpha.png`" class="h4" />
         </a>
 
       </div>

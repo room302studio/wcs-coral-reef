@@ -3,7 +3,7 @@
     <h1>{{ title }}</h1>
 
     <div class="cf">
-      <img class="w-100 w-50-ns fl br2" src="/images/Emily%20Darling.Borneo.2018%20(12).jpg" />
+      <img class="w-100 w-50-ns fl br2" :src="`/images/Emily%20Darling.Borneo.2018.jpg`" />
 
       <div class="w-100 w-50-ns fl-ns pl4">
         <h3 class="w-100 mv0 pv0">

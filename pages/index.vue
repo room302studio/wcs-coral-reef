@@ -85,7 +85,7 @@
 
     <div class="o-70" style="margin-top: -50px;">
       <!-- beautiful coral reef photography -->
-      <img src="images/EmilyDarling.Fiji.2019%20%20(6)_transparent.png" alt="coral reef" class="br4 z-0" />
+      <img src="/images/EmilyDarling.Fiji.2019%20%20(6)_transparent.png" alt="coral reef" class="br4 z-0" />
     </div>
 
     <!-- The tachyons class to make flex items go to the bottom of the container is "flex flex-column justify-end items-center" -->

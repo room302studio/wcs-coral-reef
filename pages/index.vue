@@ -1,7 +1,7 @@
 <template>
   <div class="light-blue pa1 pa5-l">
 
-    
+
 
 
     <TopographicVisual class="w-100 z-1" />
@@ -147,10 +147,26 @@
         <h1 class="pr1 pr4-l">Where Ocean Life Thrives</h1>
       </div>
 
-      <div class="w-50 fl">Reefs, found in <a
-          href="https://www.fisheries.noaa.gov/national/habitat-conservation/shallow-coral-reef-habitat#:~:text=Reefs%20occur%20in%20less%20than,%2C%20sea%20turtles%2C%20and%20more.">less
-          than 1 percent of the ocean</a>, are incredibly important as they house nearly one-quarter of all marine
-        species.</div>
+      <div class="w-50 fl">
+        <p>Reefs, found in <a
+            href="https://www.fisheries.noaa.gov/national/habitat-conservation/shallow-coral-reef-habitat#:~:text=Reefs%20occur%20in%20less%20than,%2C%20sea%20turtles%2C%20and%20more.">less
+            than 1 percent of the ocean</a>, are incredibly important as they house nearly one-quarter of all marine
+          species.</p>
+
+        <p>
+          Corals are the perfect spot for ocean life to find food, shelter, and raise the next generation. This boosts
+          fishery productivity, sustaining millions of people with protein-rich food. But coral reefs are more than
+          aquatic supermarkets. They serve as buffers, absorbing wave energy, protecting our coastlines from storms and
+          erosion.
+        </p>
+
+        <p>
+          Economically too, they're worth billions, driving tourism in many countries.
+        </p>
+
+        <p>With ocean temperatures rising due to climate change, they are under threat.</p>
+
+      </div>
     </div>
 
     <div class="section w-100 cf flex flex-row justify-center items-center w-100 w-90-l pa1 pa5-l">
@@ -159,9 +175,24 @@
         <img src="svg/environmental_conditions.svg" alt="reef evolution" class="w-100" />
       </div>
 
-      <div class="w-third fl pa4">Previous models used only a single environmental condition to understand reefs, but
-        newer models incorporate over 25. This high-definition understanding gives us a much better view of what is
-        happening to reefs around the world, and what we can do to help.
+      <div class="w-third fl pa4">
+        <p>Previous models used to understand how Coral Reefs survive were based only a single environmental condition,
+          but
+          <strong class="white">newer models incorporate over 25</strong>.
+        </p>
+        <p> This high-definition understanding gives us a much better view of what is
+          happening to reefs around the world, and what we can do to help.
+        </p>
+      </div>
+    </div>
+
+    <div class="pa1 pa5-l">
+      <div class="pa3 pa5-l lh-copy f2 measure">
+        <p>We've identified that there are not just one, but <strong>three</strong> distinct types of coral reefs, each
+          responding to climate change in a variety of remarkable ways.
+        </p>
+        <p> This multifaceted way of understanding brings with it profound implications for conservation efforts, enabling
+          us to tailor our strategies to the unique needs and resilience patterns of each reef type. </p>
       </div>
     </div>
 
@@ -267,13 +298,25 @@
         <div class="reef-type w-third fl">Avoid</div>
       </div> -->
       <div class="bg-transparent-black">
-      <img src="svg/refuge_types.r2.svg" alt="reef type breakdown" class="w-100 z-2" />
+        <img src="svg/refuge_types.r2.svg" alt="reef type breakdown" class="w-100 z-2" />
       </div>
     </div>
 
+    <div class="pa1 pa5-l">
+      <div class="pa3 pa5-l lh-copy f2 measure">
+        <h1 class="f1">What now?</h1>
+        <p>
+          What countries are currently doing...
+        </p>
+        <p>
+          How many reefs have yet to be found...
+        </p>
+      </div>
+    </div>
+
+
+
     <div id="section-6" class="section w-100 w-80-ns pa1 pa3-l">
-
-
       <div id="section-7" class="section pa1 pa5-l">
         <h2 class="f1 mv0 pv0">Help</h2>
         <div class="measure-wide white f2 pv5">
@@ -365,13 +408,13 @@
               <tr v-for="reef in reefs" :key="i" :style="{
                 backgroundColor: i === 7 ? '#CCC' : '',
               }" class="stripe-dark">
-                <td class="pa2">{{ reef.Location}}</td>
+                <td class="pa2">{{ reef.Location }}</td>
                 <!-- <td class="pa2">Location {{ i }}</td>
                   <td class="pa2">Country {{ i }}</td>
                   <td class="pa2">Region {{ i }}</td>
                   <td class="pa2">Size {{ i }}</td> -->
                 <td class="pa2"> {{ reef.Description }}</td>
-                <td class="pa2"> {{reef['Refugia type']}}</td>
+                <td class="pa2"> {{ reef['Refugia type'] }}</td>
               </tr>
             </tbody>
           </table>
@@ -388,7 +431,7 @@
       <div class="flex flex-row justify-center items-center">
         <img src="logos/WCS_SEAL_ACRONYM-White%20stroke.png" alt="WCS logo" class="h4" />
 
-        <img src="logos/BP_Ocean_Initiative_logo_BP-Lockup_White.png" alt="NOAA logo" class="h4" />
+        <img src="logos/BP_Ocean_Initiative_logo_Stacked_White.png" alt="NOAA logo" class="h4" />
         <a href="https://room302.studio" class="dim ml2">
           <img src="logos/room302_logo_whiteonalpha.png" class="h4" />
         </a>
@@ -557,5 +600,4 @@ ul li::before {
 /* but disable on the floating nav */
 #floating-nav ul li::before {
   content: none;
-}
-</style>
+}</style>

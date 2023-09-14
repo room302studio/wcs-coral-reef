@@ -429,11 +429,11 @@
 
       <!-- /logos/WCS_SEAL_ACRONYM-White stroke.png -->
       <div class="flex flex-row justify-center items-center">
-        <img src="logos/WCS_SEAL_ACRONYM-White%20stroke.png" alt="WCS logo" class="h4" />
+        <img src="/logos/WCS_SEAL_ACRONYM-White%20stroke.png" alt="WCS logo" class="h4" />
 
-        <img src="logos/BP_Ocean_Initiative_logo_Stacked_White.png" alt="NOAA logo" class="h4" />
+        <img src="/logos/BP_Ocean_Initiative_logo_Stacked_White.png" alt="NOAA logo" class="h4" />
         <a href="https://room302.studio" class="dim ml2">
-          <img src="logos/room302_logo_whiteonalpha.png" class="h4" />
+          <img src="/logos/room302_logo_whiteonalpha.png" class="h4" />
         </a>
 
       </div>

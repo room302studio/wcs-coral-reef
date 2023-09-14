@@ -26,7 +26,6 @@ const worldAtlasURL =
 // const sensitivity = 58;
 const sensitivity = 72;
 
-
 // Framework-agnostic implementation of a spinny globe.
 export const globe = (container, { state, setState }) => {
   // SVG setup
@@ -103,38 +102,46 @@ export const globe = (container, { state, setState }) => {
   projection.rotate(state.rotate);
   projection.scale(state.scale);
 
-   // Calculate the centroids
+  // Calculate the centroids
   const centroids = state.goodCompromiseBCUsData.features
-    .map(feature => path.centroid(feature))
-      .filter(centroid => !centroid.some(Number.isNaN));
+    .map((feature) => path.centroid(feature))
+    .filter((centroid) => !centroid.some(Number.isNaN))
+    // then sort by latitude
+    .sort((a, b) => a[1] - b[1]);
 
   console.log("centroids", centroids);
 
   // Rotate to Centroids
   let currentCentroidIndex = 0;
-setInterval(() => {
-  const centroid = centroids[currentCentroidIndex];
-  
-  // Create a transition
-  const t = transition().duration(6000).ease(easeQuadInOut);
+  setInterval(() => {
+    const centroid = centroids[currentCentroidIndex];
 
-  // Use the transition to rotate the projection
-  const rotate = projection.rotate();
-  const interpolator = interpolate(rotate, [-centroid[0], -centroid[1]]);
-  
-  t.tween("rotate", () => {
-    return t => {
-      const newRotate = interpolator(t);
-      newRotate[1] = Math.max(-180, Math.min(180, newRotate[1]));
-      // newRotate[1] = 0
-      projection.rotate(newRotate);
-      projection.scale(1000);
-      svg.selectAll("path").attr("d", path);
-    };
-  });
+    // Create a transition
+    const t = transition().duration(10000).ease(easeQuadInOut);
 
-  currentCentroidIndex = (currentCentroidIndex + 1) % centroids.length;
-}, 6000);
+    // Use the transition to rotate the projection
+    const rotate = projection.rotate();
+    const interpolator = interpolate(rotate, [-centroid[0], -centroid[1]]);
+
+    t.tween("rotate", () => {
+      return (t) => {
+        const newRotate = interpolator(t);
+        // newRotate[1] = Math.max(-180, Math.min(180, newRotate[1]));
+        newRotate[1] = 0
+        projection.rotate(newRotate);
+        projection.scale(1000);
+        svg.selectAll("path").attr("d", path);
+        // update circle positions
+        // svg
+        //   .selectAll("circle")
+        //   .data(centroids)
+        //   .attr("cx", (d) => path.centroid(d)[0])
+        //   .attr("cy", (d) => path.centroid(d)[1]);
+      };
+    });
+
+    currentCentroidIndex = (currentCentroidIndex + 1) % centroids.length;
+  }, 12000);
 
   // Render graticules (lines around the globe)
   // svg
@@ -155,7 +162,7 @@ setInterval(() => {
     .attr("d", path)
     // .attr("stroke", "black")
     // .attr("fill", "#ffedd9");
-    .attr('fill', '#011129');
+    .attr("fill", "#011129");
 
   const colorScale = scaleOrdinal(schemeCategory10);
 
@@ -170,7 +177,7 @@ setInterval(() => {
     // .attr("stroke", "black")
     .attr("fill", (d) => colorScale(d.properties.BCUID))
     .on("click", (_, d) => {
-      if(!d.properties.BCUID) {
+      if (!d.properties.BCUID) {
         return;
       }
       // console.log(d.properties.BCUID);
@@ -179,6 +186,22 @@ setInterval(() => {
         selectedBCUID: d.properties.BCUID,
       }));
     });
+
+  /* now we need to draw big circles on the map at the centroids of the BCUs */
+
+  // svg
+  //   .selectAll("circle")
+  //   .data(centroids)
+  //   .join("circle")
+  //   .attr("cx", (d) => d[0])
+  //   .attr("cy", (d) => d[1])
+  //   .attr("r", 25)
+  //   .attr("opacity", 0.5)
+  //   // .attr("fill", "black");
+  //   // but lets use the same fill colors as the BCUs
+  //   .attr("stroke", (d, i) =>
+  //     colorScale(state.goodCompromiseBCUsData.features[i].properties.BCUID)
+  //   );
 
   /* 
         <path
@@ -259,5 +282,4 @@ setInterval(() => {
   //     mouseDown: false,
   //   }));
   // });
-    
 };

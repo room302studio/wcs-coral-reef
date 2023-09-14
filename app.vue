@@ -1,11 +1,5 @@
 <template>
   <div>
-    <div id="bg-gradient">
-    </div>
-    <div id="bg-gradient-2"></div>
-
-
-
     <NuxtPage />
   </div>
 </template>
@@ -69,8 +63,19 @@ body {
   }
 }
 
-body {
+/* r1 */
+/* body {
   background: linear-gradient(180deg, #020E18 0%, #006794 100%);
+} */
+
+/* r2 */
+/* body {
+  background: linear-gradient(180deg, #020E18 0%, #033862 25%, #0365a9 50%, #0484d1 75%, #006794 100%);
+} */
+
+/* figma */
+body {
+background: linear-gradient(180deg, #020E18 0%, #006794 100%);
 }
 
 /* #bg-gradient {
@@ -119,7 +124,8 @@ body {
 } */
 
 a {
-  color: #8054FF;
+  /* color: #8054FF; */
+  color: white;
 }
 
 /* links with an image inside them should not have a background color */
@@ -132,5 +138,13 @@ a {
 
 ul li {
   margin-top: 1.25rem;
+}
+
+.bg-transparent-white {
+  background-color: #99CDFF1A;
+}
+
+.bg-transparent-black {
+  background-color: #0000001A;
 }
 </style>

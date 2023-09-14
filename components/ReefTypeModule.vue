@@ -17,14 +17,12 @@
       <h2>Where</h2>
       <!-- make a 2x3 grid of map locations -->
       <div class="cf">
-        <div class="w-third pa2 break-word overflow-hidden fl">
+        <!-- <div class="w-third pa2 break-word overflow-hidden fl">
           <h3 class="mv0 pv1">Location 1</h3>
-          <!-- <img class="w-100 h5" style="background-color: #CCC;" /> -->
           <SatelliteImage lat="40" lng="-100" class="w-100 h5" />
         </div>
         <div class="w-third pa2 break-word overflow-hidden fl">
           <h3 class="mv0 pv1">Location 2</h3>
-          <!-- <img class="w-100 h5" style="background-color: #CCC;" /> -->
           <SatelliteImage lat="20" lng="-120" class="w-100 h5" />
         </div>
         <div class="w-third pa2 break-word overflow-hidden fl">
@@ -42,6 +40,10 @@
         <div class="w-third pa2 break-word overflow-hidden fl">
           <h3 class="mv0 pv1">Location 6</h3>
           <SatelliteImage lat="10" lng="-99" class="w-100 h5" />
+        </div> -->
+        <div v-for="location in locations" class="w-third pa2 break-word overflow-hidden fl">
+          <h3 class="mv0 pv1 f3 fw1">{{ location.name }}</h3>
+          <SatelliteImage :lat="location.lat" :lng="location.lng" class="w-100 h5" />
         </div>
       </div>
 
@@ -70,5 +72,6 @@ const { title, headline, copy } = defineProps({
   title: String,
   headline: String,
   copy: String,
+  locations: Array,
 })
 </script>

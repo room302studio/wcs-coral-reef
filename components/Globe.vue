@@ -1,5 +1,5 @@
 <template>
-  <div class="globe-container" ref="globeDiv"></div>
+  <div class="globe-container" ref="globeDiv" style="height: 900px;"></div>
 </template>
 <script setup>
 import { defineProps, watch } from "vue";
@@ -25,7 +25,8 @@ watch(() => props.state, render);
 onMounted(() => {
   const { setState } = props;
   // Measure the initial width and height of globeDiv
-  const { width, height } = globeDiv.value.getBoundingClientRect();
+  const { width } = globeDiv.value.getBoundingClientRect();
+  const height = 900
   //   console.log({ width, height });
 
   // Trigger initial render

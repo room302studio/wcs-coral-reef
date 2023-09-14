@@ -4,6 +4,8 @@
       :height="height" :style="{
         transform: `scale(${canvasScale})`,
         transformOrigin: 'center center',
+        opacity: canvasOpacity,
+        blur: canvasBlur,
       }"></canvas>
   </div>
 </template>
@@ -23,9 +25,9 @@ const { width, height } = useWindowSize()
 const q = 3.1
 
 const period = 0.008
-const octaves = 4.5
+const octaves = 4
 
-const scrollMultiplier = ref(0.5);
+const scrollMultiplier = ref(0.25);
 
 
 const n = Math.ceil(width.value / q) + 1
@@ -55,20 +57,22 @@ const { y } = useWindowScroll()
 const { height: pageHeight } = useElementSize(document.body)
 
 // we are going to slowly scale up the canvas from 1 to 1.25 using a quadratic ease out
+// we want to scale up using a quadratic ease out
+  const ease = (t) => t * (2 - t)
+  
 const canvasScale = computed(() => {
   // use y to find how far down the page we are
 
   const scrollProgress = (y.value / pageHeight.value) * scrollMultiplier.value
 
   // we want to scale up from 1 to 1.25
-  const scaleStart = 1
-  const scaleEnd = 1.5
+  const scaleStart = 0.88
+  const scaleEnd = 1.62
 
   // we want to scale up for the entire duration of the page
   const duration = 1 * scrollMultiplier.value
 
-  // we want to scale up using a quadratic ease out
-  const ease = (t) => t * (2 - t)
+  
 
   // we want to scale up for the entire duration of the page
   const t = scrollProgress / duration
@@ -80,6 +84,53 @@ const canvasScale = computed(() => {
   const scale = scaleStart + (scaleEnd - scaleStart) * scaledT
 
   return scale
+})
+
+/* now we need to tweak the canvas opacity, if the page is at the very top, it should be 0, and it should transition from 0 to 1 over the first screen height */
+const canvasOpacity = computed(() => {
+  // use y to find how far down the page we are
+
+  const scrollProgress = (y.value / pageHeight.value) * scrollMultiplier.value
+
+  const opacityStart = 0
+  const opacityEnd = 1
+
+  // we want to scale up for the entire duration of the page
+  const duration = 1 * scrollMultiplier.value
+
+  
+
+  // we want to scale up for the entire duration of the page
+  const t = scrollProgress / duration
+
+  // we want to scale up using a quadratic ease out
+  const scaledT = ease(t)
+
+  // we want to scale up from 1 to 1.25
+  const opacity = opacityStart + (opacityEnd - opacityStart) * scaledT
+
+  return opacity
+})
+
+/* same thing with blur, we want to blur the canvas from 0 to 10 over the first screen height */
+const canvasBlur = computed(() => {
+  // use y to find how far down the page we are
+
+  const scrollProgress = (y.value / pageHeight.value) * scrollMultiplier.value
+
+  const blurStart = 0
+  const blurEnd = 20
+  const duration = 1 * scrollMultiplier.value
+
+  const t = scrollProgress / duration
+
+  // we want to scale up using a quadratic ease out
+  const scaledT = ease(t)
+
+  // we want to scale up from 1 to 1.25
+  const blur = blurStart + (blurEnd - blurStart) * scaledT
+
+  return blur
 })
 
 // Define the offset as a reactive value so it can be easily tweaked later

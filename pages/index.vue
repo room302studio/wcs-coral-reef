@@ -1,8 +1,5 @@
 <template>
-  <div class="light-blue pa1 pa5-l">
-
-
-
+  <div class="light-blue pa1 pa5-l debug">
 
     <TopographicVisual class="w-100 z-1" />
 
@@ -11,14 +8,13 @@
 
     <div class="vh-50 w-100 w-90-ns pa4 mt6">
       <!-- <h3 class="w-100 f3 fw4 tc mv0 pv1 teal">Wave of Hope</h3> -->
-      <h1 class="f-headline tl light-blue mv0 pa3 ph5-l">
+      <h1 class="f2 f-headline-l tl light-blue mv0 pa3 ph5-l">
         <span class="fw4">Hope Blooms Underwater:</span> <br />The Coral Reefs Defying Climate Change
       </h1>
 
       <div class="">
-        <div class="measure-wide fw6 lh-title pb5 light-blue mv5 ph5-l" :initial="{ opacity: 0 }"
-          :enter="{ opacity: 1, scale: 1 }" :delay="500">
-          <p class="f2">Nestled beneath the ocean waves, some coral reefs are defying the odds, challenging standard
+        <div class="measure-wide fw6 lh-title pb5 light-blue mv5 ph5-l">
+          <p class="f4 f2-l">Nestled beneath the ocean waves, some coral reefs are defying the odds, challenging standard
             climate predictions.</p>
         </div>
       </div>
@@ -28,7 +24,7 @@
         <img :src="`/svg/stars.svg`" alt="stars" class="w-100 h-100" />
       </div>
 
-      <div id="floating-nav" class="pa2 f6 br2 fixed">
+      <div id="floating-nav" class="pa2 f6 br2 fixed dn db-l">
         <h4 class="ma0 pa0 ttu white ph2 o-60">Navigation</h4>
         <ul class="pa0 mt2 mb0 list light-blue fw5">
           <li class="mv0 pa2 br2">Introduction</li>
@@ -47,7 +43,7 @@
 
 
     <div id="intro-cta" class="mv0" style="margin-top: 33vh;">
-      <p class="measure-wide f3 fw7 teal tc center">
+      <p class="measure-wide f5 f3-l fw7 teal tc center">
         Understand how these resilient ecosystems are resisting, avoiding, and recovering from climate change.
       </p>
       <!-- down arrow -->
@@ -59,7 +55,7 @@
 
     </div>
 
-    <div id="intro-visual" class="w-100">
+    <div id="intro-visual" class="">
       <div id="cloud-1" class="cloud vh-25">
         <img :src="`/svg/cloud.svg`" alt="cloud" class="w-100 h-100" />
       </div>
@@ -89,9 +85,9 @@
     </div>
 
     <!-- The tachyons class to make flex items go to the bottom of the container is "flex flex-column justify-end items-center" -->
-    <div id="section-1 cf" class="w-100 w-90-l pa1 pa5-l section v-mid flex flex-row justify-center items-end">
+    <div id="section-1 cf" class="w-100 w-90-l pa1 pa5-l section v-mid flex-ns flex-row justify-center items-end">
       <div class="w-100 w-50-ns flex-item">
-        <h1>What Different Climate Scenarios Mean for Global Temperature</h1>
+        <h1 class="f1">What Different Climate Scenarios Mean for Global Temperature</h1>
 
 
         <div>
@@ -142,12 +138,12 @@
       </div>
     </div>
 
-    <div id="section-3" class="section w-100 cf flex flex-row justify-center items-center w-100 w-90-l pa1 pa5-l">
+    <div id="section-3" class="section w-100 cf flex-ns flex-row justify-center items-center w-100 w-90-l pa1 pa5-l">
       <div class="w-100 w-50-ns">
         <h1 class="pr1 pr4-l">Where Ocean Life Thrives</h1>
       </div>
 
-      <div class="w-50 fl">
+      <div class="w-100 w-50-ns fl-ns">
         <p>Reefs, found in <a
             href="https://www.fisheries.noaa.gov/national/habitat-conservation/shallow-coral-reef-habitat#:~:text=Reefs%20occur%20in%20less%20than,%2C%20sea%20turtles%2C%20and%20more.">less
             than 1 percent of the ocean</a>, are incredibly important as they house nearly one-quarter of all marine
@@ -169,13 +165,13 @@
       </div>
     </div>
 
-    <div class="section w-100 cf flex flex-row justify-center items-center w-100 w-90-l pa1 pa5-l">
+    <div class="section w-100 cf flex-ns flex-row justify-center items-center w-100 w-90-l pa1 pa5-l">
       <div class="w-100 w-two-thirds-ns bg-transparent-white pa3">
         <h1 class="pr1 pr4-l f2 fw2 tc">Our understanding is evolving</h1>
         <img :src="`/svg/environmental_conditions.svg`" alt="reef evolution" class="w-100" />
       </div>
 
-      <div class="w-third fl pa4">
+      <div class="w-100 w-third-ns fl-ns pa4">
         <p>Previous models used to understand how Coral Reefs survive were based only a single environmental condition,
           but
           <strong class="white">newer models incorporate over 25</strong>.
@@ -290,7 +286,7 @@
 
 
 
-    <div id="section-4" class="section w-80 cf z-2 pa4">
+    <div id="section-4" class="section w-100 w-80-l cf z-2 pa1 pa4-l">
       <h2 class="f1 teal tc">Reefs by type</h2>
       <!-- <div class="cf">
         <div class="reef-type w-third fl">Resist</div>
@@ -371,8 +367,8 @@
         </div>
       </div>
 
-      <div class="cf w-80 pt3">
-        <div class="w-20 fl pa2 pa4-l">
+      <div class="cf w-100 w-80-l pt3">
+        <div class="w-100 w-20-l fl-l pa1 pa4-l">
           <h2 class="pa0 ma0">Metadata</h2>
           <h2 class="yellow">{{ selectedBCUID }}</h2>
           <ul class="list pa0 f6">
@@ -389,7 +385,7 @@
           </ul>
         </div>
 
-        <div class="w-80 fl overflow-x-auto pa1 ph5-l">
+        <div class="w-100 w-80-l fl-l overflow-x-auto pa1 ph5-l">
           <h3>Coral reefs around the world</h3>
           <table class="h2 w-100 f7 overflow-x-auto collapse bg-white near-black  overflow-y-auto">
             <thead>
@@ -428,7 +424,7 @@
       </h3>
 
       <!-- /logos/WCS_SEAL_ACRONYM-White stroke.png -->
-      <div class="flex flex-row justify-center items-center">
+      <div class="tc flex-l flex-row justify-center items-center">
         <img :src="`/logos/WCS_SEAL_ACRONYM-White%20stroke.png`" alt="WCS logo" class="h4" />
 
         <img :src="`/logos/BP_Ocean_Initiative_logo_Stacked_White.png`" alt="NOAA logo" class="h4" />
@@ -470,6 +466,7 @@ watch(selectedBCUID, (newValue) => {
 </style>
 <style scoped>
 #intro-visual {
+  overflow: hidden;
   z-index: -1;
   pointer-events: none;
 }
@@ -528,7 +525,6 @@ watch(selectedBCUID, (newValue) => {
   animation-delay: -2s;
   top: 44vh;
   animation-duration: 100s;
-
 }
 
 #cloud-2 img {

@@ -1,5 +1,5 @@
 <template>
-  <div class="light-blue pa1 pa5-l debug">
+  <div class="light-blue pa1 pa5-l">
 
     <TopographicVisual class="w-100 z-1" />
 
@@ -113,7 +113,7 @@
       <div class="w-100 mv4 pv4">
         <h2 class="ma0 pa0 fw1">Impact on the world</h2>
         <ul>
-          <li>More frequent and intense heatwaves</li>
+          <li>More frequent and intense heatwaves above and underwater</li>
           <li>Increased frequency of wildfires</li>
           <li>Changes in crop yields</li>
           <li>Increased intensity of tropical storms</li>
@@ -194,8 +194,8 @@
 
 
 
-    <ReefTypeModule class="w-100 w-80-ns pa4" :title="'Avoid'" :headline="`Avoid Refugia: The Nature's Cool Zones`"
-      :copy="`In the ocean's vast expanse, certain reefs have found their survival tactics by dwelling in areas with less heat impact. Known as 'Avoid Refugia', these reefs represent natural sanctuaries from the warming trends of climate change. Despite their small number, they uphold significant biodiversity, symbolizing resilience amidst adversity.`"
+    <ReefTypeModule class="w-100 w-80-ns pa4" :title="'Avoid'" :headline="`Avoid Refugia: Rare Ocean 'Cool Spots'`"
+      :copy="`In the ocean's vast expanse, certain reefs have been able to avoid the impacts of hot water thanks to being located in rare underwater ‘cool spots’. Known as 'Avoid Refugia', these reefs are natural sanctuaries from the warming trends of climate change, places where corals still thrive and massive, healthy reefs shelter huge troves of marine biodiversity.`"
       :locations="[{
         name: 'South Africa',
         lat: '-34.397',
@@ -230,7 +230,7 @@
 
 
     <ReefTypeModule class="w-100 w-80-ns pa4" :title="'Recover'" :headline="`Recover Refugia: The Oceanic Phoenix`"
-      :copy="`The 'Recover Refugia' embody the ocean’s incredible power of recovery. Even when battered by high temperatures or severe storms, these reefs display an astounding ability to regenerate and restore themselves. They represent nature's promise of renewal and restoration, reinforcing the critical need for proactive marine conservation efforts.`"
+      :copy="`The 'Recover Refugia' embody our planet’s incredible capacity to heal and recover. Researchers are finding reefs all over the world that have bleached during warm water events, or been leveled by climate change induced mega storms, only to shock communities and scientists by recovering - growing back in record time where there was once only rubble.`"
       :locations="[{
         name: 'Maldives',
         lat: '-34.397',
@@ -263,8 +263,8 @@
       }
       ]" />
 
-    <ReefTypeModule class="w-100 w-80-ns pa4" :title="'Resist'" :headline="'Resist Refugia: The Heat Endurers'"
-      :copy="`Adaptation is nature's survival strategy and the 'Resist Refugia' stand as a testament to this. These coral reefs exhibit an evolved tolerance to increased temperatures. Their ability to thrive despite the thermal stress illustrates nature’s stunning resilience and the diverse marine life they support is a powerful reminder of why we must fight for our oceans.`"
+    <ReefTypeModule class="w-100 w-80-ns pa4" :title="'Resist'" :headline="'Resist Refugia: The Adapters'"
+      :copy="`Adaptation is nature's survival strategy. There are reefs all over the world that aren’t avoiding heat, but are actively resisting it. Evolved adaptations are allowing those corals to take hot water events in stride and defy bleaching and other impacts – a show of resilience in the face of rapid change.`"
       :locations="[{
         name: 'Northwest Mauritius',
         lat: '-34.397',
@@ -314,33 +314,49 @@
 
     <div id="section-6" class="section w-100 w-80-ns pa1 pa3-l">
       <div id="section-7" class="section pa1 pa5-l">
-        <h2 class="f1 mv0 pv0">Help</h2>
+        <h2 class="f2 f1-l mv0 pv0">Our oceans are counting on us. Act for them now.</h2>
         <div class="measure-wide white f2 pv5">
-          There's two ways that you can help. You can sign on to a letter that WCS will deliver to UN letters, or reach
-          out to join our new global partnership of experts.
+          All of this comes down to one simple message: Despite what you’ve heard, if we act soon we can still save our
+          reefs. Now that you understand how important each of these rare climate refuge reefs are, you can use your voice
+          for good.
         </div>
 
         <div class="w-100 cf tc">
-          <div class="w-100 w-50-ns dib bg-transparent-white pa4">
+          <div class="w-100 w-third-ns dib bg-transparent-white pa4">
             <div class="pa4">
-              <div class="pv4 f1 white b">
-                Sign on to the WCS letter to save ocean biodiversity
+              <div class="pv4 f3 white b">
+                Tell your government representatives loud and clear: coral reefs are critical to biodiversity conservation
+                and climate adaptation. Sign on, and WCS will hand-deliver your signatures to international leaders and
+                lawmakers at the UN Climate Change Conference and the Convention on Biological Diversity.
               </div>
               <img src="/svg/down_arrow.svg" alt="down arrow" class="h3 center db" />
               <button class="w-100 pa2 tc mv4 bg-black white br2 ba b--white bw2">Sign on</button>
             </div>
 
           </div>
-          <div class="w-100 w-50-ns dib pa4 v-bottom">
+          <div class="w-100 w-third-ns dib pa4 v-bottom">
             <div class="bg-transparent-white pa4">
-              <div class="pv4 f1 white b">
-                Scientist or funder?
+              <div class="pv4 f3 white b">
+                Scientists have only discovered about half of the coral reef refuges hidden underwater all over the world.
+                We need to change that, and soon. Consider expanding your funding or extending a hand in partnership to
+                help support the discovery of these climate-resilient coral reefs. Reach out to explore other ways to
+                advance this work with us.
               </div>
               <img src="/svg/down_arrow.svg" alt="down arrow" class="h3 center db" />
               <button class="w-100 pa2 tc mv4 bg-black white br2 ba b--white bw2">Join us</button>
             </div>
+          </div>
 
-
+          <div class="w-100 w-third-ns dib pa4 v-bottom">
+            <div class="bg-transparent-white pa4">
+              <div class="pv4 f3 white b">
+                Finding and protecting all of our coral reef refuges is a group effort. To dive deeper into the data and
+                to contribute your own data, meet MERMAID. To join our collaborative global movement to find these reefs,
+                reach out.
+              </div>
+              <img src="/svg/down_arrow.svg" alt="down arrow" class="h3 center db" />
+              <button class="w-100 pa2 tc mv4 bg-black white br2 ba b--white bw2">Join us</button>
+            </div>
           </div>
         </div>
         <!-- <div class="mv5 pa5 f1">
@@ -350,6 +366,11 @@
             <button type="submit">Sign up</button>
           </form>
         </div> -->
+      </div>
+
+      <div class="white f1 i tc">
+        So much has been, and will be lost to climate change. <br />But coral reefs <strong>aren’t lost yet</strong>. 
+        And if we act now, we can make sure they never are.
       </div>
 
 

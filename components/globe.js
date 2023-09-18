@@ -19,6 +19,9 @@ const graticule = geoGraticule();
 const dragHandler = drag();
 const zoomHandler = zoom();
 
+// This represents the circle of the entire globe.
+const sphere = { type: "Sphere" };
+
 const worldAtlasURL =
   "https://unpkg.com/visionscarto-world-atlas@0.1.0/world/110m.json";
 
@@ -41,9 +44,7 @@ export const globe = (container, { state, setState }) => {
   // Fit the initial projection to the size of the container
   if (!state.initialScale) {
     console.log("      Fitting initial projection to container size.");
-    const initialScale = projection
-      .fitSize([width, height], { type: "Sphere" })
-      .scale();
+    const initialScale = projection.fitSize([width, height], sphere).scale();
     setState((state) => ({
       ...state,
       initialScale,
@@ -127,7 +128,7 @@ export const globe = (container, { state, setState }) => {
       return (t) => {
         const newRotate = interpolator(t);
         // newRotate[1] = Math.max(-180, Math.min(180, newRotate[1]));
-        newRotate[1] = 0
+        newRotate[1] = 0;
         projection.rotate(newRotate);
         projection.scale(1000);
         svg.selectAll("path").attr("d", path);
@@ -223,35 +224,35 @@ export const globe = (container, { state, setState }) => {
 
   // console.log("scale", state.scale);
 
-  // Support panning
-  svg.call(
-    // Inspired by https://vizhub.com/curran/8373d190b0f14dd89c07b44cf1baa9f9
-    dragHandler.on("drag", (event) => {
-      // Get the current rotation and scale
-      const rotate = projection.rotate();
-      const scale = projection.scale();
+  // // Support panning
+  // svg.call(
+  //   // Inspired by https://vizhub.com/curran/8373d190b0f14dd89c07b44cf1baa9f9
+  //   dragHandler.on("drag", (event) => {
+  //     // Get the current rotation and scale
+  //     const rotate = projection.rotate();
+  //     const scale = projection.scale();
 
-      // Compute the new rotation
-      const k = sensitivity / scale;
-      const newRotate = [rotate[0] + event.dx * k, rotate[1] - event.dy * k];
+  //     // Compute the new rotation
+  //     const k = sensitivity / scale;
+  //     const newRotate = [rotate[0] + event.dx * k, rotate[1] - event.dy * k];
 
-      // Update the state
-      setState((state) => ({
-        ...state,
-        rotate: newRotate,
-      }));
-    })
-  );
+  //     // Update the state
+  //     setState((state) => ({
+  //       ...state,
+  //       rotate: newRotate,
+  //     }));
+  //   })
+  // );
 
-  // Support zooming
-  svg.call(
-    zoomHandler.on("zoom", ({ transform: { k } }) => {
-      setState((state) => ({
-        ...state,
-        scale: state.initialScale * k,
-      }));
-    })
-  );
+  // // Support zooming
+  // svg.call(
+  //   zoomHandler.on("zoom", ({ transform: { k } }) => {
+  //     setState((state) => ({
+  //       ...state,
+  //       scale: state.initialScale * k,
+  //     }));
+  //   })
+  // );
 
   /* start a request animation frame that slowly rotates the globe as long as the mouse is not down */
   // if (!state.mouseDown) {

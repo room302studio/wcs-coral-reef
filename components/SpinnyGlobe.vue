@@ -15,7 +15,7 @@ watch(
     return stateRef.value.selectedBCUID;
   },
   (newState) => {
-    console.log("state changed", newState);
+    // console.log("state changed", newState);
     emit("update:bcu", newState);
   }
 );

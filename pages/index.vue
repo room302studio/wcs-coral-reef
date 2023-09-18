@@ -20,22 +20,6 @@
         <img :src="`/svg/stars.svg`" alt="stars" class="w-100 h-100" />
       </div>
 
-      <!-- <div id="floating-nav" class="pa2 f6 br2 fixed dn db-l">
-        <h4 class="ma0 pa0 ttu white ph2 o-60">Navigation</h4>
-        <ul class="pa0 mt2 mb0 list light-blue fw5">
-          <li class="mv0 pa2 br2">Introduction</li>
-          <li class="mv0 pa2 br2 active">Global temperature rise</li>
-          <li class="mv0 pa2 br2">Impact on world and oceans</li>
-          <li class="mv0 pa2 br2">Ocean reef percentage</li>
-          <li class="mv0 pa2 br2">Reef type breakdown</li>
-          <li class="mv0 pa2 br2">Reef type: resist</li>
-          <li class="mv0 pa2 br2">Reef type: recover</li>
-          <li class="mv0 pa2 br2">Reef type: avoid</li>
-          <li class="mv0 pa2 br2">Explore them all</li>
-          <li class="mv0 pa2 br2">Call to action</li>
-        </ul>
-      </div> -->
-
       <div id="floating-nav" class="pa2 f6 br2 fixed dn db-l">
         <h4 class="ma0 pa0 ttu white ph2 o-60">Navigation</h4>
         <ul class="pa0 mt2 mb0 list light-blue fw5">
@@ -98,12 +82,15 @@
 
       <div class="w-100 w-50-ns flex-item pa2 pa5-l">
         <p>
-          The rising global temperatures challenge life as we know it, but beneath the ocean's surface, an unprecedented
-          phenomenon is occurring.
+          Since the inception of global temperature monitoring a clear pattern of steady increase is evident. This rise in global temperatures is a challenge to life on Earth, including the life below our ocean's surface.
         </p>
         <p>
-          Coral reefs, in defiance of escalating odds, are writing their own survival story.
+          <a href="https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_Chapter04.pdf">Shared Socioeconomic Pathways (SSP)</a> scenarios predict future conditions based on current socioeconomic trends.
         </p>
+        <p>
+          Amidst this, a remarkable event is playing out. Coral reefs, despite the increasingly challenging conditions, are scripting their own tales of survival. Our task is to ensure these stories of resilience continue.
+        </p>
+        
       </div>
     </div>
 
@@ -197,6 +184,7 @@
 
     <ReefTypeModule id="section-6" ref="avoidrefugia" class="w-100 w-80-ns pa4" :title="'Avoid'"
       :headline="`Avoid Refugia: Rare Ocean 'Cool Spots'`"
+      :headline-image="`/images/Emily%20Darling.Borneo.2018.jpg`"
       :copy="`In the ocean's vast expanse, certain reefs have been able to avoid the impacts of hot water thanks to being located in rare underwater ‘cool spots’. Known as 'Avoid Refugia', these reefs are natural sanctuaries from the warming trends of climate change, places where corals still thrive and massive, healthy reefs shelter huge troves of marine biodiversity.`"
       :locations="[{
         name: 'South Africa',
@@ -414,6 +402,20 @@
           </table>
         </div>
       </div>
+    </div>
+
+    <div id="citations" class="pa3 f6 tracked-tight">
+      <h3 class="f3">Citations and credits</h3>
+    <p><strong>Global temperature rise:</strong> Lee, J.-Y., J. Marotzke, G. Bala, L. Cao, S. Corti, J.P. Dunne, F. Engelbrecht, E. Fischer, J.C. Fyfe, C. Jones, A. Maycock,
+J. Mutemi, O. Ndiaye, S. Panickal, and T. Zhou, 2021: Future Global Climate: Scenario-Based Projections and NearTerm Information. In Climate Change 2021: The Physical Science Basis. Contribution of Working Group I to the
+Sixth Assessment Report of the Intergovernmental Panel on Climate Change [Masson-Delmotte, V., P. Zhai, A.
+Pirani, S.L.  Connors, C. Péan, S. Berger, N. Caud, Y. Chen, L. Goldfarb, M.I. Gomis, M. Huang, K. Leitzell, E. Lonnoy,
+J.B.R. Matthews, T.K. Maycock, T. Waterfield, O. Yelekçi, R. Yu, and B. Zhou (eds.)]. Cambridge University Press,
+Cambridge, United Kingdom and New York, NY, USA, pp. 553–672, doi:10.1017/9781009157896.006. </p>
+
+    <p><strong>Photography from:</strong> </p>
+
+
     </div>
 
     <div id="credits" ref="credits" class="o-90 vh-50" style="margin-top: 80vh;">

@@ -27,6 +27,7 @@
             :class="{ active: isSectionVisible[index] }" ref="listItems">
             <!-- {{ section.title }} -->
             <a
+              class="ttc"
               :href="`#${section.id}`">{{ section.title }}</a>
 
           </li>
@@ -161,10 +162,12 @@
         <img :src="`/svg/environmental_conditions.svg`" alt="reef evolution" class="w-100" />
       </div>
 
-      <div class="w-100 w-third-ns fl-ns pa4">
+      <div class="w-100 w-third-ns fl-ns pa4 f4 measure">
         <p>Previous models used to understand how Coral Reefs survive were based only a single environmental condition,
           but
-          <strong class="white">newer models incorporate over 25</strong>.
+          <strong class="white">newer models incorporate over 25</strong>.</p>
+          
+          <p>The new models consider various geological, environmental, and human-interaction factors like depth, sea surface temperature, concentration of different substances in water, visitation values, various types of connectivity, travel time metrics, fishery management, and even the effect of gravity.
         </p>
         <p> This high-definition understanding gives us a much better view of what is
           happening to reefs around the world, and what we can do to help.

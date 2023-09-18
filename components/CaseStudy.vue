@@ -3,14 +3,16 @@
 
     <div class="w-100 w-two-thirds-l center pa0 cf">
       <div class="casestudy-text-content w-100 w-two-thirds-l fl-l pa2 pa4-l pv6-l">
-        <button @click="emit('close')">Close</button>
+        <button @click="emit('close')"
+          class="w-100 w-third-ns pa2 pa3-l  extra-dark-blue bg-white bn br2 pointer dim"
+        >Close</button>
         <h1>{{ title }}</h1>
         <h2>{{ headline }}</h2>
         <p>{{ copy }}</p>
       </div>
 
-      <div class="w-100 w-third-l fl-l">
-        <SatelliteImage :lat="lat" :lng="lng" />
+      <div class="w-100 w-third-l fl-l ba b--pink">
+        <CaseStudySatelliteImage :lat="lat" :lng="lng" class="ba b--purple"/>
       </div>
 
       <!-- close button -->

@@ -17,14 +17,16 @@
     <div>
       <h2>Examples</h2>
       <div class="cf">
-        <div v-for="location in locations" class="w-third pa2 break-word overflow-hidden fl">
-          <h3 class="mv0 pv1 f3 fw1">{{ location.name }}</h3>
+        <div v-for="location in locations" class="w-third pv2 pr2 break-word overflow-hidden fl">
+          <h3 class="mv0 pv1 ph0 f3 fw1">{{ location.name }}</h3>
           <SatelliteImage :lat="location.lat" :lng="location.lng" class="w-100 h5" />
         </div>
       </div>
 
       <!-- button to showCaseStudy -->
-      <button @click="showCaseStudy = !showCaseStudy">Show Case Study</button>
+      <button @click="showCaseStudy = !showCaseStudy"
+      class="w-100 w-third-ns pa2 pa3-l extra-dark-blue-bg white bn br2 pointer dim"
+      >Show Case Study</button>
 
       <div v-if="showCaseStudy" class="case-study-container flex justify-center items-center">
         <CaseStudy

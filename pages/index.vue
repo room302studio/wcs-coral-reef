@@ -247,8 +247,8 @@
       },
       {
         name: 'Southeast Mauritius',
-        lat: '19.8968',
-        lng: '-155.5828',
+        lat: '-20.540289409615923',
+        lng: '57.35869206436161',
       },
       {
         name: 'Belize',
@@ -268,8 +268,8 @@
       :copy="`Adaptation is nature's survival strategy. There are reefs all over the world that aren’t avoiding heat, but are actively resisting it. Evolved adaptations are allowing those corals to take hot water events in stride and defy bleaching and other impacts – a show of resilience in the face of rapid change.`"
       :locations="[{
         name: 'Northwest Mauritius',
-        lat: '-34.397',
-        lng: '150.644'
+        lat: '-20.173',
+        lng: '57.560'
       },
       {
         name: 'Bay of Cartagena',
@@ -413,7 +413,7 @@
       </div>
 
       <div class="cf w-100 w-80-l pt3">
-        <div class="w-100 w-20-l fl-l pa1 pa4-l">
+        <!-- <div class="w-100 w-20-l fl-l pa1 pa4-l">
           <h2 class="pa0 ma0">Metadata</h2>
           <h2 class="yellow">{{ selectedBCUID }}</h2>
           <ul class="list pa0 f6">
@@ -422,9 +422,9 @@
             <li><strong>Item:</strong> Value</li>
             <li><strong>Item:</strong> Value</li>
           </ul>
-        </div>
+        </div> -->
 
-        <div class="w-100 w-80-l fl-l overflow-x-auto pa1 ph5-l">
+        <div class="w-100  overflow-x-auto pa1 ph5-l">
           <h3>Coral reefs around the world</h3>
           <table class="h2 w-100 f7 overflow-x-auto collapse bg-white near-black  overflow-y-auto">
             <thead>

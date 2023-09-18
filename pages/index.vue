@@ -439,6 +439,23 @@
 import * as d3 from 'd3'
 const selectedBCUID = ref(null);
 
+useSeoMeta({
+  title: 'Hope Blooms Underwater: The Coral Reefs Defying Climate Change',
+  ogTitle: 'Hope Blooms Underwater: The Coral Reefs Defying Climate Change',
+  description: 'Nestled beneath the ocean waves, some coral reefs are defying the odds, challenging standard climate predictions.',
+  ogDescription: 'Nestled beneath the ocean waves, some coral reefs are defying the odds, challenging standard climate predictions.',
+})
+
+useHead({
+  title: 'Hope Blooms Underwater: The Coral Reefs Defying Climate Change',
+  meta: [
+    { name: 'description', content: 'Nestled beneath the ocean waves, some coral reefs are defying the odds, challenging standard climate predictions.' },
+    /* favicon */
+    { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+  ]
+})
+
+
 /* load CSV from public/Table 1 from Conservation Biology2023.pdf - Sheet1.csv for table */
 const reefs = ref([]);
 const sections = [

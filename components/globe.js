@@ -96,10 +96,7 @@ export const globe = (container, { state, setState }) => {
       .then((response) => response.json())
       .then((topojsonData) => {
         // console.log("topojsonData", topojsonData);
-        const worldAtlasData = feature(
-          topojsonData,
-          topojsonData.objects.countries
-        );
+        const worldAtlasData = feature(topojsonData, topojsonData.objects.land);
         // console.log("worldAtlasData", worldAtlasData);
 
         setState((state) => ({

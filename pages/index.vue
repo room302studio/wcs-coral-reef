@@ -322,40 +322,40 @@
         </div>
 
         <div class="w-100 cf tc">
-          <div class="w-100 w-third-ns dib bg-transparent-white pa4">
-            <div class="pa4">
-              <div class="pv4 f3 white b">
-                Tell your government representatives loud and clear: coral reefs are critical to biodiversity conservation
-                and climate adaptation. Sign on, and WCS will hand-deliver your signatures to international leaders and
+          <div class="w-100 w-third-ns dib pa1 pa2-l v-bottom">
+            <div class="bg-transparent-black white br4 pa2 tl">
+              <div class="pa2 pa3-l fw5 f5 lh-copy">
+                Tell your government representatives loud and clear: <strong style="color: #5CF3E1;">coral reefs are critical to biodiversity conservation
+                and climate adaptation</strong>. Sign on, and WCS will hand-deliver your signatures to international leaders and
                 lawmakers at the UN Climate Change Conference and the Convention on Biological Diversity.
               </div>
               <img src="/svg/down_arrow.svg" alt="down arrow" class="h3 center db" />
-              <button class="w-100 pa2 tc mv4 bg-black white br2 ba b--white bw2">Sign on</button>
-            </div>
-
+              <button class="cta-button dim pointer w-100 pa2 mv4">Sign on</button>
+              </div>
           </div>
-          <div class="w-100 w-third-ns dib pa4 v-bottom">
-            <div class="bg-transparent-white pa4">
-              <div class="pv4 f3 white b">
+
+          <div class="w-100 w-third-ns dib pa1 pa2-l v-bottom">
+            <div class="bg-transparent-black white br4 pa2 tl">
+              <div class="pa2 pa3-l fw5 f5 lh-copy">
                 Scientists have only discovered about half of the coral reef refuges hidden underwater all over the world.
-                We need to change that, and soon. Consider expanding your funding or extending a hand in partnership to
-                help support the discovery of these climate-resilient coral reefs. Reach out to explore other ways to
+                We need to change that, and soon. Consider <strong style="color: #5CF3E1;">expanding your funding or extending a hand in partnership to
+                help support the discovery of these climate-resilient coral reefs.</strong> Reach out to explore other ways to
                 advance this work with us.
               </div>
               <img src="/svg/down_arrow.svg" alt="down arrow" class="h3 center db" />
-              <button class="w-100 pa2 tc mv4 bg-black white br2 ba b--white bw2">Join us</button>
+              <button class="cta-button dim pointer w-100 pa2 mv4">Join us</button>
             </div>
           </div>
 
-          <div class="w-100 w-third-ns dib pa4 v-bottom">
-            <div class="bg-transparent-white pa4">
-              <div class="pv4 f3 white b">
-                Finding and protecting all of our coral reef refuges is a group effort. To dive deeper into the data and
-                to contribute your own data, meet MERMAID. To join our collaborative global movement to find these reefs,
+          <div class="w-100 w-third-ns dib pa1 pa2-l v-bottom">
+            <div class="bg-transparent-black white br4 pa2 tl">
+              <div class="pa2 pa3-l fw5 f5 lh-copy">
+                Finding and protecting all of our coral reef refuges is a group effort. <strong style="color: #5CF3E1;">To dive deeper into the data and
+                to contribute your own data, meet MERMAID.</strong> To join our collaborative global movement to find these reefs,
                 reach out.
               </div>
               <img src="/svg/down_arrow.svg" alt="down arrow" class="h3 center db" />
-              <button class="w-100 pa2 tc mv4 bg-black white br2 ba b--white bw2">Join us</button>
+              <button class="cta-button dim pointer w-100 pa2 mv4">Join us</button>
             </div>
           </div>
         </div>
@@ -649,5 +649,13 @@ ul li::before {
 /* but disable on the floating nav */
 #floating-nav ul li::before {
   content: none;
+}
+
+.cta-button {
+  font-size: 1.7em;
+  line-height: 1.4em;
+  background-color: #5CF3E1;
+  color: black;
+  border: none;
 }
 </style>

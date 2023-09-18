@@ -168,6 +168,20 @@ export const globe = (container, { state, setState }) => {
       }));
     });
 
+  svg
+    .selectAll("path.boundingbox")
+    .data(state.goodCompromiseBCUsData.features)
+    .join("path")
+    .attr("class", "boundingbox")
+    // .attr("d", path.bounds)
+    .attr("d", (d) => {
+      // get the bounding box of the BCU
+      const [[x0, y0], [x1, y1]] = path.bounds(d);
+      return `M${x0},${y0}L${x1},${y0}L${x1},${y1}L${x0},${y1}Z`;
+    })
+    .attr("stroke", "yellow")
+    .attr("fill", "none");
+
   /* now we need to draw big circles on the map at the centroids of the BCUs */
 
   // svg

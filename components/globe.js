@@ -115,14 +115,14 @@ export const globe = (container, { state, setState }) => {
   projection.scale(state.scale);
 
   // Render graticules (lines around the globe)
-  // svg
-  //   .selectAll("path.graticule")
-  //   .data([null])
-  //   .join("path")
-  //   .attr("class", "graticule")
-  //   .attr("d", path(graticule()))
-  //   .attr("stroke", "red")
-  //   .attr("fill", "none");
+  svg
+    .selectAll("path.graticule")
+    .data([null])
+    .join("path")
+    .attr("class", "graticule")
+    .attr("d", path(graticule()))
+    .attr("stroke", "gray")
+    .attr("fill", "none");
 
   // Render shapes from state.worldAtlasData
   svg

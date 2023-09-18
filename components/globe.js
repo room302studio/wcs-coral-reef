@@ -63,16 +63,18 @@ export const globe = (container, { state, setState }) => {
       goodCompromiseBCUsData: "LOADING",
     }));
     fetch("/50Reefs_data_extract/50Reefs_good_compromise_BCUs.json")
+      // fetch("/Reefs70_min_attribute.json")
       .then((response) => response.json())
       .then((topojsonData) => {
         // console.log(goodCompromiseBCUsData);
         // console.log(feature(goodCompromiseBCUsData));
-
+        // console.log(topojsonData.objects);
         // console.log("feature", feature);
 
         const goodCompromiseBCUsData = feature(
           topojsonData,
           topojsonData.objects["50Reefs_good_compromise_BCUs"]
+          // topojsonData.objects["Reefs70_min_attribute"]
         );
         // console.log("goodCompromiseBCUsData", goodCompromiseBCUsData);
 

@@ -30,31 +30,29 @@ watch(
       // console.log(goodCompromiseBCUsData.features);
       // Calculate the centroids
       const centroids = goodCompromiseBCUsData.features
-        .map((feature) => geoCentroid(feature))
-        .filter((centroid) => !centroid.some(Number.isNaN))
+        .map((feature) => ({
+          centroid: geoCentroid(feature),
+          id: feature.properties.BCUID,
+        }))
+        .filter(({ centroid }) => !centroid.some(Number.isNaN))
         // then sort by latitude
-        .sort((a, b) => a[0] - b[0]);
-
+        .sort((a, b) => a.centroid[0] - b.centroid[0]);
       // Rotate to Centroids
       let currentCentroidIndex = 0;
       setInterval(() => {
-        const centroid = centroids[currentCentroidIndex];
-        console.log("centroid", centroid);
-
+        const { centroid, id } = centroids[currentCentroidIndex];
+        console.log("id", id);
         // Rotate to that centroid
         setState((state) => ({
           ...state,
           rotate: [-centroid[0], -centroid[1]],
           scale: 2000,
         }));
-
         // // Create a transition
         // const t = transition().duration(10000).ease(easeQuadInOut);
-
         // // Use the transition to rotate the projection
         // const rotate = projection.rotate();
         // const interpolator = interpolate(rotate, [-centroid[0], -centroid[1]]);
-
         // t.tween("rotate", () => {
         //   return (t) => {
         //     const newRotate = interpolator(t);
@@ -71,9 +69,8 @@ watch(
         //     //   .attr("cy", (d) => path.centroid(d)[1]);
         //   };
         // });
-
         currentCentroidIndex = (currentCentroidIndex + 1) % centroids.length;
-      }, 1000);
+      }, 2000);
     }
   }
 );

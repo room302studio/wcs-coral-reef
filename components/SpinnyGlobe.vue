@@ -54,7 +54,7 @@ watch(
         //   scale: 2000,
         // }));
         // Create a transition
-        const t = transition().duration(800).ease(easeQuadInOut);
+        const t = transition().duration(1600).ease(easeQuadInOut);
         // // Use the transition to rotate the projection
         // const rotate = projection.rotate();
         t.tween("rotate", () => {
@@ -80,7 +80,7 @@ watch(
           };
         });
         currentCentroidIndex = (currentCentroidIndex + 1) % centroids.length;
-      }, 2000);
+      }, 3200);
     }
   }
 );

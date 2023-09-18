@@ -57,6 +57,11 @@ export const globe = (container, { state, setState }) => {
   // If the data is not loaded for public/50Reefs_data_extract/50Reefs_good_compromise_BCUs.json
   // then load it.
   if (!state.goodCompromiseBCUsData) {
+    console.log("      Loading 50Reefs_good_compromise_BCUs.json.");
+    setState((state) => ({
+      ...state,
+      goodCompromiseBCUsData: "LOADING",
+    }));
     fetch("/50Reefs_data_extract/50Reefs_good_compromise_BCUs.json")
       .then((response) => response.json())
       .then((topojsonData) => {
@@ -76,6 +81,11 @@ export const globe = (container, { state, setState }) => {
           goodCompromiseBCUsData,
         }));
       });
+    return;
+  }
+
+  // Wait for it to load
+  if (state.goodCompromiseBCUsData === "LOADING") {
     return;
   }
 
@@ -102,47 +112,6 @@ export const globe = (container, { state, setState }) => {
   // Update projection rotation based on state
   projection.rotate(state.rotate);
   projection.scale(state.scale);
-
-  // Calculate the centroids
-  const centroids = state.goodCompromiseBCUsData.features
-    .map((feature) => path.centroid(feature))
-    .filter((centroid) => !centroid.some(Number.isNaN))
-    // then sort by latitude
-    .sort((a, b) => a[1] - b[1]);
-
-  console.log("centroids", centroids);
-
-  // Rotate to Centroids
-  let currentCentroidIndex = 0;
-  setInterval(() => {
-    const centroid = centroids[currentCentroidIndex];
-
-    // Create a transition
-    const t = transition().duration(10000).ease(easeQuadInOut);
-
-    // Use the transition to rotate the projection
-    const rotate = projection.rotate();
-    const interpolator = interpolate(rotate, [-centroid[0], -centroid[1]]);
-
-    t.tween("rotate", () => {
-      return (t) => {
-        const newRotate = interpolator(t);
-        // newRotate[1] = Math.max(-180, Math.min(180, newRotate[1]));
-        newRotate[1] = 0;
-        projection.rotate(newRotate);
-        projection.scale(1000);
-        svg.selectAll("path").attr("d", path);
-        // update circle positions
-        // svg
-        //   .selectAll("circle")
-        //   .data(centroids)
-        //   .attr("cx", (d) => path.centroid(d)[0])
-        //   .attr("cy", (d) => path.centroid(d)[1]);
-      };
-    });
-
-    currentCentroidIndex = (currentCentroidIndex + 1) % centroids.length;
-  }, 12000);
 
   // Render graticules (lines around the globe)
   // svg

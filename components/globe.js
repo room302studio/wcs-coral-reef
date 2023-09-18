@@ -35,7 +35,7 @@ export const globe = (container, { state, setState }) => {
 
   // Assumes the state has width and height,
   // measured from the container element.
-  const { width, height } = state;
+  const { width, height, activeId } = state;
 
   // SVG scaling
   svg.attr("width", width).attr("height", height);
@@ -180,7 +180,8 @@ export const globe = (container, { state, setState }) => {
       return `M${x0},${y0}L${x1},${y0}L${x1},${y1}L${x0},${y1}Z`;
     })
     .attr("stroke", "yellow")
-    .attr("fill", "none");
+    .attr("fill", "none")
+    .attr("opacity", (d) => (d.properties.BCUID === activeId ? 1 : 0.3));
 
   /* now we need to draw big circles on the map at the centroids of the BCUs */
 

@@ -1,5 +1,5 @@
 <template>
-  <Globe :state="stateRef" :setState="setState" class="pa2 pa4-l vh-100" />
+  <Globe :state="stateRef" :setState="setState" class="vh-100" />
 </template>
 <script setup>
 import { geoCentroid } from "d3-geo";

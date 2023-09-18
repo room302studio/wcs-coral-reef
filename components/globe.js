@@ -114,6 +114,16 @@ export const globe = (container, { state, setState }) => {
   projection.rotate(state.rotate);
   projection.scale(state.scale);
 
+  // Render the sphere
+  svg
+
+    .selectAll("path.sphere")
+    .data([sphere])
+    .join("path")
+    .attr("class", "sphere")
+    .attr("d", path)
+    .attr("fill", "#003d53");
+
   // Render graticules (lines around the globe)
   svg
     .selectAll("path.graticule")
@@ -121,7 +131,7 @@ export const globe = (container, { state, setState }) => {
     .join("path")
     .attr("class", "graticule")
     .attr("d", path(graticule()))
-    .attr("stroke", "gray")
+    .attr("stroke", "#005979")
     .attr("fill", "none");
 
   // Render shapes from state.worldAtlasData

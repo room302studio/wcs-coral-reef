@@ -63,7 +63,7 @@ onMounted(() => {
 .globe-container {
   width: 100%;
   height: 500px;
-  background-color: #003d53;
+  /* background-color: #003d53; */
   position: relative;
 }
 

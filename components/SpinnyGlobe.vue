@@ -3,6 +3,7 @@
 </template>
 <script setup>
 import { geoCentroid } from "d3-geo";
+import { transition, easeQuadInOut, interpolate } from "d3";
 const stateRef = ref({});
 function setState(next) {
   stateRef.value = next(stateRef.value);
@@ -41,34 +42,42 @@ watch(
       let currentCentroidIndex = 0;
       setInterval(() => {
         const { centroid, id } = centroids[currentCentroidIndex];
-        console.log("id", id);
+        const oldRotate = stateRef.value.rotate;
+        const newRotate = [-centroid[0], -centroid[1]];
+        const interpolator = interpolate(oldRotate, newRotate);
+
+        // console.log("id", id);
         // Rotate to that centroid
-        setState((state) => ({
-          ...state,
-          rotate: [-centroid[0], -centroid[1]],
-          scale: 2000,
-        }));
-        // // Create a transition
-        // const t = transition().duration(10000).ease(easeQuadInOut);
+        // setState((state) => ({
+        //   ...state,
+        //   rotate:
+        //   scale: 2000,
+        // }));
+        // Create a transition
+        const t = transition().duration(800).ease(easeQuadInOut);
         // // Use the transition to rotate the projection
         // const rotate = projection.rotate();
-        // const interpolator = interpolate(rotate, [-centroid[0], -centroid[1]]);
-        // t.tween("rotate", () => {
-        //   return (t) => {
-        //     const newRotate = interpolator(t);
-        //     // newRotate[1] = Math.max(-180, Math.min(180, newRotate[1]));
-        //     newRotate[1] = 0;
-        //     projection.rotate(newRotate);
-        //     projection.scale(1000);
-        //     svg.selectAll("path").attr("d", path);
-        //     // update circle positions
-        //     // svg
-        //     //   .selectAll("circle")
-        //     //   .data(centroids)
-        //     //   .attr("cx", (d) => path.centroid(d)[0])
-        //     //   .attr("cy", (d) => path.centroid(d)[1]);
-        //   };
-        // });
+        t.tween("rotate", () => {
+          return (t) => {
+            const rotate = interpolator(t);
+            setState((state) => ({
+              ...state,
+              rotate,
+              scale: 2000,
+            }));
+            // newRotate[1] = Math.max(-180, Math.min(180, newRotate[1]));
+            // newRotate[1] = 0;
+            // projection.rotate(newRotate);
+            // projection.scale(1000);
+            // svg.selectAll("path").attr("d", path);
+            // update circle positions
+            // svg
+            //   .selectAll("circle")
+            //   .data(centroids)
+            //   .attr("cx", (d) => path.centroid(d)[0])
+            //   .attr("cy", (d) => path.centroid(d)[1]);
+          };
+        });
         currentCentroidIndex = (currentCentroidIndex + 1) % centroids.length;
       }, 2000);
     }

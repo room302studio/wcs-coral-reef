@@ -1,4 +1,3 @@
-import { transition, easeQuadInOut, interpolate } from "d3";
 import { select } from "d3-selection";
 import { geoOrthographic, geoPath, geoGraticule } from "d3-geo";
 import { scaleOrdinal } from "d3-scale";
@@ -76,7 +75,7 @@ export const globe = (container, { state, setState }) => {
           topojsonData.objects["50Reefs_good_compromise_BCUs"]
           // topojsonData.objects["Reefs70_min_attribute"]
         );
-        // console.log("goodCompromiseBCUsData", goodCompromiseBCUsData);
+        console.log("goodCompromiseBCUsData", goodCompromiseBCUsData);
 
         setState((state) => ({
           ...state,

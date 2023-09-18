@@ -98,7 +98,7 @@
 
     <div id="section-2" ref="climateimpact" class="section cf w-100 w-90-l pa1 pa5-l">
       <div>
-        <h2 class="pv4 teal">The impact of climate change is clear...</h2>
+        <h2 class="f3 f-subheadline-l pv4 teal">The impact of climate change is clear...</h2>
       </div>
       <div class="w-100 mv4 pv4">
         <h2 class="ma0 pa0 fw1">Impact on the world</h2>

@@ -26,9 +26,7 @@
           <li v-for="(section, index) in sections" :key="index" class="mv0 pa2 br2"
             :class="{ active: isSectionVisible[index] }" ref="listItems">
             <!-- {{ section.title }} -->
-            <a
-              class="ttc"
-              :href="`#${section.id}`">{{ section.title }}</a>
+            <a class="ttc" :href="`#${section.id}`">{{ section.title }}</a>
 
           </li>
         </ul>
@@ -83,15 +81,18 @@
 
       <div class="w-100 w-50-ns flex-item pa2 pa5-l">
         <p>
-          Since the inception of global temperature monitoring a clear pattern of steady increase is evident. This rise in global temperatures is a challenge to life on Earth, including the life below our ocean's surface.
+          Since the inception of global temperature monitoring a clear pattern of steady increase is evident. This rise in
+          global temperatures is a challenge to life on Earth, including the life below our ocean's surface.
         </p>
         <p>
-          <a href="https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_Chapter04.pdf">Shared Socioeconomic Pathways (SSP)</a> scenarios predict future conditions based on current socioeconomic trends.
+          <a href="https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_Chapter04.pdf">Shared Socioeconomic
+            Pathways (SSP)</a> scenarios predict future conditions based on current socioeconomic trends.
         </p>
         <p>
-          Amidst this, a remarkable event is playing out. Coral reefs, despite the increasingly challenging conditions, are scripting their own tales of survival. Our task is to ensure these stories of resilience continue.
+          Amidst this, a remarkable event is playing out. Coral reefs, despite the increasingly challenging conditions,
+          are scripting their own tales of survival. Our task is to ensure these stories of resilience continue.
         </p>
-        
+
       </div>
     </div>
 
@@ -165,9 +166,12 @@
       <div class="w-100 w-third-ns fl-ns pa4 f4 measure">
         <p>Previous models used to understand how Coral Reefs survive were based only a single environmental condition,
           but
-          <strong class="white">newer models incorporate over 25</strong>.</p>
-          
-          <p>The new models consider various geological, environmental, and human-interaction factors like depth, sea surface temperature, concentration of different substances in water, visitation values, various types of connectivity, travel time metrics, fishery management, and even the effect of gravity.
+          <strong class="white">newer models incorporate over 25</strong>.
+        </p>
+
+        <p>The new models consider various geological, environmental, and human-interaction factors like depth, sea
+          surface temperature, concentration of different substances in water, visitation values, various types of
+          connectivity, travel time metrics, fishery management, and even the effect of gravity.
         </p>
         <p> This high-definition understanding gives us a much better view of what is
           happening to reefs around the world, and what we can do to help.
@@ -186,8 +190,7 @@
     </div>
 
     <ReefTypeModule id="section-6" ref="avoidrefugia" class="w-100 w-80-ns pa4" :title="'Avoid'"
-      :headline="`Avoid Refugia: Rare Ocean 'Cool Spots'`"
-      :headline-image="`/images/Emily%20Darling.Borneo.2018.jpg`"
+      :headline="`Avoid Refugia: Rare Ocean 'Cool Spots'`" :headline-image="`/images/Emily%20Darling.Borneo.2018.jpg`"
       :copy="`In the ocean's vast expanse, certain reefs have been able to avoid the impacts of hot water thanks to being located in rare underwater ‘cool spots’. Known as 'Avoid Refugia', these reefs are natural sanctuaries from the warming trends of climate change, places where corals still thrive and massive, healthy reefs shelter huge troves of marine biodiversity.`"
       :locations="[{
         name: 'South Africa',
@@ -278,7 +281,20 @@
       ]" />
 
     <div id="section-9" ref="reefsbytype" class="section w-100 w-80-l cf z-2 pa1 pa4-l">
-      <h2 class="f1 teal tc">Reefs by type</h2>
+      <h2 class="f1 teal mv0 pv2">Reefs by type</h2>
+      <div>
+        <p class="measure pv2">
+          Coral reefs have truly astonishing adaptive capabilities, falling mainly into three categories: Avoidance,
+          Resistance, and Recovery. These reefs either evade harsh conditions, endure them steadfastly, or rejuvenate
+          after damage.
+        </p>
+
+        <p class="measure pv2">
+          Despite our expanding knowledge, a significant portion of the ocean's reefs remain <strong
+            class="white">unknown,</strong> hinting at undiscovered survival techniques that could help us better
+          understand how to protect these ecosystems.
+        </p>
+      </div>
       <!-- <div class="cf">
         <div class="reef-type w-third fl">Resist</div>
         <div class="reef-type w-third fl">Recover</div>
@@ -290,13 +306,28 @@
     </div>
 
     <div id="section-10" ref="whatnow" class="pa1 pa5-l">
-      <div class="pa3 pa5-l lh-copy f2 measure">
-        <h1 class="f1">What now?</h1>
-        <p>
-          What countries are currently doing...
+      <div class="pa3 pa5-l lh-copy f3 measure bg-transparent-black">
+        <h1 class="f1 f-subheadline-l pv2 mv0 white">What now?</h1>
+        <p class="measure pv3">
+          Countries worldwide are waking up to the crisis facing coral reefs. Aiming to protect 30% of the earth's lands
+          and oceans by 2030 - the "30x30" pledge - was one significant step taken during last year's global biodiversity
+          summit. Coral reefs got a special mention for their vital role in ocean biodiversity. The Philippines has
+          already set the pace, launching its national 30x30 initiative.
         </p>
-        <p>
-          How many reefs have yet to be found...
+        <p class="measure pv3">
+          Contrary to the popular narrative of dying coral reefs, recent findings offer room for hope. The doom prediction
+          rested on a single "excess heat" model, which, recent studies show, isn't sufficient to assess coral reef
+          health. Environment factors such as oxygen levels and water cleanliness turn out to be more critical.
+        </p>
+        <p class="measure pv3">
+          Given the new findings, there's a need for more sophisticated models to better predict the future of our oceans
+          and reefs. By protecting and nurturing these climate-resistant reefs, we can give them a fighting chance against
+          climate change.
+        </p>
+
+        <p class="measure pv3">
+          The bottom line? Coral reefs aren't necessarily doomed. If we act decisively and intelligently now, we can still
+          save our reefs.
         </p>
       </div>
     </div>
@@ -316,21 +347,25 @@
           <div class="w-100 w-third-ns dib pa1 pa2-l v-bottom">
             <div class="bg-transparent-black white br4 pa2 tl">
               <div class="pa2 pa3-l fw5 f5 lh-copy">
-                Tell your government representatives loud and clear: <strong style="color: #5CF3E1;">coral reefs are critical to biodiversity conservation
-                and climate adaptation</strong>. Sign on, and WCS will hand-deliver your signatures to international leaders and
+                Tell your government representatives loud and clear: <strong style="color: #5CF3E1;">coral reefs are
+                  critical to biodiversity conservation
+                  and climate adaptation</strong>. Sign on, and WCS will hand-deliver your signatures to international
+                leaders and
                 lawmakers at the UN Climate Change Conference and the Convention on Biological Diversity.
               </div>
               <img src="/svg/down_arrow.svg" alt="down arrow" class="h3 center db" />
               <button class="cta-button dim pointer w-100 pa2 mv4">Sign on</button>
-              </div>
+            </div>
           </div>
 
           <div class="w-100 w-third-ns dib pa1 pa2-l v-bottom">
             <div class="bg-transparent-black white br4 pa2 tl">
               <div class="pa2 pa3-l fw5 f5 lh-copy">
                 Scientists have only discovered about half of the coral reef refuges hidden underwater all over the world.
-                We need to change that, and soon. Consider <strong style="color: #5CF3E1;">expanding your funding or extending a hand in partnership to
-                help support the discovery of these climate-resilient coral reefs.</strong> Reach out to explore other ways to
+                We need to change that, and soon. Consider <strong style="color: #5CF3E1;">expanding your funding or
+                  extending a hand in partnership to
+                  help support the discovery of these climate-resilient coral reefs.</strong> Reach out to explore other
+                ways to
                 advance this work with us.
               </div>
               <img src="/svg/down_arrow.svg" alt="down arrow" class="h3 center db" />
@@ -341,8 +376,10 @@
           <div class="w-100 w-third-ns dib pa1 pa2-l v-bottom">
             <div class="bg-transparent-black white br4 pa2 tl">
               <div class="pa2 pa3-l fw5 f5 lh-copy">
-                Finding and protecting all of our coral reef refuges is a group effort. <strong style="color: #5CF3E1;">To dive deeper into the data and
-                to contribute your own data, meet MERMAID.</strong> To join our collaborative global movement to find these reefs,
+                Finding and protecting all of our coral reef refuges is a group effort. <strong style="color: #5CF3E1;">To
+                  dive deeper into the data and
+                  to contribute your own data, meet MERMAID.</strong> To join our collaborative global movement to find
+                these reefs,
                 reach out.
               </div>
               <img src="/svg/down_arrow.svg" alt="down arrow" class="h3 center db" />
@@ -352,8 +389,8 @@
         </div>
       </div>
 
-      <div class="white f1 i tc">
-        So much has been, and will be lost to climate change. <br />But coral reefs <strong>aren’t lost yet</strong>.
+      <div class="white f1 f-subheadline-l i tc tracked-tight mv2 mt6-l">
+        So much has been, and will be lost to climate change. But coral reefs <strong>aren’t lost yet</strong>.
         And if we act now, we can make sure they never are.
       </div>
 
@@ -409,14 +446,17 @@
 
     <div id="citations" class="pa3 f6 tracked-tight">
       <h3 class="f3">Citations and credits</h3>
-    <p><strong>Global temperature rise:</strong> Lee, J.-Y., J. Marotzke, G. Bala, L. Cao, S. Corti, J.P. Dunne, F. Engelbrecht, E. Fischer, J.C. Fyfe, C. Jones, A. Maycock,
-J. Mutemi, O. Ndiaye, S. Panickal, and T. Zhou, 2021: Future Global Climate: Scenario-Based Projections and NearTerm Information. In Climate Change 2021: The Physical Science Basis. Contribution of Working Group I to the
-Sixth Assessment Report of the Intergovernmental Panel on Climate Change [Masson-Delmotte, V., P. Zhai, A.
-Pirani, S.L.  Connors, C. Péan, S. Berger, N. Caud, Y. Chen, L. Goldfarb, M.I. Gomis, M. Huang, K. Leitzell, E. Lonnoy,
-J.B.R. Matthews, T.K. Maycock, T. Waterfield, O. Yelekçi, R. Yu, and B. Zhou (eds.)]. Cambridge University Press,
-Cambridge, United Kingdom and New York, NY, USA, pp. 553–672, doi:10.1017/9781009157896.006. </p>
+      <p><strong>Global temperature rise:</strong> Lee, J.-Y., J. Marotzke, G. Bala, L. Cao, S. Corti, J.P. Dunne, F.
+        Engelbrecht, E. Fischer, J.C. Fyfe, C. Jones, A. Maycock,
+        J. Mutemi, O. Ndiaye, S. Panickal, and T. Zhou, 2021: Future Global Climate: Scenario-Based Projections and
+        NearTerm Information. In Climate Change 2021: The Physical Science Basis. Contribution of Working Group I to the
+        Sixth Assessment Report of the Intergovernmental Panel on Climate Change [Masson-Delmotte, V., P. Zhai, A.
+        Pirani, S.L. Connors, C. Péan, S. Berger, N. Caud, Y. Chen, L. Goldfarb, M.I. Gomis, M. Huang, K. Leitzell, E.
+        Lonnoy,
+        J.B.R. Matthews, T.K. Maycock, T. Waterfield, O. Yelekçi, R. Yu, and B. Zhou (eds.)]. Cambridge University Press,
+        Cambridge, United Kingdom and New York, NY, USA, pp. 553–672, doi:10.1017/9781009157896.006. </p>
 
-    <p><strong>Photography from:</strong> </p>
+      <p><strong>Photography from:</strong> </p>
 
 
     </div>
@@ -679,5 +719,4 @@ ul li::before {
   background-color: #5CF3E1;
   color: black;
   border: none;
-}
-</style>
+}</style>

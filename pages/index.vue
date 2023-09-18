@@ -401,10 +401,10 @@
     </div>
 
     <div id="section-12" class="cf" ref="explorethemall">
-      <h2 class="mv0 pa2 ph5-l f2 f1-l">Explore the world's reefs</h2>
+      <h2 class="mv0 pa2 f2 f1-l">Explore some of the world's reefs</h2>
 
-      <div class="w-100 bg-transparent-white">
-        <div class="flex flex-column justify-center items-center">
+      <div class="w-100">
+        <div class="flex flex-column justify-center items-center bb bt b--white">
           <SpinnyGlobe @update:bcu="selectedBCUID = $event" />
         </div>
       </div>

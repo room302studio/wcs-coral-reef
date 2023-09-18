@@ -1,4 +1,3 @@
-import { transition, easeQuadInOut, interpolate } from "d3";
 import { select } from "d3-selection";
 import { geoOrthographic, geoPath, geoGraticule } from "d3-geo";
 import { scaleOrdinal } from "d3-scale";
@@ -19,6 +18,9 @@ const graticule = geoGraticule();
 const dragHandler = drag();
 const zoomHandler = zoom();
 
+// This represents the circle of the entire globe.
+const sphere = { type: "Sphere" };
+
 const worldAtlasURL =
   "https://unpkg.com/visionscarto-world-atlas@0.1.0/world/110m.json";
 
@@ -33,7 +35,7 @@ export const globe = (container, { state, setState }) => {
 
   // Assumes the state has width and height,
   // measured from the container element.
-  const { width, height } = state;
+  const { width, height, activeId } = state;
 
   // SVG scaling
   svg.attr("width", width).attr("height", height);
@@ -41,9 +43,7 @@ export const globe = (container, { state, setState }) => {
   // Fit the initial projection to the size of the container
   if (!state.initialScale) {
     console.log("      Fitting initial projection to container size.");
-    const initialScale = projection
-      .fitSize([width, height], { type: "Sphere" })
-      .scale();
+    const initialScale = projection.fitSize([width, height], sphere).scale();
     setState((state) => ({
       ...state,
       initialScale,
@@ -56,19 +56,26 @@ export const globe = (container, { state, setState }) => {
   // If the data is not loaded for public/50Reefs_data_extract/50Reefs_good_compromise_BCUs.json
   // then load it.
   if (!state.goodCompromiseBCUsData) {
+    console.log("      Loading 50Reefs_good_compromise_BCUs.json.");
+    setState((state) => ({
+      ...state,
+      goodCompromiseBCUsData: "LOADING",
+    }));
     fetch("/50Reefs_data_extract/50Reefs_good_compromise_BCUs.json")
+      // fetch("/Reefs70_min_attribute.json")
       .then((response) => response.json())
       .then((topojsonData) => {
         // console.log(goodCompromiseBCUsData);
         // console.log(feature(goodCompromiseBCUsData));
-
+        // console.log(topojsonData.objects);
         // console.log("feature", feature);
 
         const goodCompromiseBCUsData = feature(
           topojsonData,
           topojsonData.objects["50Reefs_good_compromise_BCUs"]
+          // topojsonData.objects["Reefs70_min_attribute"]
         );
-        // console.log("goodCompromiseBCUsData", goodCompromiseBCUsData);
+        console.log("goodCompromiseBCUsData", goodCompromiseBCUsData);
 
         setState((state) => ({
           ...state,
@@ -78,16 +85,18 @@ export const globe = (container, { state, setState }) => {
     return;
   }
 
+  // Wait for it to load
+  if (state.goodCompromiseBCUsData === "LOADING") {
+    return;
+  }
+
   // Load in the world atlas data
   if (!state.worldAtlasData) {
     fetch(worldAtlasURL)
       .then((response) => response.json())
       .then((topojsonData) => {
         // console.log("topojsonData", topojsonData);
-        const worldAtlasData = feature(
-          topojsonData,
-          topojsonData.objects.countries
-        );
+        const worldAtlasData = feature(topojsonData, topojsonData.objects.land);
         // console.log("worldAtlasData", worldAtlasData);
 
         setState((state) => ({
@@ -102,56 +111,27 @@ export const globe = (container, { state, setState }) => {
   projection.rotate(state.rotate);
   projection.scale(state.scale);
 
-  // Calculate the centroids
-  const centroids = state.goodCompromiseBCUsData.features
-    .map((feature) => path.centroid(feature))
-    .filter((centroid) => !centroid.some(Number.isNaN))
-    // then sort by latitude
-    .sort((a, b) => a[1] - b[1]);
+  // Render the sphere
+  svg
 
-  console.log("centroids", centroids);
-
-  // Rotate to Centroids
-  let currentCentroidIndex = 0;
-  setInterval(() => {
-    const centroid = centroids[currentCentroidIndex];
-
-    // Create a transition
-    const t = transition().duration(10000).ease(easeQuadInOut);
-
-    // Use the transition to rotate the projection
-    const rotate = projection.rotate();
-    const interpolator = interpolate(rotate, [-centroid[0], -centroid[1]]);
-
-    t.tween("rotate", () => {
-      return (t) => {
-        const newRotate = interpolator(t);
-        // newRotate[1] = Math.max(-180, Math.min(180, newRotate[1]));
-        newRotate[1] = 0
-        projection.rotate(newRotate);
-        projection.scale(1000);
-        svg.selectAll("path").attr("d", path);
-        // update circle positions
-        // svg
-        //   .selectAll("circle")
-        //   .data(centroids)
-        //   .attr("cx", (d) => path.centroid(d)[0])
-        //   .attr("cy", (d) => path.centroid(d)[1]);
-      };
-    });
-
-    currentCentroidIndex = (currentCentroidIndex + 1) % centroids.length;
-  }, 12000);
+    .selectAll("path.sphere")
+    .data([sphere])
+    .join("path")
+    .attr("class", "sphere")
+    .attr("d", path)
+    // .attr("fill", "#003d53");
+    // make semi-transparent
+    .attr("fill", "rgba(0, 61, 83, 0.88)");
 
   // Render graticules (lines around the globe)
-  // svg
-  //   .selectAll("path.graticule")
-  //   .data([null])
-  //   .join("path")
-  //   .attr("class", "graticule")
-  //   .attr("d", path(graticule()))
-  //   .attr("stroke", "red")
-  //   .attr("fill", "none");
+  svg
+    .selectAll("path.graticule")
+    .data([null])
+    .join("path")
+    .attr("class", "graticule")
+    .attr("d", path(graticule()))
+    .attr("stroke", "#005979")
+    .attr("fill", "none");
 
   // Render shapes from state.worldAtlasData
   svg
@@ -186,6 +166,21 @@ export const globe = (container, { state, setState }) => {
         selectedBCUID: d.properties.BCUID,
       }));
     });
+
+  svg
+    .selectAll("path.boundingbox")
+    .data(state.goodCompromiseBCUsData.features)
+    .join("path")
+    .attr("class", "boundingbox")
+    // .attr("d", path.bounds)
+    .attr("d", (d) => {
+      // get the bounding box of the BCU
+      const [[x0, y0], [x1, y1]] = path.bounds(d);
+      return `M${x0},${y0}L${x1},${y0}L${x1},${y1}L${x0},${y1}Z`;
+    })
+    .attr("stroke", "yellow")
+    .attr("fill", "none")
+    .attr("opacity", (d) => (d.properties.BCUID === activeId ? 1 : 0.3));
 
   /* now we need to draw big circles on the map at the centroids of the BCUs */
 
@@ -223,35 +218,35 @@ export const globe = (container, { state, setState }) => {
 
   // console.log("scale", state.scale);
 
-  // Support panning
-  svg.call(
-    // Inspired by https://vizhub.com/curran/8373d190b0f14dd89c07b44cf1baa9f9
-    dragHandler.on("drag", (event) => {
-      // Get the current rotation and scale
-      const rotate = projection.rotate();
-      const scale = projection.scale();
+  // // Support panning
+  // svg.call(
+  //   // Inspired by https://vizhub.com/curran/8373d190b0f14dd89c07b44cf1baa9f9
+  //   dragHandler.on("drag", (event) => {
+  //     // Get the current rotation and scale
+  //     const rotate = projection.rotate();
+  //     const scale = projection.scale();
 
-      // Compute the new rotation
-      const k = sensitivity / scale;
-      const newRotate = [rotate[0] + event.dx * k, rotate[1] - event.dy * k];
+  //     // Compute the new rotation
+  //     const k = sensitivity / scale;
+  //     const newRotate = [rotate[0] + event.dx * k, rotate[1] - event.dy * k];
 
-      // Update the state
-      setState((state) => ({
-        ...state,
-        rotate: newRotate,
-      }));
-    })
-  );
+  //     // Update the state
+  //     setState((state) => ({
+  //       ...state,
+  //       rotate: newRotate,
+  //     }));
+  //   })
+  // );
 
-  // Support zooming
-  svg.call(
-    zoomHandler.on("zoom", ({ transform: { k } }) => {
-      setState((state) => ({
-        ...state,
-        scale: state.initialScale * k,
-      }));
-    })
-  );
+  // // Support zooming
+  // svg.call(
+  //   zoomHandler.on("zoom", ({ transform: { k } }) => {
+  //     setState((state) => ({
+  //       ...state,
+  //       scale: state.initialScale * k,
+  //     }));
+  //   })
+  // );
 
   /* start a request animation frame that slowly rotates the globe as long as the mouse is not down */
   // if (!state.mouseDown) {

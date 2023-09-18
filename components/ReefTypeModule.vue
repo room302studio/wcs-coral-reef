@@ -21,10 +21,11 @@
         class="w-100 w-third-ns pa2 pa3-l extra-dark-blue bg-white br2 pointer dim ba b--white bw2">Show Case
         Study</button>
 
-      <div class="cf">
+      <div class="cf mt4">
         <div v-for="location in locations" class="w-third pv2 pr2 break-word overflow-hidden fl">
-          <h3 class="mv0 pv1 ph0 f3 fw1">{{ location.name }}</h3>
           <SatelliteImage :lat="location.lat" :lng="location.lng" class="w-100 h5" />
+          <h3 class="mv0 pv1 ph0 f3 fw1">{{ location.name }}</h3>
+
         </div>
       </div>
 

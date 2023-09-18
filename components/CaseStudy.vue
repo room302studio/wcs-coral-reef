@@ -1,12 +1,45 @@
 <template>
-<section>
-  <h1>Hello world!</h1>
-</section>
+  <section class="casestudy-container white cf extra-dark-blue-bg">
+
+    <div class="w-100 w-two-thirds-l center pa0 cf">
+      <div class="casestudy-text-content w-100 w-two-thirds-l fl-l pa2 pa4-l pv6-l">
+        <button @click="emit('close')">Close</button>
+        <h1>{{ title }}</h1>
+        <h2>{{ headline }}</h2>
+        <p>{{ copy }}</p>
+      </div>
+
+      <div class="w-100 w-third-l fl-l">
+        <SatelliteImage :lat="lat" :lng="lng" />
+      </div>
+
+      <!-- close button -->
+
+    </div>
+
+  </section>
 </template>
 
 <script setup>
+const emit = defineEmits(['close'])
+
+/*
+        <CaseStudy
+          :lat="locations[0].lat"
+          :lng="locations[0].lng"
+          :title="locations[0].name"
+          :headline="locations[0].name"
+          :copy="locations[0].name"
+          @close="showCaseStudy = false"
+          />*/
+
+const { lat, lng, title, headline, copy } = defineProps({
+  lat: Number,
+  lng: Number,
+  title: String,
+  headline: String,
+  copy: String
+})
 </script>
 
-<style>
-
-</style>
+<style scoped></style>

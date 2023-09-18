@@ -23,22 +23,22 @@
         </div>
       </div>
 
-      <!-- <div>
-        <h2>Case Study</h2>
-        <div class="cf">
-          <div class="w-100 w-50-ns fl-ns">
-            Satellite photo
-          </div>
+      <!-- button to showCaseStudy -->
+      <button @click="showCaseStudy = !showCaseStudy">Show Case Study</button>
 
-          <div class="w-100 w-50-ns fl-ns">
-            Ocean photo slideshow
-          </div>
-        </div>
+      <div v-if="showCaseStudy" class="case-study-container flex justify-center items-center">
+        <CaseStudy
+          class="w-100 w-two-thirds-l"
+          :lat="locations[0].lat"
+          :lng="locations[0].lng"
+          :title="locations[0].name"
+          :headline="locations[0].name"
+          :copy="locations[0].name"
+          @close="showCaseStudy = false"
+          />
+      </div>
 
-        <div class="pv2 pv5-l ph5-l w-100">
-          What makes it special
-        </div>
-      </div> -->
+      
     </div>
 
   </div>
@@ -51,4 +51,25 @@ const { title, headline, copy, headlineImage } = defineProps({
   locations: Array,
   headlineImage: String
 })
+
+const showCaseStudy = ref(false)
 </script>
+<style scoped>
+/* this should be a big modal pop-up with 10% margin on each side */
+.case-study-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-color: rgba(0,0,0,0.5); */
+  background-color: rgba(0,0,0,0.8);
+  overflow-y: auto;
+
+  z-index: 100;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+</style>

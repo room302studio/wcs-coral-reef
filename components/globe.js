@@ -119,7 +119,9 @@ export const globe = (container, { state, setState }) => {
     .join("path")
     .attr("class", "sphere")
     .attr("d", path)
-    .attr("fill", "#003d53");
+    // .attr("fill", "#003d53");
+    // make semi-transparent
+    .attr("fill", "rgba(0, 61, 83, 0.88)");
 
   // Render graticules (lines around the globe)
   svg

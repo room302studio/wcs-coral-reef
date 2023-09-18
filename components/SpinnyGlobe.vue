@@ -64,7 +64,7 @@ watch(
               ...state,
               rotate,
               activeId: id,
-              // scale: 2000,
+              scale: 720,
             }));
             // newRotate[1] = Math.max(-180, Math.min(180, newRotate[1]));
             // newRotate[1] = 0;

@@ -35,7 +35,7 @@
           :lng="locations[0].lng"
           :title="locations[0].name"
           :headline="locations[0].name"
-          :copy="locations[0].name"
+          :copy="locations[0]?.copy"
           @close="showCaseStudy = false"
           />
       </div>

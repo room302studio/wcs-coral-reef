@@ -190,7 +190,8 @@
     </div>
 
     <ReefTypeModule id="section-6" ref="avoidrefugia" class="w-100 w-80-ns pa4" :title="'Avoid'"
-      :headline="`Avoid Refugia: Rare Ocean 'Cool Spots'`" :headline-image="`/images/Emily%20Darling.Borneo.2018.jpg`"
+      :headline="`Avoid Refugia: Rare Ocean 'Cool Spots'`" 
+      :headline-image="`/images/avoid_OceanImageBank_MattCurnock_02.jpeg`"
       :copy="`In the ocean's vast expanse, certain reefs have been able to avoid the impacts of hot water thanks to being located in rare underwater ‘cool spots’. Known as 'Avoid Refugia', these reefs are natural sanctuaries from the warming trends of climate change, places where corals still thrive and massive, healthy reefs shelter huge troves of marine biodiversity.`"
       :locations="[{
         name: 'South Africa',
@@ -226,6 +227,7 @@
 
 
     <ReefTypeModule id="section-7" ref="recoverrefugia" class="w-100 w-80-ns pa4" :title="'Recover'"
+    :headline-image="`/images/recover_OceanImageBank_MattCurnock_24.jpeg`"
       :headline="`Recover Refugia: The Oceanic Phoenix`"
       :copy="`The 'Recover Refugia' embody our planet’s incredible capacity to heal and recover. Researchers are finding reefs all over the world that have bleached during warm water events, or been leveled by climate change induced mega storms, only to shock communities and scientists by recovering - growing back in record time where there was once only rubble.`"
       :locations="[{
@@ -262,6 +264,7 @@
 
     <ReefTypeModule id="section-8" ref="resistrefugia" class="w-100 w-80-ns pa4" :title="'Resist'"
       :headline="'Resist Refugia: The Adapters'"
+      :headline-image="`/images/resist_OceanImageBank_ShaunWolfe_26.jpeg`"
       :copy="`Adaptation is nature's survival strategy. There are reefs all over the world that aren’t avoiding heat, but are actively resisting it. Evolved adaptations are allowing those corals to take hot water events in stride and defy bleaching and other impacts – a show of resilience in the face of rapid change.`"
       :locations="[{
         name: 'Northwest Mauritius',

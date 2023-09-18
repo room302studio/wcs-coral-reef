@@ -7,7 +7,7 @@
           class="w-100 w-third-ns pa2 pa3-l  extra-dark-blue bg-white bn br2 pointer dim"
         >Close</button>
         <h1>{{ title }}</h1>
-        <h2>{{ headline }}</h2>
+        <!-- <h2>{{ headline }}</h2> -->
         <p>{{ copy }}</p>
       </div>
 

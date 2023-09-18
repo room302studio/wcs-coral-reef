@@ -1,11 +1,7 @@
 <template>
-  <div class="light-blue pa1 pa5-l">
-
+  <div class="light-blue pa1 pa5-l" id="top">
     <TopographicVisual class="w-100 z-1" />
-
-    <!-- this is a background gradient that goes from black to transparent at the top of the screen (it does not move) -->
     <div id="top-bg-gradient" class="fixed top-0 left-0 w-100 vh-100 z-0"></div>
-
     <div class="vh-50 w-100 w-90-ns pa4 mt6">
       <!-- <h3 class="w-100 f3 fw4 tc mv0 pv1 teal">Wave of Hope</h3> -->
       <h1 class="f2 f-headline-l tl light-blue mv0 pa3 ph5-l">
@@ -24,7 +20,7 @@
         <img :src="`/svg/stars.svg`" alt="stars" class="w-100 h-100" />
       </div>
 
-      <div id="floating-nav" class="pa2 f6 br2 fixed dn db-l">
+      <!-- <div id="floating-nav" class="pa2 f6 br2 fixed dn db-l">
         <h4 class="ma0 pa0 ttu white ph2 o-60">Navigation</h4>
         <ul class="pa0 mt2 mb0 list light-blue fw5">
           <li class="mv0 pa2 br2">Introduction</li>
@@ -38,11 +34,23 @@
           <li class="mv0 pa2 br2">Explore them all</li>
           <li class="mv0 pa2 br2">Call to action</li>
         </ul>
+      </div> -->
+
+      <div id="floating-nav" class="pa2 f6 br2 fixed dn db-l">
+        <h4 class="ma0 pa0 ttu white ph2 o-60">Navigation</h4>
+        <ul class="pa0 mt2 mb0 list light-blue fw5">
+          <li v-for="(section, index) in sections" :key="index" class="mv0 pa2 br2"
+            :class="{ active: isSectionVisible[index] }" ref="listItems">
+            <!-- {{ section.title }} -->
+            <a
+              :href="`#${section.id}`">{{ section.title }}</a>
+
+          </li>
+        </ul>
       </div>
     </div>
 
-
-    <div id="intro-cta" class="mv0" style="margin-top: 33vh;">
+    <div id="intro-cta" ref="intro" class="mv0" style="margin-top: 33vh;">
       <p class="measure-wide f5 f3-l fw7 teal tc center">
         Understand how these resilient ecosystems are resisting, avoiding, and recovering from climate change.
       </p>
@@ -50,12 +58,9 @@
       <img :src="`/svg/down_arrow.svg`" alt="down arrow" class="h3 center db" />
     </div>
 
+    <div id="intro-bg"></div>
 
-    <div id="intro-bg">
-
-    </div>
-
-    <div id="intro-visual" class="">
+    <div id="intro-visual" ref="introvisual" class="">
       <div id="cloud-1" class="cloud vh-25">
         <img :src="`/svg/cloud.svg`" alt="cloud" class="w-100 h-100" />
       </div>
@@ -73,11 +78,7 @@
       </div>
     </div>
 
-
-
-
-    <div id="surface-of-water">
-    </div>
+    <div id="surface-of-water"></div>
 
     <div class="o-70" style="margin-top: -50px;">
       <!-- beautiful coral reef photography -->
@@ -85,10 +86,10 @@
     </div>
 
     <!-- The tachyons class to make flex items go to the bottom of the container is "flex flex-column justify-end items-center" -->
-    <div id="section-1 cf" class="w-100 w-90-l pa1 pa5-l section v-mid flex-ns flex-row justify-center items-end">
+    <div ref="globaltemp" id="section-1"
+      class="w-100 w-90-l pa1 pa5-l section v-mid flex-ns flex-row justify-center items-end">
       <div class="w-100 w-50-ns flex-item">
         <h1 class="f1">What Different Climate Scenarios Mean for Global Temperature</h1>
-
 
         <div>
           <img :src="`/svg/global_temp_rise_chart.svg`" />
@@ -106,7 +107,7 @@
       </div>
     </div>
 
-    <div id="section-2" class="section cf w-100 w-90-l pa1 pa5-l">
+    <div id="section-2" ref="climateimpact" class="section cf w-100 w-90-l pa1 pa5-l">
       <div>
         <h2 class="pv4 teal">The impact of climate change is clear...</h2>
       </div>
@@ -138,7 +139,8 @@
       </div>
     </div>
 
-    <div id="section-3" class="section w-100 cf flex-ns flex-row justify-center items-center w-100 w-90-l pa1 pa5-l">
+    <div id="section-3" ref="oceanlifethrives"
+      class="section w-100 cf flex-ns flex-row justify-center items-center w-100 w-90-l pa1 pa5-l">
       <div class="w-100 w-50-ns">
         <h1 class="pr1 pr4-l">Where Ocean Life Thrives</h1>
       </div>
@@ -165,7 +167,8 @@
       </div>
     </div>
 
-    <div class="section w-100 cf flex-ns flex-row justify-center items-center w-100 w-90-l pa1 pa5-l">
+    <div id="section-4" ref="evolvingunderstanding"
+      class="section w-100 cf flex-ns flex-row justify-center items-center w-100 w-90-l pa1 pa5-l">
       <div class="w-100 w-two-thirds-ns bg-transparent-white pa3">
         <h1 class="pr1 pr4-l f2 fw2 tc">Our understanding is evolving</h1>
         <img :src="`/svg/environmental_conditions.svg`" alt="reef evolution" class="w-100" />
@@ -182,7 +185,7 @@
       </div>
     </div>
 
-    <div class="pa1 pa5-l">
+    <div id="section-5" ref="threedistinct" class="pa1 pa5-l">
       <div class="pa3 pa5-l lh-copy f2 measure">
         <p>We've identified that there are not just one, but <strong>three</strong> distinct types of coral reefs, each
           responding to climate change in a variety of remarkable ways.
@@ -192,9 +195,8 @@
       </div>
     </div>
 
-
-
-    <ReefTypeModule class="w-100 w-80-ns pa4" :title="'Avoid'" :headline="`Avoid Refugia: Rare Ocean 'Cool Spots'`"
+    <ReefTypeModule id="section-6" ref="avoidrefugia" class="w-100 w-80-ns pa4" :title="'Avoid'"
+      :headline="`Avoid Refugia: Rare Ocean 'Cool Spots'`"
       :copy="`In the ocean's vast expanse, certain reefs have been able to avoid the impacts of hot water thanks to being located in rare underwater ‘cool spots’. Known as 'Avoid Refugia', these reefs are natural sanctuaries from the warming trends of climate change, places where corals still thrive and massive, healthy reefs shelter huge troves of marine biodiversity.`"
       :locations="[{
         name: 'South Africa',
@@ -229,7 +231,8 @@
       ]" />
 
 
-    <ReefTypeModule class="w-100 w-80-ns pa4" :title="'Recover'" :headline="`Recover Refugia: The Oceanic Phoenix`"
+    <ReefTypeModule id="section-7" ref="recoverrefugia" class="w-100 w-80-ns pa4" :title="'Recover'"
+      :headline="`Recover Refugia: The Oceanic Phoenix`"
       :copy="`The 'Recover Refugia' embody our planet’s incredible capacity to heal and recover. Researchers are finding reefs all over the world that have bleached during warm water events, or been leveled by climate change induced mega storms, only to shock communities and scientists by recovering - growing back in record time where there was once only rubble.`"
       :locations="[{
         name: 'Maldives',
@@ -263,7 +266,8 @@
       }
       ]" />
 
-    <ReefTypeModule class="w-100 w-80-ns pa4" :title="'Resist'" :headline="'Resist Refugia: The Adapters'"
+    <ReefTypeModule id="section-8" ref="resistrefugia" class="w-100 w-80-ns pa4" :title="'Resist'"
+      :headline="'Resist Refugia: The Adapters'"
       :copy="`Adaptation is nature's survival strategy. There are reefs all over the world that aren’t avoiding heat, but are actively resisting it. Evolved adaptations are allowing those corals to take hot water events in stride and defy bleaching and other impacts – a show of resilience in the face of rapid change.`"
       :locations="[{
         name: 'Northwest Mauritius',
@@ -282,11 +286,7 @@
       },
       ]" />
 
-
-
-
-
-    <div id="section-4" class="section w-100 w-80-l cf z-2 pa1 pa4-l">
+    <div id="section-9" ref="reefsbytype" class="section w-100 w-80-l cf z-2 pa1 pa4-l">
       <h2 class="f1 teal tc">Reefs by type</h2>
       <!-- <div class="cf">
         <div class="reef-type w-third fl">Resist</div>
@@ -298,7 +298,7 @@
       </div>
     </div>
 
-    <div class="pa1 pa5-l">
+    <div id="section-10" ref="whatnow" class="pa1 pa5-l">
       <div class="pa3 pa5-l lh-copy f2 measure">
         <h1 class="f1">What now?</h1>
         <p>
@@ -312,8 +312,8 @@
 
 
 
-    <div id="section-6" class="section w-100 w-80-ns pa1 pa3-l">
-      <div id="section-7" class="section pa1 pa5-l">
+    <div id="section-11" ref="calltoaction" class="section w-100 w-80-ns pa1 pa3-l">
+      <div class="pa1 pa5-l">
         <h2 class="f2 f1-l mv0 pv0">Our oceans are counting on us. Act for them now.</h2>
         <div class="measure-wide white f2 pv5">
           All of this comes down to one simple message: Despite what you’ve heard, if we act soon we can still save our
@@ -359,17 +359,10 @@
             </div>
           </div>
         </div>
-        <!-- <div class="mv5 pa5 f1">
-          <form action="">
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" />
-            <button type="submit">Sign up</button>
-          </form>
-        </div> -->
       </div>
 
       <div class="white f1 i tc">
-        So much has been, and will be lost to climate change. <br />But coral reefs <strong>aren’t lost yet</strong>. 
+        So much has been, and will be lost to climate change. <br />But coral reefs <strong>aren’t lost yet</strong>.
         And if we act now, we can make sure they never are.
       </div>
 
@@ -379,7 +372,7 @@
 
     </div>
 
-    <div class="cf">
+    <div id="section-12" class="cf" ref="explorethemall">
       <h2 class="mv0 pa2 ph5-l f2 f1-l">Explore the world's reefs</h2>
 
       <div class="w-100 bg-transparent-white">
@@ -397,12 +390,6 @@
             <li><strong>Item:</strong> Value</li>
             <li><strong>Item:</strong> Value</li>
             <li><strong>Item:</strong> Value</li>
-            <!-- <li><strong>Item:</strong> Value</li>
-              <li><strong>Item:</strong> Value</li>
-              <li><strong>Item:</strong> Value</li>
-              <li><strong>Item:</strong> Value</li>
-              <li><strong>Item:</strong> Value</li>
-              <li><strong>Item:</strong> Value</li> -->
           </ul>
         </div>
 
@@ -412,24 +399,14 @@
             <thead>
               <tr class="tl bg-black white">
                 <th class="pa2">Name</th>
-                <!-- <th class="pa2">Location</th>
-                  <th class="pa2">Country</th>
-                  <th class="pa2">Region</th>
-                  <th class="pa2">Size</th> -->
                 <th class="pa2">Description</th>
                 <th class="pa2">Refugia Type</th>
               </tr>
             </thead>
             <tbody>
               <!-- just make 20 example reefs -->
-              <tr v-for="reef in reefs" :key="i" :style="{
-                backgroundColor: i === 7 ? '#CCC' : '',
-              }" class="stripe-dark">
+              <tr v-for="reef in reefs" class="stripe-dark">
                 <td class="pa2">{{ reef.Location }}</td>
-                <!-- <td class="pa2">Location {{ i }}</td>
-                  <td class="pa2">Country {{ i }}</td>
-                  <td class="pa2">Region {{ i }}</td>
-                  <td class="pa2">Size {{ i }}</td> -->
                 <td class="pa2"> {{ reef.Description }}</td>
                 <td class="pa2"> {{ reef['Refugia type'] }}</td>
               </tr>
@@ -439,7 +416,7 @@
       </div>
     </div>
 
-    <div id="credits" class="o-90 vh-50" style="margin-top: 80vh;">
+    <div id="credits" ref="credits" class="o-90 vh-50" style="margin-top: 80vh;">
       <h3 class="tc o-70">
         A project from
       </h3>
@@ -464,6 +441,66 @@ const selectedBCUID = ref(null);
 
 /* load CSV from public/Table 1 from Conservation Biology2023.pdf - Sheet1.csv for table */
 const reefs = ref([]);
+const sections = [
+  { title: 'Introduction', id: 'top', ref: 'introvisual' },
+  { title: 'Global temperature rise', id: 'section-1', ref: 'globaltemp' },
+  { title: 'Impact on world and oceans', id: 'section-2', ref: 'climateimpact' },
+  { title: 'Ocean life thrives', id: 'section-3', ref: 'oceanlifethrives' },
+  { title: 'Evolving understanding', id: 'section-4', ref: 'evolvingunderstanding' },
+  { title: 'Three distinct reef types', id: 'section-5', ref: 'threedistinct' },
+  { title: 'Avoid refugia', id: 'section-6', ref: 'avoidrefugia' },
+  { title: 'Recover refugia', id: 'section-7', ref: 'recoverrefugia' },
+  { title: 'Resist refugia', id: 'section-8', ref: 'resistrefugia' },
+  { title: 'Reef type breakdown', id: 'section-9', ref: 'reefsbytype' },
+  { title: 'What now?', id: 'section-10', ref: 'whatnow' },
+  { title: 'Act for them now', id: 'section-11', ref: 'calltoaction' },
+  { title: 'Explore', id: 'section-12', ref: 'explorethemall' },
+  { title: 'Credits', id: 'credits', ref: 'credits' },
+]
+
+/* now we need to make all of the refs for the sections */
+const oceanlifethrives = ref(null)
+const climateimpact = ref(null)
+const globaltemp = ref(null)
+const evolvingunderstanding = ref(null)
+const threedistinct = ref(null)
+const avoidrefugia = ref(null)
+const recoverrefugia = ref(null)
+const resistrefugia = ref(null)
+const reefsbytype = ref(null)
+const whatnow = ref(null)
+const calltoaction = ref(null)
+const explorethemall = ref(null)
+const credits = ref(null)
+
+const isSectionVisible = ref([
+  false, // intro
+  false, // globaltemp
+  false, // climateimpact
+  false, // oceanlifethrives
+  false, // evolvingunderstanding
+  false, // threedistinct
+  false, // avoidrefugia
+  false, // recoverrefugia
+  false, // resistrefugia
+  false, // reefsbytype
+  false, // whatnow
+  false, // calltoaction
+  false, // explorethemall
+  false, // credits
+])
+
+for (let i = 0; i < sections.length; i++) {
+  const section = sections[i];
+  const sectionRef = ref(null);
+  const sectionObserver = useIntersectionObserver(sectionRef, {}, ([{ isIntersecting }]) => {
+    isSectionVisible.value[i] = isIntersecting;
+  });
+
+  // add the sectionRef to the section
+  section.ref = sectionRef;
+  section.observer = sectionObserver;
+}
 
 onMounted(async () => {
   // use d3 to load the csv
@@ -471,7 +508,6 @@ onMounted(async () => {
 
   reefs.value = data;
 });
-
 
 // watch selectedBCUID and console.log it with an emoji
 watch(selectedBCUID, (newValue) => {
@@ -492,7 +528,6 @@ watch(selectedBCUID, (newValue) => {
   pointer-events: none;
 }
 
-
 #top-bg-gradient {
   /* background: linear-gradient(180deg, rgba(9, 26, 43, 1) 0%, rgba(0, 103, 148, 0) 96.1%); */
   background: linear-gradient(180deg, rgba(9, 26, 43, 1) 0%, rgba(0, 103, 148, 0) 96.1%);
@@ -500,7 +535,6 @@ watch(selectedBCUID, (newValue) => {
   height: 100vh;
   z-index: -1;
 }
-
 
 @keyframes cloudAnimation {
   0% {
@@ -511,8 +545,6 @@ watch(selectedBCUID, (newValue) => {
     transform: translateX(110%);
   }
 }
-
-
 
 #cloud-1 img {
   transform: scaleX(-1) scale(2);
@@ -617,4 +649,5 @@ ul li::before {
 /* but disable on the floating nav */
 #floating-nav ul li::before {
   content: none;
-}</style>
+}
+</style>

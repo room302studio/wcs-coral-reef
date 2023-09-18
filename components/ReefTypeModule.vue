@@ -3,7 +3,8 @@
     <h1>{{ title }}</h1>
 
     <div class="cf">
-      <img class="w-100 w-50-ns fl br2" :src="`/images/Emily%20Darling.Borneo.2018.jpg`" />
+      <!-- <img class="w-100 w-50-ns fl br2" :src="`/images/Emily%20Darling.Borneo.2018.jpg`" /> -->
+      <img class="w-100 w-50-ns fl br2" :src="headlineImage" />
 
       <div class="w-100 w-50-ns fl-ns pl4">
         <h3 class="w-100 mv0 pv0">
@@ -14,64 +15,63 @@
     </div>
 
     <div>
-      <h2>Where</h2>
-      <!-- make a 2x3 grid of map locations -->
+      <h2>Examples</h2>
       <div class="cf">
-        <!-- <div class="w-third pa2 break-word overflow-hidden fl">
-          <h3 class="mv0 pv1">Location 1</h3>
-          <SatelliteImage lat="40" lng="-100" class="w-100 h5" />
-        </div>
-        <div class="w-third pa2 break-word overflow-hidden fl">
-          <h3 class="mv0 pv1">Location 2</h3>
-          <SatelliteImage lat="20" lng="-120" class="w-100 h5" />
-        </div>
-        <div class="w-third pa2 break-word overflow-hidden fl">
-          <h3 class="mv0 pv1">Location 3</h3>
-          <SatelliteImage lat="20" lng="-120" class="w-100 h5" />
-        </div>
-        <div class="w-third pa2 break-word overflow-hidden fl">
-          <h3 class="mv0 pv1">Location 4</h3>
-          <SatelliteImage lat="-20" lng="120" class="w-100 h5" />
-        </div>
-        <div class="w-third pa2 break-word overflow-hidden fl">
-          <h3 class="mv0 pv1">Location 5</h3>
-          <SatelliteImage lat="3" lng="-40" class="w-100 h5" />
-        </div>
-        <div class="w-third pa2 break-word overflow-hidden fl">
-          <h3 class="mv0 pv1">Location 6</h3>
-          <SatelliteImage lat="10" lng="-99" class="w-100 h5" />
-        </div> -->
-        <div v-for="location in locations" class="w-third pa2 break-word overflow-hidden fl">
-          <h3 class="mv0 pv1 f3 fw1">{{ location.name }}</h3>
+        <div v-for="location in locations" class="w-third pv2 pr2 break-word overflow-hidden fl">
+          <h3 class="mv0 pv1 ph0 f3 fw1">{{ location.name }}</h3>
           <SatelliteImage :lat="location.lat" :lng="location.lng" class="w-100 h5" />
         </div>
       </div>
 
-      <!-- <div>
-        <h2>Case Study</h2>
-        <div class="cf">
-          <div class="w-100 w-50-ns fl-ns">
-            Satellite photo
-          </div>
+      <!-- button to showCaseStudy -->
+      <button @click="showCaseStudy = !showCaseStudy"
+      class="w-100 w-third-ns pa2 pa3-l extra-dark-blue-bg white bn br2 pointer dim"
+      >Show Case Study</button>
 
-          <div class="w-100 w-50-ns fl-ns">
-            Ocean photo slideshow
-          </div>
-        </div>
+      <div v-if="showCaseStudy" class="case-study-container flex justify-center items-center">
+        <CaseStudy
+          class="w-100 w-two-thirds-l"
+          :lat="locations[0].lat"
+          :lng="locations[0].lng"
+          :title="locations[0].name"
+          :headline="locations[0].name"
+          :copy="locations[0].name"
+          @close="showCaseStudy = false"
+          />
+      </div>
 
-        <div class="pv2 pv5-l ph5-l w-100">
-          What makes it special
-        </div>
-      </div> -->
+      
     </div>
 
   </div>
 </template>
 <script setup>
-const { title, headline, copy } = defineProps({
+const { title, headline, copy, headlineImage } = defineProps({
   title: String,
   headline: String,
   copy: String,
   locations: Array,
+  headlineImage: String
 })
+
+const showCaseStudy = ref(false)
 </script>
+<style scoped>
+/* this should be a big modal pop-up with 10% margin on each side */
+.case-study-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-color: rgba(0,0,0,0.5); */
+  background-color: rgba(0,0,0,0.8);
+  overflow-y: auto;
+
+  z-index: 100;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+</style>

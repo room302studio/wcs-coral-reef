@@ -115,6 +115,14 @@ background: linear-gradient(180deg, #020E18 0%, #006794 100%);
   color: #5CF3E1;
 }
 
+.extra-dark-blue-bg {
+  background-color: #011129;
+}
+
+.extra-dark-blue {
+  color: #011129;
+}
+
 /* give links a background color of #8054FF, remove underline, make text white, and round corners */
 /* a {
   background-color: #443fe5;

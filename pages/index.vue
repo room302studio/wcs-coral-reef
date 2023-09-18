@@ -492,6 +492,7 @@ useSeoMeta({
   ogTitle: 'Hope Blooms Underwater: The Coral Reefs Defying Climate Change',
   description: 'Nestled beneath the ocean waves, some coral reefs are defying the odds, challenging standard climate predictions.',
   ogDescription: 'Nestled beneath the ocean waves, some coral reefs are defying the odds, challenging standard climate predictions.',
+  ogImage: '/og_image.png'
 })
 
 useHead({

@@ -157,7 +157,8 @@ export const globe = (container, { state, setState }) => {
     .attr("class", "goodCompromiseBCUs")
     .attr("d", path)
     // .attr("stroke", "black")
-    .attr("fill", (d) => colorScale(d.properties.BCUID))
+    // .attr("fill", (d) => colorScale(d.properties.BCUID))
+    .attr('fill', '#5CF3E1')
     .on("click", (_, d) => {
       if (!d.properties.BCUID) {
         return;

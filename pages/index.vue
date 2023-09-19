@@ -186,7 +186,7 @@
 
       <div class="w-100 w-third-ns fl-ns pa4 f4 measure">
         <p>Previous scientific models used to predict how coral reefs might survive climate change were only based on a
-          single environmental condition – temperature. Newer models are much more complex, and incorporate over 25
+          single environmental condition – excess temperature. Newer models are much more complex, and incorporate over 25
           variables of temperature, depth, and human pressures of pollution, overfishing and management
         </p>
 
@@ -255,7 +255,7 @@
       :headline-image="`/images/recover_OceanImageBank_MattCurnock_24.jpeg`"
       :casestudy-image="`/images/recover_casestudy_TomVierus.VatuiRa.Fiji.2020.94.jpg`"
       :headline="`Recovery Refugia: The Oceanic Phoenix`"
-      :copy="`The 'Recovery Refugia' embody our planet’s incredible capacity to heal and recover. Researchers are finding reefs all over the world that have bleached during warm water events, or been leveled by climate change induced mega storms, only to shock scientists by their rapid recovery - growing back in record time where there was once only rubble. Often found in locations with where fast currents promote rapid coral growth.`"
+      :copy="`The 'Recovery Refugia' embody our planet’s incredible capacity to heal and recover. Researchers are finding reefs all over the world that have bleached during warm water events, or been leveled by climate change induced mega storms, only to shock scientists by their rapid recovery - growing back in record time where there was once only rubble. Often found in locations where fast currents promote rapid coral growth.`"
       :locations="[
         //   {
         //   name: 'Maldives',
@@ -330,7 +330,7 @@
       <div>
         <p class="measure pv2">
           Coral reefs have truly astonishing adaptive capabilities, falling mainly into three categories: Avoidance,
-          Resistance, and Recovery. These reefs either evade harsh conditions, endure them steadfastly, or rejuvenate
+          Recovery, and Resistance. These reefs either evade harsh conditions, endure them steadfastly, or rejuvenate
           after damage.
         </p>
 
@@ -344,7 +344,7 @@
           subtle and need to be verified in the water by researchers.
         </p>
         <p>
-          Scientists think, right now, that as many as 50% more of these coral reefs are still waiting to be found and
+          Scientists think, right now, that more than 50% of these coral reefs are still waiting to be found and
           protected all over the world.
         </p>
       </div>

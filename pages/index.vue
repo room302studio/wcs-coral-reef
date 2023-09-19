@@ -400,7 +400,7 @@
         <div class="w-100 cf tc">
           <div class="w-100 dib pa1 pa2-l v-bottom">
             <div class="bg-transparent-black white br4 pa2 tl">
-              <div class="pa2 pa3-l fw5 f5 lh-copy">
+              <div class="pa2 pa3-l fw5 f4 f3-l lh-copy">
                 Tell your government representatives loud and clear: <strong style="color: #5CF3E1;">coral reefs are
                   critical to biodiversity conservation
                   and climate adaptation</strong>. Sign on, and WCS will hand-deliver your signatures to international
@@ -414,7 +414,7 @@
 
           <div class="w-100 dib pa1 pa2-l v-bottom">
             <div class="bg-transparent-black white br4 pa2 tl">
-              <div class="pa2 pa3-l fw5 f5 lh-copy">
+              <div class="pa2 pa3-l fw5 f4 f3-l lh-copy">
                 Scientists have only discovered about half of the coral reef refuges hidden underwater all over the world.
                 We need to change that, and soon. Consider <strong style="color: #5CF3E1;">expanding your funding or
                   extending a hand in partnership to
@@ -429,7 +429,7 @@
 
           <div class="w-100 dib pa1 pa2-l v-bottom">
             <div class="bg-transparent-black white br4 pa2 tl">
-              <div class="pa2 pa3-l fw5 f5 lh-copy">
+              <div class="pa2 pa3-l fw5 f4 f3-l lh-copy">
                 Finding and protecting all of our coral reef refuges is a group effort. <strong style="color: #5CF3E1;">To
                   dive deeper into the data and to contribute your own data, meet MERMAID.</strong> Join our collaborative
                 global movement.

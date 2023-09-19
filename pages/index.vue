@@ -205,7 +205,7 @@
       </div>
     </div>
 
-    <ReefTypeModule id="section-6" ref="avoidrefugia" class="w-100 w-80-ns pa4" :title="'Avoid'"
+    <ReefTypeModule id="section-6" ref="avoidrefugia" class="w-100 w-80-ns pa4" :title="'Avoidance'"
       :headline="`Avoidance Refugia: Rare Ocean 'Cool Spots'`"
       :headline-image="`/images/avoid_OceanImageBank_MattCurnock_02.jpeg`"
       :casestudy-image="`/images/avoid_casestudy_MichaelMarkovina.Tanzania.Pemba.2019%20(3).jpg`"
@@ -251,7 +251,7 @@
       ]" />
 
 
-    <ReefTypeModule id="section-7" ref="recoverrefugia" class="w-100 w-80-ns pa4" :title="'Recover'"
+    <ReefTypeModule id="section-7" ref="recoverrefugia" class="w-100 w-80-ns pa4" :title="'Recovery'"
       :headline-image="`/images/recover_OceanImageBank_MattCurnock_24.jpeg`"
       :casestudy-image="`/images/recover_casestudy_TomVierus.VatuiRa.Fiji.2020.94.jpg`"
       :headline="`Recovery Refugia: The Oceanic Phoenix`"

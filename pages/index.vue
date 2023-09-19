@@ -35,7 +35,7 @@
 
     <div id="intro-cta" ref="intro" class="mv0" style="margin-top: 33vh;">
       <p class="measure-wide f5 f3-l fw7 teal tc center">
-        Understand how these resilient ecosystems are resisting, avoiding, and recovering from climate change.
+        Discover the new evidence showing some reefs are resisting, avoiding, and recovering from climate change.
       </p>
       <!-- down arrow -->
       <img :src="`/svg/down_arrow.svg`" alt="down arrow" class="h3 center db" />
@@ -81,18 +81,15 @@
 
       <div class="w-100 w-50-ns flex-item pa2 pa5-l">
         <p>
-          Since the inception of global temperature monitoring a clear pattern of steady increase is evident. This rise in
-          global temperatures is a challenge to life on Earth, including the life below our ocean's surface.
+          Since scientists first started monitoring global temperatures, a clear pattern of steady increase has emerged.
         </p>
         <p>
-          <a href="https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_Chapter04.pdf">Shared Socioeconomic
-            Pathways (SSP)</a> scenarios predict future conditions based on current socioeconomic trends.
+          Rising temperatures challenge life on earth as we know it, as well as life below our ocean’s surface – <a
+            href="https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_Chapter04.pdf">Shared Socioeconomic
+            Pathways, or SSPs,</a> are scenarios predicting possible future conditions on the planet based on warming
+          trends, and the picture those models paint, if we aren’t able to curb CO2 emissions and cap warming, can be
+          dire.
         </p>
-        <p>
-          Amidst this, a remarkable event is playing out. Coral reefs, despite the increasingly challenging conditions,
-          are scripting their own tales of survival. Our task is to ensure these stories of resilience continue.
-        </p>
-
       </div>
     </div>
 
@@ -135,23 +132,28 @@
       </div>
 
       <div class="w-100 w-50-ns fl-ns">
+        <p>However, amidst all the bad news, <a href="https://pubmed.ncbi.nlm.nih.gov/37144480/">a remarkable show of
+            resilience</a> has been playing out under the water, mostly
+          beyond our notice.</p>
+        <p>Coral reefs, despite the increasingly challenging conditions, are scripting their own tales of survival.</p>
         <p>Reefs, found in <a
             href="https://www.fisheries.noaa.gov/national/habitat-conservation/shallow-coral-reef-habitat#:~:text=Reefs%20occur%20in%20less%20than,%2C%20sea%20turtles%2C%20and%20more.">less
             than 1 percent of the ocean</a>, are incredibly important as they house nearly one-quarter of all marine
           species.</p>
 
         <p>
-          Corals are the perfect spot for ocean life to find food, shelter, and raise the next generation. This boosts
-          fishery productivity, sustaining millions of people with protein-rich food. But coral reefs are more than
-          aquatic supermarkets. They serve as buffers, absorbing wave energy, protecting our coastlines from storms and
-          erosion.
+          Coral reefs are the perfect spot for ocean life to find food, shelter, and raise the next generation. They
+          underpin the productivity of our fisheries, sustaining millions of people with protein-rich food every day, and
+          also serve as buffers absorbing wave energy and protecting our coastlines from storms and erosion.
         </p>
 
         <p>
           Economically too, they're worth billions, driving tourism in many countries.
         </p>
 
-        <p>With ocean temperatures rising due to climate change, they are under threat.</p>
+        <p>With ocean temperatures rising, reefs have been under threat and in the news as waves of bleaching events hit
+          these biodiversity hotspots. But, we now know, temperature isn’t the only factor in whether or not reefs
+          survive.</p>
 
       </div>
     </div>
@@ -164,14 +166,14 @@
       </div>
 
       <div class="w-100 w-third-ns fl-ns pa4 f4 measure">
-        <p>Previous models used to understand how Coral Reefs survive were based only a single environmental condition,
-          but
-          <strong class="white">newer models incorporate over 25</strong>.
+        <p>Previous scientific models used to predict how coral reefs might survive climate change were only based on a
+          single environmental condition – temperature. Newer models are much more complex, and incorporate over 25
+          variables.
         </p>
 
-        <p>The new models consider various geological, environmental, and human-interaction factors like depth, sea
-          surface temperature, concentration of different substances in water, visitation values, various types of
-          connectivity, travel time metrics, fishery management, and even the effect of gravity.
+        <p>These 25 variables run the gamut – including factors like depth, sea surface temperature, concentration of
+          different substances in water, how clean and clear the water is, fishery management conditions, how connected or
+          disconnected the reefs are, and even the effects of gravity.
         </p>
         <p> This high-definition understanding gives us a much better view of what is
           happening to reefs around the world, and what we can do to help.
@@ -181,16 +183,15 @@
 
     <div id="section-5" ref="threedistinct" class="pa1 pa5-l">
       <div class="pa3 pa5-l lh-copy f2 measure">
-        <p>We've identified that there are not just one, but <strong>three</strong> distinct types of coral reefs, each
-          responding to climate change in a variety of remarkable ways.
+        <p>We’ve identified that there are not just one, <strong>but three</strong> distinct types of coral reefs that are
+          defying the odds of climate change, and they are each showing signs of resilience in a variety of remarkable
+          ways.
         </p>
-        <p> This multifaceted way of understanding brings with it profound implications for conservation efforts, enabling
-          us to tailor our strategies to the unique needs and resilience patterns of each reef type. </p>
       </div>
     </div>
 
     <ReefTypeModule id="section-6" ref="avoidrefugia" class="w-100 w-80-ns pa4" :title="'Avoid'"
-      :headline="`Avoid Refugia: Rare Ocean 'Cool Spots'`" 
+      :headline="`Avoid Refugia: Rare Ocean 'Cool Spots'`"
       :headline-image="`/images/avoid_OceanImageBank_MattCurnock_02.jpeg`"
       :copy="`In the ocean's vast expanse, certain reefs have been able to avoid the impacts of hot water thanks to being located in rare underwater ‘cool spots’. Known as 'Avoid Refugia', these reefs are natural sanctuaries from the warming trends of climate change, places where corals still thrive and massive, healthy reefs shelter huge troves of marine biodiversity.`"
       :locations="[{
@@ -227,7 +228,7 @@
 
 
     <ReefTypeModule id="section-7" ref="recoverrefugia" class="w-100 w-80-ns pa4" :title="'Recover'"
-    :headline-image="`/images/recover_OceanImageBank_MattCurnock_24.jpeg`"
+      :headline-image="`/images/recover_OceanImageBank_MattCurnock_24.jpeg`"
       :headline="`Recover Refugia: The Oceanic Phoenix`"
       :copy="`The 'Recover Refugia' embody our planet’s incredible capacity to heal and recover. Researchers are finding reefs all over the world that have bleached during warm water events, or been leveled by climate change induced mega storms, only to shock communities and scientists by recovering - growing back in record time where there was once only rubble.`"
       :locations="[{
@@ -263,8 +264,7 @@
       ]" />
 
     <ReefTypeModule id="section-8" ref="resistrefugia" class="w-100 w-80-ns pa4" :title="'Resist'"
-      :headline="'Resist Refugia: The Adapters'"
-      :headline-image="`/images/resist_OceanImageBank_ShaunWolfe_26.jpeg`"
+      :headline="'Resist Refugia: The Adapters'" :headline-image="`/images/resist_OceanImageBank_ShaunWolfe_26.jpeg`"
       :copy="`Adaptation is nature's survival strategy. There are reefs all over the world that aren’t avoiding heat, but are actively resisting it. Evolved adaptations are allowing those corals to take hot water events in stride and defy bleaching and other impacts – a show of resilience in the face of rapid change.`"
       :locations="[{
         name: 'Northwest Mauritius',
@@ -292,10 +292,18 @@
           after damage.
         </p>
 
+        <p> This multifaceted way of understanding brings with it profound implications for conservation efforts, enabling
+          us to tailor our strategies to the unique needs and resilience patterns of each reef type. </p>
+
         <p class="measure pv2">
-          Despite our expanding knowledge, a significant portion of the ocean's reefs remain <strong
-            class="white">unknown,</strong> hinting at undiscovered survival techniques that could help us better
-          understand how to protect these ecosystems.
+          Despite our expanding knowledge, a significant number of these rare coral reef refuges currently remain <strong
+            class="white">unknown.</strong>
+          Satellite data tells us a lot about coral reefs and our oceans, but signs of resilience in coral refuges can be
+          subtle and need to be verified in the water by researchers.
+        </p>
+        <p>
+          Scientists think, right now, that as many as 50% more of these coral reefs are still waiting to be found and
+          protected all over the world.
         </p>
       </div>
       <!-- <div class="cf">
@@ -314,8 +322,13 @@
         <p class="measure pv3">
           Countries worldwide are waking up to the crisis facing coral reefs. Aiming to protect 30% of the earth's lands
           and oceans by 2030 - the "30x30" pledge - was one significant step taken during last year's global biodiversity
-          summit. Coral reefs got a special mention for their vital role in ocean biodiversity. The Philippines has
-          already set the pace, launching its national 30x30 initiative.
+          summit. Coral reefs got a special mention for their vital role in ocean biodiversity.
+          Contrary to the popular doom prognosis for coral reefs, these new findings offer room for hope and expand our
+          understanding of the ways that corals <strong>can survive climate change.</strong>
+        </p>
+        <p class="measure pv3">
+          This new science shines a path toward a better future for our oceans – <em>if</em> we can find and protect all
+          of these climate-resilient reefs.
         </p>
         <p class="measure pv3">
           Contrary to the popular narrative of dying coral reefs, recent findings offer room for hope. The doom prediction
@@ -380,10 +393,8 @@
             <div class="bg-transparent-black white br4 pa2 tl">
               <div class="pa2 pa3-l fw5 f5 lh-copy">
                 Finding and protecting all of our coral reef refuges is a group effort. <strong style="color: #5CF3E1;">To
-                  dive deeper into the data and
-                  to contribute your own data, meet MERMAID.</strong> To join our collaborative global movement to find
-                these reefs,
-                reach out.
+                  dive deeper into the data and to contribute your own data, meet MERMAID.</strong> Join our collaborative
+                global movement.
               </div>
               <img src="/svg/down_arrow.svg" alt="down arrow" class="h3 center db" />
               <button class="cta-button dim pointer w-100 pa2 mv4">Join us</button>
@@ -404,7 +415,7 @@
     </div>
 
     <div id="section-12" class="cf" ref="explorethemall">
-      <h2 class="mv0 pa2 f2 f1-l">Explore some of the world's reefs</h2>
+      <h2 class="mv0 pa2 f2 f1-l">Explore some of the world's climate resilient reefs</h2>
 
       <div class="w-100">
         <div class="flex flex-column justify-center items-center bb bt b--white">
@@ -459,7 +470,7 @@
         J.B.R. Matthews, T.K. Maycock, T. Waterfield, O. Yelekçi, R. Yu, and B. Zhou (eds.)]. Cambridge University Press,
         Cambridge, United Kingdom and New York, NY, USA, pp. 553–672, doi:10.1017/9781009157896.006. </p>
 
-      <p><strong>Photography from:</strong> </p>
+      <p><strong>Photography from:</strong> The Wildlife Conservation Society, The Ocean Image Bank</p>
 
 
     </div>

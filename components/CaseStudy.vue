@@ -15,7 +15,7 @@
         <!-- <p>{{ copy }}</p> -->
         <div class="f4 lh-copy">
           <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl eget aliquam ultricies, nunc nisl
+          {{copy}}
         </p>
         </div>
         

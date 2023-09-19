@@ -33,7 +33,8 @@
 
       <div v-if="showCaseStudy" class="case-study-container flex justify-center items-center">
         <CaseStudy class="w-100 w-two-thirds-l" :lat="locations[0].lat" :lng="locations[0].lng" :title="locations[0].name"
-          :headline="locations[0].name" :headline-image="headlineImage" :copy="locations[0]?.copy"
+          :headline="locations[0].name" 
+          :headline-image="casestudyImage" :copy="locations[0]?.copy"
           @close="showCaseStudy = false" />
       </div>
 
@@ -43,12 +44,13 @@
   </div>
 </template>
 <script setup>
-const { title, headline, copy, headlineImage } = defineProps({
+const { title, headline, copy, headlineImage, casestudyImage } = defineProps({
   title: String,
   headline: String,
   copy: String,
   locations: Array,
-  headlineImage: String
+  headlineImage: String,
+  casestudyImage: String
 })
 
 const showCaseStudy = ref(false)

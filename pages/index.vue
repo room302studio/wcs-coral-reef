@@ -193,12 +193,21 @@
     <ReefTypeModule id="section-6" ref="avoidrefugia" class="w-100 w-80-ns pa4" :title="'Avoid'"
       :headline="`Avoid Refugia: Rare Ocean 'Cool Spots'`"
       :headline-image="`/images/avoid_OceanImageBank_MattCurnock_02.jpeg`"
+      :casestudy-image="`/images/avoid_casestudy_MichaelMarkovina.Tanzania.Pemba.2019%20(3).jpg`"
       :copy="`In the ocean's vast expanse, certain reefs have been able to avoid the impacts of hot water thanks to being located in rare underwater ‘cool spots’. Known as 'Avoid Refugia', these reefs are natural sanctuaries from the warming trends of climate change, places where corals still thrive and massive, healthy reefs shelter huge troves of marine biodiversity.`"
-      :locations="[{
-        name: 'South Africa',
-        lat: '-34.397',
-        lng: '150.644',
-      },
+      :locations="[
+        {
+          name: 'Kisite Marine Park in Kenya',
+          // -4.713696429415297, 39.3622329267236
+          lat: '-4.713696429415297',
+          lng: '39.3622329267236',
+          copy: 'Kisite Marine Park is located near a deep underwater channel on the border of Kenya and Tanzania. The channel’s unique depth and cool currents have helped nearby coral reefs escape the impacts of hot water events, a pattern of avoidance that has been demonstrated across 30 years of WCS monitoring.'
+        },
+      //   {
+      //   name: 'South Africa',
+      //   lat: '-34.397',
+      //   lng: '150.644',
+      // },
       {
         name: 'Western Phillipines',
         lat: '12.879',
@@ -229,12 +238,21 @@
 
     <ReefTypeModule id="section-7" ref="recoverrefugia" class="w-100 w-80-ns pa4" :title="'Recover'"
       :headline-image="`/images/recover_OceanImageBank_MattCurnock_24.jpeg`"
+      :casestudy-image="`/images/recover_casestudy_TomVierus.VatuiRa.Fiji.2020.94.jpg`"
       :headline="`Recover Refugia: The Oceanic Phoenix`"
       :copy="`The 'Recover Refugia' embody our planet’s incredible capacity to heal and recover. Researchers are finding reefs all over the world that have bleached during warm water events, or been leveled by climate change induced mega storms, only to shock communities and scientists by recovering - growing back in record time where there was once only rubble.`"
-      :locations="[{
-        name: 'Maldives',
-        lat: '-34.397',
-        lng: '150.644',
+      :locations="[
+      //   {
+      //   name: 'Maldives',
+      //   lat: '-34.397',
+      //   lng: '150.644',
+      // },
+      {
+        name: 'Vatu-i-Ra in Fiji',
+        // -17.31537905313272, 178.4666749294758
+        lat: '-17.31537905313272',
+        lng: '178.4666749294758',
+        copy: 'Vatu-i-Ra is located on Fiji’s Suncoast between the two main islands of Viti Levu and Vanua Levu. The Conservation Area has 100+ km2 of coral reefs and over 100 species of fish, and has shown an ability to rapidly recover after being severely damaged by storms.'
       },
       {
         name: 'Northern Japan',
@@ -265,17 +283,26 @@
 
     <ReefTypeModule id="section-8" ref="resistrefugia" class="w-100 w-80-ns pa4" :title="'Resist'"
       :headline="'Resist Refugia: The Adapters'" :headline-image="`/images/resist_OceanImageBank_ShaunWolfe_26.jpeg`"
+      :casestudy-image="`/images/resist_casestudy_WCS__Tom Vierus.Western Province.Solomon Islands.2023.83.jpg`"
       :copy="`Adaptation is nature's survival strategy. There are reefs all over the world that aren’t avoiding heat, but are actively resisting it. Evolved adaptations are allowing those corals to take hot water events in stride and defy bleaching and other impacts – a show of resilience in the face of rapid change.`"
-      :locations="[{
+      :locations="[
+        {
+          name: 'Kolombangara Island in Solomon Islands',
+          // -7.9817752095027, 157.06518171888
+          lat: '-7.9817752095027',
+          lng: '157.06518171888',
+          copy: 'Part of the Coral Triangle, Solomon Islands has some of the world’s highest diversity of coral species. WCS completed the first ever island-wide coral reef survey in Kolombangara in 2016, where teams found low levels of bleaching despite heat events.'
+        },
+        {
         name: 'Northwest Mauritius',
         lat: '-20.173',
         lng: '57.560'
       },
-      {
-        name: 'Bay of Cartagena',
-        lat: '12.879',
-        lng: '121.774'
-      },
+      // {
+      //   name: 'Bay of Cartagena',
+      //   lat: '12.879',
+      //   lng: '121.774'
+      // },
       {
         name: 'Gulf of Mannar',
         lat: '-24.397',

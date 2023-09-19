@@ -1,5 +1,5 @@
 <template>
-  <section class="casestudy-container white cf extra-dark-blue-bg">
+  <section class="casestudy-container white cf extra-dark-blue-bg vh-100 overflow-y-auto pa1-ns">
 
     <div class="w-100 flex justify-center items-center pr4" ref="modal">
       <div class="casestudy-text-content w-100 w-two-thirds-l fl-l pa2 pa4-l ">

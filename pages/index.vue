@@ -2,15 +2,37 @@
   <div class="light-blue pa1 pa5-l" id="top">
     <TopographicVisual class="w-100 z-1" />
     <div id="top-bg-gradient" class="fixed top-0 left-0 w-100 vh-100 z-0"></div>
+
+    <div id="intro-bg"></div>
+
+    <div id="intro-visual" ref="introvisual" class="z-0">
+      <div id="cloud-1" class="cloud vh-25">
+        <img :src="`/svg/cloud.svg`" alt="cloud" class="w-100 h-100" />
+      </div>
+      <div id="cloud-2" class="cloud vh-25">
+        <img :src="`/svg/cloud.svg`" alt="cloud" class="w-100 h-100" />
+      </div>
+      <div id="cloud-3" class="cloud vh-25">
+        <img :src="`/svg/cloud.svg`" alt="cloud" class="w-100 h-100" />
+      </div>
+
+      <div id="stars"></div>
+
+      <div id="ocean-waves" class="vh-25">
+        <img :src="`/svg/waves.svg`" alt="ocean waves" class="" />
+      </div>
+    </div>
+
+
     <div class="vh-50 w-100 w-90-ns pa4 mt6">
       <!-- <h3 class="w-100 f3 fw4 tc mv0 pv1 teal">Wave of Hope</h3> -->
-      <h1 class="f2 f-headline-l tl light-blue mv0 pa3 ph5-l">
-        <span class="fw4">Hope Blooms Underwater:</span> <br />The Coral Reefs Defying Climate Change
+      <h1 class="f2 f-subheadline-l tl light-blue mv0 pa3 ph4-l">
+        <span class="fw4">Hope Underwater:</span> <br />The Coral Reefs Defying Climate Change
       </h1>
 
       <div class="">
-        <div class="measure-wide fw6 lh-title pb5 light-blue mv5 ph5-l">
-          <p class="f4 f2-l">Nestled beneath the ocean waves, some coral reefs are defying the odds, challenging standard
+        <div class="measure-wide fw6 lh-title pb5 light-blue mv5 ph2 ph4-l">
+          <p class="f4 f3-l">Nestled beneath the ocean waves, some coral reefs are defying the odds, challenging standard
             climate predictions.</p>
         </div>
       </div>
@@ -33,7 +55,7 @@
       </div>
     </div>
 
-    <div id="intro-cta" ref="intro" class="mv0" style="margin-top: 33vh;">
+    <div id="intro-cta" ref="intro" class="mv0 z-1">
       <p class="measure-wide f5 f3-l fw7 teal tc center">
         Discover the new evidence showing some reefs are resisting, avoiding, and recovering from climate change.
       </p>
@@ -41,38 +63,20 @@
       <img :src="`/svg/down_arrow.svg`" alt="down arrow" class="h3 center db" />
     </div>
 
-    <div id="intro-bg"></div>
-
-    <div id="intro-visual" ref="introvisual" class="">
-      <div id="cloud-1" class="cloud vh-25">
-        <img :src="`/svg/cloud.svg`" alt="cloud" class="w-100 h-100" />
-      </div>
-      <div id="cloud-2" class="cloud vh-25">
-        <img :src="`/svg/cloud.svg`" alt="cloud" class="w-100 h-100" />
-      </div>
-      <div id="cloud-3" class="cloud vh-25">
-        <img :src="`/svg/cloud.svg`" alt="cloud" class="w-100 h-100" />
-      </div>
-
-      <div id="stars"></div>
-
-      <div id="ocean-waves" class="vh-25">
-        <img :src="`/svg/waves.svg`" alt="ocean waves" class="" />
-      </div>
-    </div>
-
     <div id="surface-of-water"></div>
 
-    <div class="o-70" style="margin-top: -50px;">
-      <!-- beautiful coral reef photography -->
-      <img :src="`/images/EmilyDarling.Fiji.2019_transparent.png`" alt="coral reef" class="br4 z-0" />
+    <div class="section">
+      <div class="o-70">
+        <!-- beautiful coral reef photography -->
+        <img :src="`/images/EmilyDarling.Fiji.2019_transparent.png`" alt="coral reef" class="mt4 pt4 br4 z-0" />
+      </div>
     </div>
 
     <!-- The tachyons class to make flex items go to the bottom of the container is "flex flex-column justify-end items-center" -->
     <div ref="globaltemp" id="section-1"
       class="w-100 w-90-l pa1 pa5-l section v-mid flex-ns flex-row justify-center items-end">
       <div class="w-100 w-50-ns flex-item">
-        <h1 class="f1">What Different Climate Scenarios Mean for Global Temperature</h1>
+        <h1 class="f2 f1-l">What Different Climate Scenarios Mean for Global Temperature</h1>
 
         <div>
           <img :src="`/svg/global_temp_rise_chart.svg`" />
@@ -129,12 +133,27 @@
       class="section w-100 cf flex-ns flex-row justify-center items-center w-100 w-90-l pa1 pa5-l">
       <div class="w-100 w-50-ns">
         <h1 class="pr1 pr4-l">Where Ocean Life Thrives</h1>
+
+        <!-- a grid of a few nice images of coral reefs -->
+        <div class="w-100 flex flex-wrap justify-center items-center pr2 pr4-l">
+          <div class="w-100 w-50-ns pa1 pa2-l">
+            <img :src="`/images/Emily%20Darling.Borneo.2018.jpg`" alt="coral reef" class="br4" />
+          </div>
+          <div class="w-100 w-50-ns pa1 pa2-l">
+            <img :src="`/images/Emily%20Darling.Borneo.2018.jpg`" alt="coral reef" class="br4" />
+          </div>
+          <div class="w-100 w-50-ns pa1 pa2-l">
+            <img :src="`/images/Emily%20Darling.Borneo.2018.jpg`" alt="coral reef" class="br4" />
+          </div>
+          <div class="w-100 w-50-ns pa1 pa2-l">
+            <img :src="`/images/Emily%20Darling.Borneo.2018.jpg`" alt="coral reef" class="br4" />
+          </div>
+        </div>
       </div>
 
       <div class="w-100 w-50-ns fl-ns">
-        <p>However, amidst all the bad news, <a href="https://pubmed.ncbi.nlm.nih.gov/37144480/">a remarkable show of
-            resilience</a> has been playing out under the water, mostly
-          beyond our notice.</p>
+        <p>However, amidst all the bad news, <a href="https://conbio.onlinelibrary.wiley.com/doi/full/10.1111/cobi.14108"
+            target="_blank">a new study finds</a> a remarkable show of coral resilience.</p>
         <p>Coral reefs, despite the increasingly challenging conditions, are scripting their own tales of survival.</p>
         <p>Reefs, found in <a
             href="https://www.fisheries.noaa.gov/national/habitat-conservation/shallow-coral-reef-habitat#:~:text=Reefs%20occur%20in%20less%20than,%2C%20sea%20turtles%2C%20and%20more.">less
@@ -162,20 +181,16 @@
       class="section w-100 cf flex-ns flex-row justify-center items-center w-100 w-90-l pa1 pa5-l">
       <div class="w-100 w-two-thirds-ns bg-transparent-white pa3">
         <h1 class="pr1 pr4-l f2 fw2 tc">Our understanding is evolving</h1>
-        <img :src="`/svg/environmental_conditions.svg`" alt="reef evolution" class="w-100" />
+        <img :src="`/svg/environmental_conditions.r2.svg`" alt="reef evolution" class="w-100" />
       </div>
 
       <div class="w-100 w-third-ns fl-ns pa4 f4 measure">
         <p>Previous scientific models used to predict how coral reefs might survive climate change were only based on a
           single environmental condition – temperature. Newer models are much more complex, and incorporate over 25
-          variables.
+          variables of temperature, depth, and human pressures of pollution, overfishing and management
         </p>
 
-        <p>These 25 variables run the gamut – including factors like depth, sea surface temperature, concentration of
-          different substances in water, how clean and clear the water is, fishery management conditions, how connected or
-          disconnected the reefs are, and even the effects of gravity.
-        </p>
-        <p> This high-definition understanding gives us a much better view of what is
+        <p>This high-definition understanding gives us a much better view of what is
           happening to reefs around the world, and what we can do to help.
         </p>
       </div>
@@ -183,7 +198,7 @@
 
     <div id="section-5" ref="threedistinct" class="pa1 pa5-l">
       <div class="pa3 pa5-l lh-copy f2 measure">
-        <p>We’ve identified that there are not just one, <strong>but three</strong> distinct types of coral reefs that are
+        <p>We’ve identified that there are not just one, <strong>but at least three</strong> distinct types of coral reefs that are
           defying the odds of climate change, and they are each showing signs of resilience in a variety of remarkable
           ways.
         </p>
@@ -191,10 +206,10 @@
     </div>
 
     <ReefTypeModule id="section-6" ref="avoidrefugia" class="w-100 w-80-ns pa4" :title="'Avoid'"
-      :headline="`Avoid Refugia: Rare Ocean 'Cool Spots'`"
+      :headline="`Avoidance Refugia: Rare Ocean 'Cool Spots'`"
       :headline-image="`/images/avoid_OceanImageBank_MattCurnock_02.jpeg`"
       :casestudy-image="`/images/avoid_casestudy_MichaelMarkovina.Tanzania.Pemba.2019%20(3).jpg`"
-      :copy="`In the ocean's vast expanse, certain reefs have been able to avoid the impacts of hot water thanks to being located in rare underwater ‘cool spots’. Known as 'Avoid Refugia', these reefs are natural sanctuaries from the warming trends of climate change, places where corals still thrive and massive, healthy reefs shelter huge troves of marine biodiversity.`"
+      :copy="`In the ocean's vast expanse, certain reefs have been able to avoidance the impacts of hot water thanks to being located in rare underwater ‘cool spots’. Known as 'Avoidance Refugia', these reefs are natural sanctuaries from the warming trends of climate change, places where corals still thrive and massive, healthy reefs shelter huge troves of marine biodiversity. They are often associated with deep cool water close to shore.`"
       :locations="[
         {
           name: 'Kisite Marine Park in Kenya',
@@ -203,88 +218,88 @@
           lng: '39.3622329267236',
           copy: 'Kisite Marine Park is located near a deep underwater channel on the border of Kenya and Tanzania. The channel’s unique depth and cool currents have helped nearby coral reefs escape the impacts of hot water events, a pattern of avoidance that has been demonstrated across 30 years of WCS monitoring.'
         },
-      //   {
-      //   name: 'South Africa',
-      //   lat: '-34.397',
-      //   lng: '150.644',
-      // },
-      {
-        name: 'Western Phillipines',
-        lat: '12.879',
-        lng: '121.774',
-      },
-      {
-        name: 'Southern Great Barrier Reef',
-        lat: '-24.397',
-        lng: '150.644',
-      },
-      {
-        name: 'Hawaii',
-        lat: '19.8968',
-        lng: '-155.5828',
-      },
-      {
-        name: 'Mesoamerican Reef',
-        lat: '20.8968',
-        lng: '-85.5828',
-      },
-      {
-        name: 'Eastern Colombia',
-        lat: '11.8968',
-        lng: '-75.5828',
-      }
+        //   {
+        //   name: 'South Africa',
+        //   lat: '-34.397',
+        //   lng: '150.644',
+        // },
+        {
+          name: 'Western Phillipines',
+          lat: '12.879',
+          lng: '121.774',
+        },
+        {
+          name: 'Southern Great Barrier Reef',
+          lat: '-24.397',
+          lng: '150.644',
+        },
+        {
+          name: 'Hawaii',
+          lat: '19.8968',
+          lng: '-155.5828',
+        },
+        {
+          name: 'Mesoamerican Reef',
+          lat: '20.8968',
+          lng: '-85.5828',
+        },
+        {
+          name: 'Eastern Colombia',
+          lat: '11.8968',
+          lng: '-75.5828',
+        }
       ]" />
 
 
     <ReefTypeModule id="section-7" ref="recoverrefugia" class="w-100 w-80-ns pa4" :title="'Recover'"
       :headline-image="`/images/recover_OceanImageBank_MattCurnock_24.jpeg`"
       :casestudy-image="`/images/recover_casestudy_TomVierus.VatuiRa.Fiji.2020.94.jpg`"
-      :headline="`Recover Refugia: The Oceanic Phoenix`"
-      :copy="`The 'Recover Refugia' embody our planet’s incredible capacity to heal and recover. Researchers are finding reefs all over the world that have bleached during warm water events, or been leveled by climate change induced mega storms, only to shock communities and scientists by recovering - growing back in record time where there was once only rubble.`"
+      :headline="`Recovery Refugia: The Oceanic Phoenix`"
+      :copy="`The 'Recovery Refugia' embody our planet’s incredible capacity to heal and recover. Researchers are finding reefs all over the world that have bleached during warm water events, or been leveled by climate change induced mega storms, only to shock scientists by their rapid recovery - growing back in record time where there was once only rubble. Often found in locations with where fast currents promote rapid coral growth.`"
       :locations="[
-      //   {
-      //   name: 'Maldives',
-      //   lat: '-34.397',
-      //   lng: '150.644',
-      // },
-      {
-        name: 'Vatu-i-Ra in Fiji',
-        // -17.31537905313272, 178.4666749294758
-        lat: '-17.31537905313272',
-        lng: '178.4666749294758',
-        copy: 'Vatu-i-Ra is located on Fiji’s Suncoast between the two main islands of Viti Levu and Vanua Levu. The Conservation Area has 100+ km2 of coral reefs and over 100 species of fish, and has shown an ability to rapidly recover after being severely damaged by storms.'
-      },
-      {
-        name: 'Northern Japan',
-        lat: '12.879',
-        lng: '121.774',
-      },
-      {
-        name: 'New Caledonia',
-        lat: '-24.397',
-        lng: '150.644',
-      },
-      {
-        name: 'Southeast Mauritius',
-        lat: '-20.540289409615923',
-        lng: '57.35869206436161',
-      },
-      {
-        name: 'Belize',
-        lat: '20.8968',
-        lng: '-85.5828',
-      },
-      {
-        name: 'Guatemala',
-        lat: '11.8968',
-        lng: '-75.5828',
-      }
+        //   {
+        //   name: 'Maldives',
+        //   lat: '-34.397',
+        //   lng: '150.644',
+        // },
+        {
+          name: 'Vatu-i-Ra in Fiji',
+          // -17.31537905313272, 178.4666749294758
+          lat: '-17.31537905313272',
+          lng: '178.4666749294758',
+          copy: 'Vatu-i-Ra is located on Fiji’s Suncoast between the two main islands of Viti Levu and Vanua Levu. The Conservation Area has 100+ km2 of coral reefs and over 100 species of fish, and has shown an ability to rapidly recovery after being severely damaged by storms.'
+        },
+        {
+          name: 'Northern Japan',
+          lat: '12.879',
+          lng: '121.774',
+        },
+        {
+          name: 'New Caledonia',
+          lat: '-24.397',
+          lng: '150.644',
+        },
+        {
+          name: 'Southeast Mauritius',
+          lat: '-20.540289409615923',
+          lng: '57.35869206436161',
+        },
+        {
+          name: 'Belize',
+          lat: '20.8968',
+          lng: '-85.5828',
+        },
+        {
+          name: 'Guatemala',
+          lat: '11.8968',
+          lng: '-75.5828',
+        }
       ]" />
 
-    <ReefTypeModule id="section-8" ref="resistrefugia" class="w-100 w-80-ns pa4" :title="'Resist'"
-      :headline="'Resist Refugia: The Adapters'" :headline-image="`/images/resist_OceanImageBank_ShaunWolfe_26.jpeg`"
+    <ReefTypeModule id="section-8" ref="resistrefugia" class="w-100 w-80-ns pa4" :title="'Resistance'"
+      :headline="'Resistance Refugia: The Adapters'" :headline-image="`/images/resist_OceanImageBank_ShaunWolfe_26.jpeg`"
       :casestudy-image="`/images/resist_casestudy_WCS__Tom Vierus.Western Province.Solomon Islands.2023.83.jpg`"
-      :copy="`Adaptation is nature's survival strategy. There are reefs all over the world that aren’t avoiding heat, but are actively resisting it. Evolved adaptations are allowing those corals to take hot water events in stride and defy bleaching and other impacts – a show of resilience in the face of rapid change.`"
+      :copy="`Adaptation is nature's survival strategy. There are reefs all over the world that aren’t avoiding heat, but are actively resisting it. Evolved adaptations are allowing those corals to take hot water events in stride and defy bleaching and other impacts – a show of resilience in the face of rapid change. These reefs often found in locations with mild to moderate chronic stresses.`"
       :locations="[
         {
           name: 'Kolombangara Island in Solomon Islands',
@@ -294,24 +309,24 @@
           copy: 'Part of the Coral Triangle, Solomon Islands has some of the world’s highest diversity of coral species. WCS completed the first ever island-wide coral reef survey in Kolombangara in 2016, where teams found low levels of bleaching despite heat events.'
         },
         {
-        name: 'Northwest Mauritius',
-        lat: '-20.173',
-        lng: '57.560'
-      },
-      // {
-      //   name: 'Bay of Cartagena',
-      //   lat: '12.879',
-      //   lng: '121.774'
-      // },
-      {
-        name: 'Gulf of Mannar',
-        lat: '-24.397',
-        lng: '150.644'
-      },
+          name: 'Northwest Mauritius',
+          lat: '-20.173',
+          lng: '57.560'
+        },
+        // {
+        //   name: 'Bay of Cartagena',
+        //   lat: '12.879',
+        //   lng: '121.774'
+        // },
+        {
+          name: 'Gulf of Mannar',
+          lat: '-24.397',
+          lng: '150.644'
+        },
       ]" />
 
     <div id="section-9" ref="reefsbytype" class="section w-100 w-80-l cf z-2 pa1 pa4-l">
-      <h2 class="f1 teal mv0 pv2">Reefs by type</h2>
+      <h2 class="f1 teal mv0 pv2">Discovering resilient reefs</h2>
       <div>
         <p class="measure pv2">
           Coral reefs have truly astonishing adaptive capabilities, falling mainly into three categories: Avoidance,
@@ -358,19 +373,15 @@
           of these climate-resilient reefs.
         </p>
         <p class="measure pv3">
-          Contrary to the popular narrative of dying coral reefs, recent findings offer room for hope. The doom prediction
-          rested on a single "excess heat" model, which, recent studies show, isn't sufficient to assess coral reef
-          health. Environment factors such as oxygen levels and water cleanliness turn out to be more critical.
+          Contrary to the popular narrative of dying coral reefs, recent findings offer room for hope.
         </p>
         <p class="measure pv3">
-          Given the new findings, there's a need for more sophisticated models to better predict the future of our oceans
-          and reefs. By protecting and nurturing these climate-resistant reefs, we can give them a fighting chance against
-          climate change.
+          By working with governments and local partners to conserve a globally connected network of these climate-resistant reefs, we can give them a fighting chance against climate change.
+
         </p>
 
         <p class="measure pv3">
-          The bottom line? Coral reefs aren't necessarily doomed. If we act decisively and intelligently now, we can still
-          save our reefs.
+          The bottom line? There is still hope for coral reefs if we act now.
         </p>
       </div>
     </div>
@@ -379,15 +390,15 @@
 
     <div id="section-11" ref="calltoaction" class="section w-100 w-80-ns pa1 pa3-l">
       <div class="pa1 pa5-l">
-        <h2 class="f2 f1-l mv0 pv0">Our oceans are counting on us. Act for them now.</h2>
+        <!-- <h2 class="f2 f1-l mv0 pv0">Our oceans are counting on us. Act for them now.</h2>
         <div class="measure-wide white f2 pv5">
           All of this comes down to one simple message: Despite what you’ve heard, if we act soon we can still save our
           reefs. Now that you understand how important each of these rare climate refuge reefs are, you can use your voice
           for good.
-        </div>
+        </div> -->
 
         <div class="w-100 cf tc">
-          <div class="w-100 w-third-ns dib pa1 pa2-l v-bottom">
+          <div class="w-100 dib pa1 pa2-l v-bottom">
             <div class="bg-transparent-black white br4 pa2 tl">
               <div class="pa2 pa3-l fw5 f5 lh-copy">
                 Tell your government representatives loud and clear: <strong style="color: #5CF3E1;">coral reefs are
@@ -401,7 +412,7 @@
             </div>
           </div>
 
-          <div class="w-100 w-third-ns dib pa1 pa2-l v-bottom">
+          <div class="w-100 dib pa1 pa2-l v-bottom">
             <div class="bg-transparent-black white br4 pa2 tl">
               <div class="pa2 pa3-l fw5 f5 lh-copy">
                 Scientists have only discovered about half of the coral reef refuges hidden underwater all over the world.
@@ -416,7 +427,7 @@
             </div>
           </div>
 
-          <div class="w-100 w-third-ns dib pa1 pa2-l v-bottom">
+          <div class="w-100 dib pa1 pa2-l v-bottom">
             <div class="bg-transparent-black white br4 pa2 tl">
               <div class="pa2 pa3-l fw5 f5 lh-copy">
                 Finding and protecting all of our coral reef refuges is a group effort. <strong style="color: #5CF3E1;">To
@@ -526,15 +537,15 @@ import * as d3 from 'd3'
 const selectedBCUID = ref(null);
 
 useSeoMeta({
-  title: 'Hope Blooms Underwater: The Coral Reefs Defying Climate Change',
-  ogTitle: 'Hope Blooms Underwater: The Coral Reefs Defying Climate Change',
+  title: 'Hope Underwater: The Coral Reefs Defying Climate Change',
+  ogTitle: 'Hope Underwater: The Coral Reefs Defying Climate Change',
   description: 'Nestled beneath the ocean waves, some coral reefs are defying the odds, challenging standard climate predictions.',
   ogDescription: 'Nestled beneath the ocean waves, some coral reefs are defying the odds, challenging standard climate predictions.',
   ogImage: '/og_image.png'
 })
 
 useHead({
-  title: 'Hope Blooms Underwater: The Coral Reefs Defying Climate Change',
+  title: 'Hope Underwater: The Coral Reefs Defying Climate Change',
   meta: [
     { name: 'description', content: 'Nestled beneath the ocean waves, some coral reefs are defying the odds, challenging standard climate predictions.' },
     /* favicon */
@@ -549,15 +560,15 @@ const sections = [
   { title: 'Introduction', id: 'top', ref: 'introvisual' },
   { title: 'Global temperature rise', id: 'section-1', ref: 'globaltemp' },
   { title: 'Impact on world and oceans', id: 'section-2', ref: 'climateimpact' },
-  { title: 'Ocean life thrives', id: 'section-3', ref: 'oceanlifethrives' },
+  { title: 'Where ocean life thrives', id: 'section-3', ref: 'oceanlifethrives' },
   { title: 'Evolving understanding', id: 'section-4', ref: 'evolvingunderstanding' },
   { title: 'Three distinct reef types', id: 'section-5', ref: 'threedistinct' },
-  { title: 'Avoid refugia', id: 'section-6', ref: 'avoidrefugia' },
-  { title: 'Recover refugia', id: 'section-7', ref: 'recoverrefugia' },
-  { title: 'Resist refugia', id: 'section-8', ref: 'resistrefugia' },
+  { title: 'Avoidance refugia', id: 'section-6', ref: 'avoidrefugia' },
+  { title: 'Recovery refugia', id: 'section-7', ref: 'recoverrefugia' },
+  { title: 'Resistance refugia', id: 'section-8', ref: 'resistrefugia' },
   { title: 'Reef type breakdown', id: 'section-9', ref: 'reefsbytype' },
   { title: 'What now?', id: 'section-10', ref: 'whatnow' },
-  { title: 'Act for them now', id: 'section-11', ref: 'calltoaction' },
+  { title: 'Act to protect now', id: 'section-11', ref: 'calltoaction' },
   { title: 'Explore', id: 'section-12', ref: 'explorethemall' },
   { title: 'Credits', id: 'credits', ref: 'credits' },
 ]
@@ -630,6 +641,15 @@ watch(selectedBCUID, (newValue) => {
   overflow: hidden;
   z-index: -1;
   pointer-events: none;
+}
+
+#intro-cta {
+  /* border: 1px solid red; */
+  /* margin-top: 22vh; */
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
 }
 
 #top-bg-gradient {
@@ -761,4 +781,5 @@ ul li::before {
   background-color: #5CF3E1;
   color: black;
   border: none;
-}</style>
+}
+</style>

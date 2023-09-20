@@ -39,8 +39,8 @@
         <div class="measure-wide fw6 lh-title pb5 light-blue mv2 mv5-l ph2 ph4-l">
           <p class="f4 f3-l">
             These rare reefs have the ability to survive and fight back against the impacts of climate
-          change – if we find them and protect them.
-            </p>
+            change – if we find them and protect them.
+          </p>
         </div>
       </div>
     </div>
@@ -451,7 +451,8 @@ Space for them to sign their name, and country. -->
                 global movement.
               </div>
               <img src="/svg/down_arrow.svg" alt="down arrow" class="h3 center db" />
-              <a href="https://www.datamermaid.org" class="db tc white link cta-button dim pointer w-100 pa2 mv4" target="_blank">Join
+              <a href="https://www.datamermaid.org" class="db tc white link cta-button dim pointer w-100 pa2 mv4"
+                target="_blank">Join
                 Us</a>
             </div>
           </div>
@@ -530,6 +531,11 @@ Space for them to sign their name, and country. -->
         Lonnoy,
         J.B.R. Matthews, T.K. Maycock, T. Waterfield, O. Yelekçi, R. Yu, and B. Zhou (eds.)]. Cambridge University Press,
         Cambridge, United Kingdom and New York, NY, USA, pp. 553–672, doi:10.1017/9781009157896.006. </p>
+      <p>T.R. McClanahan, M.K. Azali, Environmental variability and threshold model’s predictions for coral reefs,
+        Frontiers in Marine Science 8(1774) (2021).
+      </p>
+      <p>T.R. McClanahan, M.K. Azali, N.A. Muthiga, S.N. Porter, M.H. Schleyer, M.M. Guillaume, Predicting coral community
+        responses to climate change Climate PLoS in press (2023).</p>
 
       <p><strong>Photography from:</strong> The Wildlife Conservation Society, The Ocean Image Bank</p>
 

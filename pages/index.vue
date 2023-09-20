@@ -24,20 +24,20 @@
     </div>
 
 
-    <div class="vh-50 w-100 w-90-ns pa4 mt6">
+    <div class="vh-50 w-100 w-90-ns pa4 mt4">
       <!-- <h3 class="w-100 f3 fw4 tc mv0 pv1 teal">Wave of Hope</h3> -->
       <h1 class="f2 f-subheadline-l tl light-blue mv0 pa3 ph4-l">
         <span class="fw4">Hope Underwater:</span> <br />The Coral Reefs Defying Climate Change
       </h1>
 
       <div class="">
-        <div class="measure-wide fw6 lh-title pb5 light-blue mv2 mv5-l ph2 ph4-l">
-          <p class="f4 f3-l">Nestled beneath the ocean waves, some coral reefs are defying the odds, challenging standard
+        <div class="measure-wide fw6 lh-title pv2 light-blue mv2 mb2-l ph2 ph4-l">
+          <p class="f4">Nestled beneath the ocean waves, some coral reefs are defying the odds, challenging standard
             climate predictions.</p>
         </div>
 
-        <div class="measure-wide fw6 lh-title pb5 light-blue mv2 mv5-l ph2 ph4-l">
-          <p class="f4 f3-l">
+        <div class="measure-wide fw6 lh-title pv2 light-blue mv2 mv2-l ph2 ph4-l">
+          <p class="f4">
             These rare reefs have the ability to survive and fight back against the impacts of climate
             change – if we find them and protect them.
           </p>

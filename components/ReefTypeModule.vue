@@ -15,7 +15,7 @@
     </div>
 
     <div>
-      <h2>Examples</h2>
+      <h2>A selection of {{title.toLowerCase()}} reefs from around </h2>
       <!-- button to showCaseStudy -->
       <button @click="showCaseStudy = !showCaseStudy"
         class="w-100 w-third-ns pa2 pa3-l extra-dark-blue bg-white br2 pointer dim ba b--white bw2">Show Case

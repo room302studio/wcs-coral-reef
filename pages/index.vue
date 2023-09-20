@@ -35,46 +35,84 @@
           <p class="f4 f3-l">Nestled beneath the ocean waves, some coral reefs are defying the odds, challenging standard
             climate predictions.</p>
         </div>
+
+        <p class="f4 f3-l">These rare reefs have the ability to survive and fight back against the impacts of climate
+          change – if we find them and protect them.</p>
       </div>
+    </div>
 
-      <!-- add some stars floating at the top -->
-      <div id="stars" class="vh-50 absolute top-0 left-0 w-100 pa5">
-        <img :src="`/svg/stars.svg`" alt="stars" class="w-100 h-100" />
-      </div>
+    <!-- add some stars floating at the top -->
+    <div id="stars" class="vh-50 absolute top-0 left-0 w-100 pa5">
+      <img :src="`/svg/stars.svg`" alt="stars" class="w-100 h-100" />
+    </div>
 
-      <div id="floating-nav" class="pa2 f6 br2 fixed dn db-l">
-        <h4 class="ma0 pa0 ttu white ph2 o-60">Navigation</h4>
-        <ul class="pa0 mt2 mb0 list light-blue fw5">
-          <li v-for="(section, index) in sections" :key="index" class="mv0 pa2 br2"
-            :class="{ active: isSectionVisible[index] }" ref="listItems">
-            <!-- {{ section.title }} -->
-            <a class="ttc" :href="`#${section.id}`">{{ section.title }}</a>
+    <div id="floating-nav" class="pa2 f6 br2 fixed dn db-l">
+      <h4 class="ma0 pa0 ttu white ph2 o-60">Navigation</h4>
+      <ul class="pa0 mt2 mb0 list light-blue fw5">
+        <li v-for="(section, index) in sections" :key="index" class="mv0 pa2 br2"
+          :class="{ active: isSectionVisible[index] }" ref="listItems">
+          <!-- {{ section.title }} -->
+          <a class="ttc" :href="`#${section.id}`">{{ section.title }}</a>
 
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="intro-cta" ref="intro" class="mv0 z-1">
+    <p class="measure-wide f5 f3-l fw7 teal tc center">
+      Discover the new evidence showing some reefs are resisting, avoiding, and recovering from climate change.
+    </p>
+    <!-- down arrow -->
+    <img :src="`/svg/down_arrow.svg`" alt="down arrow" class="h3 center db" />
+  </div>
+
+  <div id="surface-of-water"></div>
+
+  <div class="section">
+    <div class="o-70">
+      <!-- beautiful coral reef photography -->
+      <img :src="`/images/EmilyDarling.Fiji.2019_transparent.png`" alt="coral reef" class="mt4 pt4 br4 z-0" />
+    </div>
+  </div>
+
+  <!-- The tachyons class to make flex items go to the bottom of the container is "flex flex-column justify-end items-center" -->
+  <!-- <div ref="globaltemp" id="section-1"
+    class="w-100 w-90-l pa1 pa5-l section v-mid flex-ns flex-row justify-center items-end">
+
+  </div> -->
+
+  <div id="section-2" ref="climateimpact" class="light-blue section cf w-100 w-90-l pa1 pa5-l">
+    <!-- <div>
+      <h2 class="f3 f-subheadline-l pv4 teal">The impact of climate change is clear...</h2>
+    </div> -->
+    <div class="w-100 mv4 pv4">
+      <!-- <h2 class="ma0 pa0 fw1">Impact on the world</h2>
+      <ul>
+        <li>More frequent and intense heatwaves above and underwater</li>
+        <li>Increased frequency of wildfires</li>
+        <li>Changes in crop yields</li>
+        <li>Increased intensity of tropical storms</li>
+        <li>Spread of vector-borne diseases</li>
+      </ul>
+    </div> -->
+
+      <!-- make a spacer div with 50% width -->
+      <div class="w-100 w-50-ns fl-ns">&nbsp;</div>
+
+      <div class="w-100 w-50-ns fl-ns mt3 pt4">
+        <h2 class="ma0 pa0 fw1">Impact on our oceans</h2>
+        <ul>
+          <li><a href="https://indonesia.wcs.org/en-us/Initiatives/Marine/Coral-Bleaching.aspx">Coral bleaching events</a>
           </li>
+          <li><a href="https://www.fisheries.noaa.gov/insight/understanding-ocean-acidification">Ocean acidification</a>
+          </li>
+          <li>Disruption of marine food chains</li>
+          <li>Altered ocean currents</li>
+          <li>Loss of coastal habitats due to rising sea levels</li>
         </ul>
       </div>
-    </div>
 
-    <div id="intro-cta" ref="intro" class="mv0 z-1">
-      <p class="measure-wide f5 f3-l fw7 teal tc center">
-        Discover the new evidence showing some reefs are resisting, avoiding, and recovering from climate change.
-      </p>
-      <!-- down arrow -->
-      <img :src="`/svg/down_arrow.svg`" alt="down arrow" class="h3 center db" />
-    </div>
-
-    <div id="surface-of-water"></div>
-
-    <div class="section">
-      <div class="o-70">
-        <!-- beautiful coral reef photography -->
-        <img :src="`/images/EmilyDarling.Fiji.2019_transparent.png`" alt="coral reef" class="mt4 pt4 br4 z-0" />
-      </div>
-    </div>
-
-    <!-- The tachyons class to make flex items go to the bottom of the container is "flex flex-column justify-end items-center" -->
-    <div ref="globaltemp" id="section-1"
-      class="w-100 w-90-l pa1 pa5-l section v-mid flex-ns flex-row justify-center items-end">
       <div class="w-100 w-50-ns flex-item">
         <h1 class="f2 f1-l">What Different Climate Scenarios Mean for Global Temperature</h1>
 
@@ -97,38 +135,6 @@
       </div>
     </div>
 
-    <div id="section-2" ref="climateimpact" class="section cf w-100 w-90-l pa1 pa5-l">
-      <div>
-        <h2 class="f3 f-subheadline-l pv4 teal">The impact of climate change is clear...</h2>
-      </div>
-      <div class="w-100 mv4 pv4">
-        <h2 class="ma0 pa0 fw1">Impact on the world</h2>
-        <ul>
-          <li>More frequent and intense heatwaves above and underwater</li>
-          <li>Increased frequency of wildfires</li>
-          <li>Changes in crop yields</li>
-          <li>Increased intensity of tropical storms</li>
-          <li>Spread of vector-borne diseases</li>
-        </ul>
-      </div>
-
-      <!-- make a spacer div with 50% width -->
-      <div class="w-100 w-50-ns fl-ns">&nbsp;</div>
-
-      <div class="w-100 w-50-ns fl-ns mt3 pt4">
-        <h2 class="ma0 pa0 fw1">Impact on our oceans</h2>
-        <ul>
-          <li><a href="https://indonesia.wcs.org/en-us/Initiatives/Marine/Coral-Bleaching.aspx">Coral bleaching events</a>
-          </li>
-          <li><a href="https://www.fisheries.noaa.gov/insight/understanding-ocean-acidification">Ocean acidification</a>
-          </li>
-          <li>Disruption of marine food chains</li>
-          <li>Altered ocean currents</li>
-          <li>Loss of coastal habitats due to rising sea levels</li>
-        </ul>
-      </div>
-    </div>
-
     <div id="section-3" ref="oceanlifethrives"
       class="section w-100 cf flex-ns flex-row justify-center items-center w-100 w-90-l pa1 pa5-l">
       <div class="w-100 w-50-ns">
@@ -137,16 +143,17 @@
         <!-- a grid of a few nice images of coral reefs -->
         <div class="w-100 flex flex-wrap justify-center items-center pr2 pr4-l">
           <div class="w-100 w-50-ns pa1 pa2-l">
-            <img :src="`/images/Emily%20Darling.Borneo.2018.jpg`" alt="coral reef" class="br4" />
+            <img :src="`/gallery-picks/AlecHughes.SolomonIslands.FishDrive.2022.75.JPG`" alt="coral reef" class="br4" />
           </div>
           <div class="w-100 w-50-ns pa1 pa2-l">
-            <img :src="`/images/Emily%20Darling.Borneo.2018.jpg`" alt="coral reef" class="br4" />
+            <img :src="`/gallery-picks/Emily Darling.Borneo.2018(5).jpg`" alt="coral reef" class="br4" />
           </div>
           <div class="w-100 w-50-ns pa1 pa2-l">
-            <img :src="`/images/Emily%20Darling.Borneo.2018.jpg`" alt="coral reef" class="br4" />
+            <img :src="`/gallery-picks/EmilyDarling.Siquijor Island. Philippines.2023.49.jpg`" alt="coral reef"
+              class="br4" />
           </div>
           <div class="w-100 w-50-ns pa1 pa2-l">
-            <img :src="`/images/Emily%20Darling.Borneo.2018.jpg`" alt="coral reef" class="br4" />
+            <img :src="`/gallery-picks/OceanImageBank_JordanRobins_01.jpg`" alt="coral reef" class="br4" />
           </div>
         </div>
       </div>
@@ -198,7 +205,8 @@
 
     <div id="section-5" ref="threedistinct" class="pa1 pa5-l">
       <div class="pa3 pa5-l lh-copy f2 measure">
-        <p>We’ve identified that there are not just one, <strong>but at least three</strong> distinct types of coral reefs that are
+        <p>We’ve identified that there are not just one, <strong>but at least three</strong> distinct types of coral reefs
+          that are
           defying the odds of climate change, and they are each showing signs of resilience in a variety of remarkable
           ways.
         </p>
@@ -206,10 +214,9 @@
     </div>
 
     <ReefTypeModule id="section-6" ref="avoidrefugia" class="w-100 w-80-ns pa4" :title="'Avoidance'"
-      :headline="`Avoidance Refugia: Rare Ocean 'Cool Spots'`"
-      :headline-image="`/images/avoid_OceanImageBank_MattCurnock_02.jpeg`"
+      :headline="`Rare Ocean 'Cool Spots'`" :headline-image="`/images/avoid_OceanImageBank_MattCurnock_02.jpeg`"
       :casestudy-image="`/images/avoid_casestudy_MichaelMarkovina.Tanzania.Pemba.2019%20(3).jpg`"
-      :copy="`In the ocean's vast expanse, certain reefs have been able to avoidance the impacts of hot water thanks to being located in rare underwater ‘cool spots’. Known as 'Avoidance Refugia', these reefs are natural sanctuaries from the warming trends of climate change, places where corals still thrive and massive, healthy reefs shelter huge troves of marine biodiversity. They are often associated with deep cool water close to shore.`"
+      :copy="`In the ocean's vast expanse, certain reefs known as ‘Avoidance Refugia’ have been able to avoid the impacts of hot water thanks to being located in rare underwater ‘cool spots’. These reefs are often associated with deep cool water close to shore, and are natural sanctuaries from the warming trends of climate change, places where corals still thrive and massive, healthy reefs shelter huge troves of marine biodiversity.`"
       :locations="[
         {
           name: 'Kisite Marine Park in Kenya',
@@ -253,9 +260,8 @@
 
     <ReefTypeModule id="section-7" ref="recoverrefugia" class="w-100 w-80-ns pa4" :title="'Recovery'"
       :headline-image="`/images/recover_OceanImageBank_MattCurnock_24.jpeg`"
-      :casestudy-image="`/images/recover_casestudy_TomVierus.VatuiRa.Fiji.2020.94.jpg`"
-      :headline="`Recovery Refugia: The Oceanic Phoenix`"
-      :copy="`The 'Recovery Refugia' embody our planet’s incredible capacity to heal and recover. Researchers are finding reefs all over the world that have bleached during warm water events, or been leveled by climate change induced mega storms, only to shock scientists by their rapid recovery - growing back in record time where there was once only rubble. Often found in locations where fast currents promote rapid coral growth.`"
+      :casestudy-image="`/images/recover_casestudy_TomVierus.VatuiRa.Fiji.2020.94.jpg`" :headline="`The Oceanic Phoenix`"
+      :copy="`The 'Recovery Refugia' embody our planet’s incredible capacity to heal and recover. Researchers are finding reefs all over the world that have bleached during warm water events, or been leveled by climate change induced mega storms, only to shock scientists by their rapid recovery - growing back in record time where there was once only rubble. These reefs are often found in locations where fast currents promote rapid coral growth.`"
       :locations="[
         //   {
         //   name: 'Maldives',
@@ -297,9 +303,9 @@
       ]" />
 
     <ReefTypeModule id="section-8" ref="resistrefugia" class="w-100 w-80-ns pa4" :title="'Resistance'"
-      :headline="'Resistance Refugia: The Adapters'" :headline-image="`/images/resist_OceanImageBank_ShaunWolfe_26.jpeg`"
+      :headline="'The Adapters'" :headline-image="`/images/resist_OceanImageBank_ShaunWolfe_26.jpeg`"
       :casestudy-image="`/images/resist_casestudy_WCS__Tom Vierus.Western Province.Solomon Islands.2023.83.jpg`"
-      :copy="`Adaptation is nature's survival strategy. There are reefs all over the world that aren’t avoiding heat, but are actively resisting it. Evolved adaptations are allowing those corals to take hot water events in stride and defy bleaching and other impacts – a show of resilience in the face of rapid change. These reefs often found in locations with mild to moderate chronic stresses.`"
+      :copy="`Adaptation is nature's survival strategy. ‘Resistance Refugia’ reefs all over the world aren’t just avoiding heat, but are actively resisting it. Evolved adaptations are allowing those corals to take hot water events in stride and defy bleaching and other impacts – a show of resilience in the face of rapid change. These reefs are often found in locations with mild to moderate chronic stresses.`"
       :locations="[
         {
           name: 'Kolombangara Island in Solomon Islands',
@@ -362,27 +368,22 @@
       <div class="pa3 pa5-l lh-copy f3 measure bg-transparent-black">
         <h1 class="f1 f-subheadline-l pv2 mv0 white">What now?</h1>
         <p class="measure pv3">
-          Countries worldwide are waking up to the crisis facing coral reefs. Aiming to protect 30% of the earth's lands
-          and oceans by 2030 - the "30x30" pledge - was one significant step taken during last year's global biodiversity
-          summit. Coral reefs got a special mention for their vital role in ocean biodiversity.
-          Contrary to the popular doom prognosis for coral reefs, these new findings offer room for hope and expand our
-          understanding of the ways that corals <strong>can survive climate change.</strong>
+          Contrary to the popular doom prognosis for coral reefs, this new science shines a path toward a better future
+          for our oceans. Each of these three types of coral reef refuges have the ability to survive and fight back
+          against the impacts of climate change – <em>if</em> we find them and protect them. And the clock is ticking
         </p>
         <p class="measure pv3">
-          This new science shines a path toward a better future for our oceans – <em>if</em> we can find and protect all
-          of these climate-resilient reefs.
+          Countries worldwide are waking up to the crisis facing our oceans. The "30x30" pledge, a goal to protect 30% of
+          the earth's lands and oceans by 2030, was one significant step taken during last year's global biodiversity
+          summit.
         </p>
         <p class="measure pv3">
-          Contrary to the popular narrative of dying coral reefs, recent findings offer room for hope.
+          Now, we need every coral reef country in the world to put these coral climate refuges at the center of their plans for ocean protections and 30x30.
         </p>
         <p class="measure pv3">
-          By working with governments and local partners to conserve a globally connected network of these climate-resistant reefs, we can give them a fighting chance against climate change.
-
+          By working with governments and local community partners to find and conserve a globally connected network of these climate-resistant reefs, we can give them a fighting chance against climate change.
         </p>
-
-        <p class="measure pv3">
-          The bottom line? There is still hope for coral reefs if we act now.
-        </p>
+        
       </div>
     </div>
 
@@ -423,7 +424,9 @@
                 advance this work with us.
               </div>
               <img src="/svg/down_arrow.svg" alt="down arrow" class="h3 center db" />
-              <button class="cta-button dim pointer w-100 pa2 mv4">Join us</button>
+              <!-- <button class="cta-button dim pointer w-100 pa2 mv4">Join us</button> -->
+              <a href="mailto:example@example.com?subject=Hello%20World&body=Hello,%20world!" class="cta-button dim pointer w-100 pa2 mv4">Join Us</a>
+
             </div>
           </div>
 
@@ -435,7 +438,7 @@
                 global movement.
               </div>
               <img src="/svg/down_arrow.svg" alt="down arrow" class="h3 center db" />
-              <button class="cta-button dim pointer w-100 pa2 mv4">Join us</button>
+              <a href="mailto:example@example.com?subject=Hello%20World&body=Hello,%20world!" class="cta-button dim pointer w-100 pa2 mv4">Join Us</a>
             </div>
           </div>
         </div>
@@ -498,6 +501,7 @@
 
     <div id="citations" class="pa3 f6 tracked-tight">
       <h3 class="f3">Citations and credits</h3>
+      <p><strong>Diversification of refugia types needed to secure the future of coral reefs subject to climate change:</strong> McClanahan, T. R., Darling, E. S., Beger, M., Fox, H. E., Grantham, H. S., Jupiter, S. D., Logan, C. A., Mcleod, E., McManus, L. C., Oddenyo, R. M., Surya, G. S., Wenger, A. S., Zinke, J., & Maina, J. M., 2023: Diversification of refugia types needed to secure the future of coral reefs subject to climate change. In <em>Conservation Biology</em>. Wiley Online Library, doi:10.1111/cobi.14108.</p>
       <p><strong>Global temperature rise:</strong> Lee, J.-Y., J. Marotzke, G. Bala, L. Cao, S. Corti, J.P. Dunne, F.
         Engelbrecht, E. Fischer, J.C. Fyfe, C. Jones, A. Maycock,
         J. Mutemi, O. Ndiaye, S. Panickal, and T. Zhou, 2021: Future Global Climate: Scenario-Based Projections and
@@ -520,9 +524,13 @@
 
       <!-- /logos/WCS_SEAL_ACRONYM-White stroke.png -->
       <div class="tc flex-l flex-row justify-center items-center">
+        <a href="https://www.wcs.org/our-work/species/coral" class="dim">
         <img :src="`/logos/WCS_SEAL_ACRONYM-White%20stroke.png`" alt="WCS logo" class="h4" />
+        </a>
 
-        <img :src="`/logos/BP_Ocean_Initiative_logo_Stacked_White.png`" alt="NOAA logo" class="h4" />
+        <a href="https://www.bloomberg.org/environment/protecting-the-oceans/bloomberg-ocean/" class="dim">
+          <img :src="`/logos/BP_Ocean_Initiative_logo_Stacked_White.png`" alt="NOAA logo" class="h4" />
+        </a>
         <a href="https://room302.studio" class="dim ml2">
           <img :src="`/logos/room302_logo_whiteonalpha.png`" class="h4" />
         </a>
@@ -558,7 +566,7 @@ useHead({
 const reefs = ref([]);
 const sections = [
   { title: 'Introduction', id: 'top', ref: 'introvisual' },
-  { title: 'Global temperature rise', id: 'section-1', ref: 'globaltemp' },
+  // { title: 'Global temperature rise', id: 'section-1', ref: 'globaltemp' },
   { title: 'Impact on world and oceans', id: 'section-2', ref: 'climateimpact' },
   { title: 'Where ocean life thrives', id: 'section-3', ref: 'oceanlifethrives' },
   { title: 'Evolving understanding', id: 'section-4', ref: 'evolvingunderstanding' },

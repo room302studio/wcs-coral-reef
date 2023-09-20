@@ -31,13 +31,17 @@
       </h1>
 
       <div class="">
-        <div class="measure-wide fw6 lh-title pb5 light-blue mv5 ph2 ph4-l">
+        <div class="measure-wide fw6 lh-title pb5 light-blue mv2 mv5-l ph2 ph4-l">
           <p class="f4 f3-l">Nestled beneath the ocean waves, some coral reefs are defying the odds, challenging standard
             climate predictions.</p>
         </div>
 
-        <p class="f4 f3-l">These rare reefs have the ability to survive and fight back against the impacts of climate
-          change – if we find them and protect them.</p>
+        <div class="measure-wide fw6 lh-title pb5 light-blue mv2 mv5-l ph2 ph4-l">
+          <p class="f4 f3-l">
+            These rare reefs have the ability to survive and fight back against the impacts of climate
+          change – if we find them and protect them.
+            </p>
+        </div>
       </div>
     </div>
 
@@ -98,22 +102,9 @@
     </div> -->
 
       <!-- make a spacer div with 50% width -->
-      <div class="w-100 w-50-ns fl-ns">&nbsp;</div>
+      <!-- <div class="w-100 w-50-ns fl-ns">&nbsp;</div> -->
 
-      <div class="w-100 w-50-ns fl-ns mt3 pt4">
-        <h2 class="ma0 pa0 fw1">Impact on our oceans</h2>
-        <ul>
-          <li><a href="https://indonesia.wcs.org/en-us/Initiatives/Marine/Coral-Bleaching.aspx">Coral bleaching events</a>
-          </li>
-          <li><a href="https://www.fisheries.noaa.gov/insight/understanding-ocean-acidification">Ocean acidification</a>
-          </li>
-          <li>Disruption of marine food chains</li>
-          <li>Altered ocean currents</li>
-          <li>Loss of coastal habitats due to rising sea levels</li>
-        </ul>
-      </div>
-
-      <div class="w-100 w-50-ns flex-item">
+      <div class="w-100 w-50-l flex-item">
         <h1 class="f2 f1-l">What Different Climate Scenarios Mean for Global Temperature</h1>
 
         <div>
@@ -121,7 +112,7 @@
         </div>
       </div>
 
-      <div class="w-100 w-50-ns flex-item pa2 pa5-l">
+      <div class="w-100 w-50-l flex-item pa2 pa5-l">
         <p>
           Since scientists first started monitoring global temperatures, a clear pattern of steady increase has emerged.
         </p>
@@ -132,6 +123,19 @@
           trends, and the picture those models paint, if we aren’t able to curb CO2 emissions and cap warming, can be
           dire.
         </p>
+      </div>
+
+      <div class="w-100 fl-ns mv3 pv4">
+        <h2 class="ma0 pa0 fw1">Impact on our oceans</h2>
+        <ul>
+          <li><a href="https://indonesia.wcs.org/en-us/Initiatives/Marine/Coral-Bleaching.aspx">Coral bleaching events</a>
+          </li>
+          <li><a href="https://www.fisheries.noaa.gov/insight/understanding-ocean-acidification">Ocean acidification</a>
+          </li>
+          <li>Disruption of marine food chains</li>
+          <li>Altered ocean currents</li>
+          <li>Loss of coastal habitats due to rising sea levels</li>
+        </ul>
       </div>
     </div>
 
@@ -340,7 +344,8 @@
           after damage.
         </p>
 
-        <p> This multifaceted way of understanding brings with it profound implications for conservation efforts, enabling
+        <p class="measure pv2"> This multifaceted way of understanding brings with it profound implications for
+          conservation efforts, enabling
           us to tailor our strategies to the unique needs and resilience patterns of each reef type. </p>
 
         <p class="measure pv2">
@@ -349,7 +354,7 @@
           Satellite data tells us a lot about coral reefs and our oceans, but signs of resilience in coral refuges can be
           subtle and need to be verified in the water by researchers.
         </p>
-        <p>
+        <p class="measure pv2">
           Scientists think, right now, that more than 50% of these coral reefs are still waiting to be found and
           protected all over the world.
         </p>
@@ -370,7 +375,7 @@
         <p class="measure pv3">
           Contrary to the popular doom prognosis for coral reefs, this new science shines a path toward a better future
           for our oceans. Each of these three types of coral reef refuges have the ability to survive and fight back
-          against the impacts of climate change – <em>if</em> we find them and protect them. And the clock is ticking
+          against the impacts of climate change – <em>if</em> we find them and protect them. And the clock is ticking.
         </p>
         <p class="measure pv3">
           Countries worldwide are waking up to the crisis facing our oceans. The "30x30" pledge, a goal to protect 30% of
@@ -378,12 +383,14 @@
           summit.
         </p>
         <p class="measure pv3">
-          Now, we need every coral reef country in the world to put these coral climate refuges at the center of their plans for ocean protections and 30x30.
+          Now, we need every coral reef country in the world to put these coral climate refuges at the center of their
+          plans for ocean protections and 30x30.
         </p>
         <p class="measure pv3">
-          By working with governments and local community partners to find and conserve a globally connected network of these climate-resistant reefs, we can give them a fighting chance against climate change.
+          By working with governments and local community partners to find and conserve a globally connected network of
+          these climate-resistant reefs, we can give them a fighting chance against climate change.
         </p>
-        
+
       </div>
     </div>
 
@@ -409,7 +416,13 @@
                 lawmakers at the UN Climate Change Conference and the Convention on Biological Diversity.
               </div>
               <img src="/svg/down_arrow.svg" alt="down arrow" class="h3 center db" />
-              <button class="cta-button dim pointer w-100 pa2 mv4">Sign on</button>
+              <!-- <a href="mailto:example@example.com?subject=Hello%20World&body=Hello,%20world!" class="cta-button dim pointer w-100 pa2 mv4">Join Us</a> -->
+              <!-- Sign on #1 should go to: marineprogram@wcs.org
+Subject line: Hope underwater: A message in support of coral reefs to government leaders
+Message: DRAFT “Coral reefs are critical to biodiversity conservation and climate adaptation. We need our governments and leaders to make bold commitments to safeguard ocean biodiversity, especially as part of updated national plans to conserve coral reefs. Coral reefs need to be front and center in national climate mitigation and adaptation strategies.”
+Space for them to sign their name, and country. -->
+              <a href="mailto:marineprogram@wcs.org?subject=Hope%20underwater:%20A%20message%20in%20support%20of%20coral%20reefs%20to%20government%20leaders&body=Coral%20reefs%20are%20critical%20to%20biodiversity%20conservation%20and%20climate%20adaptation.%20We%20need%20our%20governments%20and%20leaders%20to%20make%20bold%20commitments%20to%20safeguard%20ocean%20biodiversity,%20especially%20as%20part%20of%20updated%20national%20plans%20to%20conserve%20coral%20reefs.%20Coral%20reefs%20need%20to%20be%20front%20and%20center%20in%20national%20climate%20mitigation%20and%20adaptation%20strategies.%0A%0A%0AName:%0ACountry:"
+                class="db tc white link cta-button dim pointer w-100 pa2 mv4">Sign On</a>
             </div>
           </div>
 
@@ -424,9 +437,9 @@
                 advance this work with us.
               </div>
               <img src="/svg/down_arrow.svg" alt="down arrow" class="h3 center db" />
-              <!-- <button class="cta-button dim pointer w-100 pa2 mv4">Join us</button> -->
-              <a href="mailto:example@example.com?subject=Hello%20World&body=Hello,%20world!" class="cta-button dim pointer w-100 pa2 mv4">Join Us</a>
-
+              <!-- <button class="db tc white link cta-button dim pointer w-100 pa2 mv4">Join us</button> -->
+              <a href="mailto:marineprogram@wcs.org?subject=Hope%20underwater:%20Partnership%20for%20coral%20reefs&body="
+                class="db tc white link cta-button dim pointer w-100 pa2 mv4">Join Us</a>
             </div>
           </div>
 
@@ -438,7 +451,8 @@
                 global movement.
               </div>
               <img src="/svg/down_arrow.svg" alt="down arrow" class="h3 center db" />
-              <a href="mailto:example@example.com?subject=Hello%20World&body=Hello,%20world!" class="cta-button dim pointer w-100 pa2 mv4">Join Us</a>
+              <a href="https://www.datamermaid.org" class="db tc white link cta-button dim pointer w-100 pa2 mv4" target="_blank">Join
+                Us</a>
             </div>
           </div>
         </div>
@@ -501,7 +515,12 @@
 
     <div id="citations" class="pa3 f6 tracked-tight">
       <h3 class="f3">Citations and credits</h3>
-      <p><strong>Diversification of refugia types needed to secure the future of coral reefs subject to climate change:</strong> McClanahan, T. R., Darling, E. S., Beger, M., Fox, H. E., Grantham, H. S., Jupiter, S. D., Logan, C. A., Mcleod, E., McManus, L. C., Oddenyo, R. M., Surya, G. S., Wenger, A. S., Zinke, J., & Maina, J. M., 2023: Diversification of refugia types needed to secure the future of coral reefs subject to climate change. In <em>Conservation Biology</em>. Wiley Online Library, doi:10.1111/cobi.14108.</p>
+      <p><strong><a href="https://conbio.onlinelibrary.wiley.com/doi/full/10.1111/cobi.14108">Diversification of refugia
+            types needed to secure the future of coral reefs subject to climate change:</a></strong> McClanahan, T. R.,
+        Darling, E. S., Beger, M., Fox, H. E., Grantham, H. S., Jupiter, S. D., Logan, C. A., Mcleod, E., McManus, L. C.,
+        Oddenyo, R. M., Surya, G. S., Wenger, A. S., Zinke, J., & Maina, J. M., 2023: Diversification of refugia types
+        needed to secure the future of coral reefs subject to climate change. In <em>Conservation Biology</em>. Wiley
+        Online Library, doi:10.1111/cobi.14108.</p>
       <p><strong>Global temperature rise:</strong> Lee, J.-Y., J. Marotzke, G. Bala, L. Cao, S. Corti, J.P. Dunne, F.
         Engelbrecht, E. Fischer, J.C. Fyfe, C. Jones, A. Maycock,
         J. Mutemi, O. Ndiaye, S. Panickal, and T. Zhou, 2021: Future Global Climate: Scenario-Based Projections and
@@ -525,7 +544,7 @@
       <!-- /logos/WCS_SEAL_ACRONYM-White stroke.png -->
       <div class="tc flex-l flex-row justify-center items-center">
         <a href="https://www.wcs.org/our-work/species/coral" class="dim">
-        <img :src="`/logos/WCS_SEAL_ACRONYM-White%20stroke.png`" alt="WCS logo" class="h4" />
+          <img :src="`/logos/WCS_SEAL_ACRONYM-White%20stroke.png`" alt="WCS logo" class="h4" />
         </a>
 
         <a href="https://www.bloomberg.org/environment/protecting-the-oceans/bloomberg-ocean/" class="dim">

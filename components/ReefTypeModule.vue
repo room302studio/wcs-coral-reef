@@ -4,10 +4,10 @@
 
     <div class="cf">
       <!-- <img class="w-100 w-50-ns fl br2" :src="`/images/Emily%20Darling.Borneo.2018.jpg`" /> -->
-      <img class="w-100 w-50-ns fl br2" :src="headlineImage" />
+      <img class="w-100 w-50-l fl br2" :src="headlineImage" />
 
-      <div class="w-100 w-50-ns fl-ns pl4">
-        <h3 class="w-100 mv0 pv0">
+      <div class="w-100 w-50-l fl-ns pl4 pt2">
+        <h3 class="w-100 mv0 pv2">
           {{ headline }}
         </h3>
         <p>{{ copy }}</p>

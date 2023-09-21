@@ -26,17 +26,17 @@
 
     <div class="vh-50 w-100 w-90-ns pa4 mt3">
       <!-- <h3 class="w-100 f3 fw4 tc mv0 pv1 teal">Wave of Hope</h3> -->
-      <h1 class="f2 f1-ns f-subheadline-l tl light-blue mv0 pa3 pt2 ph4-l">
+      <h1 class="f2 f1-l tl light-blue mv0 pa3 pt2 ph4-l">
         <span class="fw4">Hope Underwater:</span> <br />The Coral Reefs Defying Climate Change
       </h1>
 
       <div class="">
-        <div class="measure-wide fw6 lh-title pv2 light-blue mv2 mb2-l ph2 ph4-l">
+        <div class="measure-wide fw6 lh-title pv0 light-blue mt1 ph2 ph4-l">
           <p class="f4">Nestled beneath the ocean waves, some coral reefs are defying the odds, challenging standard
             climate predictions.</p>
         </div>
 
-        <div class="measure-wide fw6 lh-title pv2 light-blue mv2 mv2-l ph2 ph4-l">
+        <div class="measure-wide fw6 lh-title pv0 light-blue mt1 ph2 ph4-l">
           <p class="f4">
             These rare reefs have the ability to survive and fight back against the impacts of climate
             change – if we find them and protect them.
@@ -64,7 +64,7 @@
   </div>
 
   <div id="intro-cta" ref="intro" class="mv0 z-1">
-    <p class="measure-wide f5 f3-l fw7 teal tc center">
+    <p class="measure f3-l fw7 teal tc center">
       Discover the new evidence showing some reefs are resisting, avoiding, and recovering from climate change.
     </p>
     <!-- down arrow -->
@@ -677,13 +677,11 @@ watch(selectedBCUID, (newValue) => {
 }
 
 #intro-cta {
-  /* border: 1px solid red; */
-  /* margin-top: 22vh; */
   position: absolute;
   bottom: 0;
   width: 100%;
-
 }
+
 
 #top-bg-gradient {
   /* background: linear-gradient(180deg, rgba(9, 26, 43, 1) 0%, rgba(0, 103, 148, 0) 96.1%); */

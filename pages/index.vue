@@ -36,7 +36,7 @@
             climate predictions.</p>
         </div>
 
-        <div class="measure-wide fw6 lh-title pv0 light-blue mt1 ph2 ph4-l">
+        <div class="measure-wide fw6 lh-title pv0 light-blue mt1 ph2 ph4-l dn db-ns">
           <p class="f4">
             These rare reefs have the ability to survive and fight back against the impacts of climate
             change – if we find them and protect them.

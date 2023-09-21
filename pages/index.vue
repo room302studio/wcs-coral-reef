@@ -410,7 +410,7 @@
             <div class="bg-transparent-black white br4 pa2 tl">
               <div class="pa2 pa3-l fw5 f4 f3-l lh-copy">
                 Tell your government representatives loud and clear: <strong style="color: #5CF3E1;">coral reefs are
-                  critical to biodiversity conservation
+                  critical to both biodiversity conservation
                   and climate adaptation</strong>. Sign on, and WCS will hand-deliver your signatures to international
                 leaders and
                 lawmakers at the UN Climate Change Conference and the Convention on Biological Diversity.
@@ -421,8 +421,8 @@
 Subject line: Hope underwater: A message in support of coral reefs to government leaders
 Message: DRAFT “Coral reefs are critical to biodiversity conservation and climate adaptation. We need our governments and leaders to make bold commitments to safeguard ocean biodiversity, especially as part of updated national plans to conserve coral reefs. Coral reefs need to be front and center in national climate mitigation and adaptation strategies.”
 Space for them to sign their name, and country. -->
-              <a href="mailto:marineprogram@wcs.org?subject=Hope%20underwater:%20A%20message%20in%20support%20of%20coral%20reefs%20to%20government%20leaders&body=Coral%20reefs%20are%20critical%20to%20biodiversity%20conservation%20and%20climate%20adaptation.%20We%20need%20our%20governments%20and%20leaders%20to%20make%20bold%20commitments%20to%20safeguard%20ocean%20biodiversity,%20especially%20as%20part%20of%20updated%20national%20plans%20to%20conserve%20coral%20reefs.%20Coral%20reefs%20need%20to%20be%20front%20and%20center%20in%20national%20climate%20mitigation%20and%20adaptation%20strategies.%0A%0A%0AName:%0ACountry:"
-                class="db tc white link cta-button dim pointer w-100 pa2 mv4">Sign On</a>
+              <a href="mailto:marineprogram@wcs.org?subject=Hope%20underwater:%20A%20message%20in%20support%20of%20coral%20reefs%20to%20government%20leaders&body=Coral%20reefs%20are%20critical%20to%20both%20biodiversity%20conservation%20and%20climate%20adaptation.%20We%20need%20our%20governments%20and%20leaders%20to%20make%20bold%20commitments%20to%20safeguard%20our%20irreplaceable%20coral%20reefs,%20especially%20as%20part%20of%20updated%20national%20plans%20and%20commitments%20to%20conserve%20ocean%20biodiversity%20and%20respond%20to%20climate%20change.%0A%0A%0AName:%0ACountry:" class="db tc white link cta-button dim pointer w-100 pa2 mv4">Sign On</a>
+
             </div>
           </div>
 

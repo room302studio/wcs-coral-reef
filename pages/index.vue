@@ -24,9 +24,9 @@
     </div>
 
 
-    <div class="vh-50 w-100 w-90-ns pa4 mt4">
+    <div class="vh-50 w-100 w-90-ns pa4 mt3">
       <!-- <h3 class="w-100 f3 fw4 tc mv0 pv1 teal">Wave of Hope</h3> -->
-      <h1 class="f2 f-subheadline-l tl light-blue mv0 pa3 ph4-l">
+      <h1 class="f2 f1-ns f-subheadline-l tl light-blue mv0 pa3 pt2 ph4-l">
         <span class="fw4">Hope Underwater:</span> <br />The Coral Reefs Defying Climate Change
       </h1>
 

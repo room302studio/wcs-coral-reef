@@ -1,5 +1,7 @@
 # WCS + Room 302 Studio: Coral Reefs
 
+Live site 👉 https://hopeunderwater.com/
+
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
 ## Setup
